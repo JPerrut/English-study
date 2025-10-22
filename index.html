@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Inglês - Minhas Frases</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>English Pro - Múltiplos Níveis</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Prática de Inglês</h1>
-        <div id="question-area">
-            </div>
-        <div id="feedback" class="feedback"></div>
-        <button id="next-button" class="hidden">Próxima Pergunta</button>
-        <div id="score-area" class="score-area hidden"></div>
+  <div id="app" class="container">
+    <h1 class="title">English Pro - Prática Inteligente</h1>
+
+    <!-- Menu Principal -->
+    <div id="main-menu" class="main-menu"></div>
+
+    <!-- Quiz -->
+    <div id="quiz-container" class="quiz-container hidden">
+      <button id="back-to-menu-1" class="back-button">← Voltar ao Menu</button>
+      <p id="current-mode-level" class="mode-level"></p>
+      <div id="question-index" class="question-index"></div>
+      <div id="question-text" class="question-text"></div>
+      <div id="options-area" class="options-area"></div>
+      <button id="submit-button" class="submit-button hidden">Verificar</button>
+      <button id="next-button" class="next-button hidden">Próxima Questão</button>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Feedback -->
+    <div id="feedback-area" class="feedback-area hidden">
+      <button id="back-to-menu-2" class="back-button">← Voltar ao Menu</button>
+      <div id="feedback-message" class="feedback-message"></div>
+      <div id="correct-answer-display" class="correct-answer-display hidden"></div>
+      <div id="vocab-display" class="vocab-display"></div>
+    </div>
+
+    <!-- Resultado Final -->
+    <div id="score-area" class="score-area hidden">
+      <button id="back-to-menu-3" class="back-button">← Voltar ao Menu</button>
+      <h2 class="score-title">Fim da Sessão!</h2>
+      <p id="final-score" class="final-score"></p>
+      <button id="restart-button" class="restart-button">Voltar ao Menu Principal</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
