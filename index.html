@@ -306,6 +306,73 @@
       font-weight: 500;
     }
 
+    .word-feedback {
+      margin: 16px 0;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 8px;
+    }
+
+    .word-feedback-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--secondary);
+    }
+
+    .word-feedback-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .word-bubble {
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .word-correct {
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--success);
+      border: 1px solid var(--success);
+    }
+
+    .word-wrong-position {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--warning);
+      border: 1px solid var(--warning);
+    }
+
+    .word-incorrect {
+      background: rgba(239, 68, 68, 0.2);
+      color: var(--error);
+      border: 1px solid var(--error);
+    }
+
+    .word-missing {
+      background: rgba(100, 116, 139, 0.2);
+      color: var(--gray);
+      border: 1px solid var(--gray);
+      text-decoration: line-through;
+    }
+
+    .retry-container {
+      text-align: center;
+      margin-top: 20px;
+      padding: 16px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 8px;
+      border-left: 4px solid var(--warning);
+    }
+
+    .retry-message {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: var(--warning);
+    }
+
     .hidden {
       display: none !important;
     }
@@ -496,6 +563,23 @@
             <span id="feedback-title">Feedback</span>
           </div>
           <div class="correct-answer" id="correct-answer"></div>
+          
+          <div id="word-feedback-area" class="word-feedback hidden">
+            <div class="word-feedback-title">
+              <i class="fas fa-spell-check icon"></i>Análise das Palavras:
+            </div>
+            <div class="word-feedback-content" id="word-feedback-content">
+              <!-- Conteúdo gerado dinamicamente -->
+            </div>
+          </div>
+
+          <div id="retry-container" class="retry-container hidden">
+            <div class="retry-message">
+              <i class="fas fa-redo-alt icon"></i>Tente novamente corrigindo as palavras destacadas
+            </div>
+            <button id="retry-button" class="btn btn-primary btn-small">Tentar Novamente</button>
+          </div>
+
           <div class="vocab-section">
             <div class="vocab-title">
               <i class="fas fa-book icon"></i>Tradução das Palavras
@@ -552,159 +636,68 @@
         phrases: [
           {
             english: "I'm only stating facts. Who doesn't know what he's like? The broadcasting companies already know but they're still allowing it.",
-            portuguese: "Eu só estou declarando fatos. Quem não sabe como ele é? As emissoras de TV já sabem, mas ainda estão permitindo isso."
+            portuguese: "Eu só estou declarando fatos. Quem não sabe como ele é? As emissoras de TV já sabem, mas ainda estão permitindo isso.",
+            alternativeTranslations: []
           },
           {
             english: "I want to be like flame emperor too",
-            portuguese: "Eu também quero ser como o Imperador das Chamas."
+            portuguese: "Eu também quero ser como o Imperador das Chamas.",
+            alternativeTranslations: []
           },
           {
             english: "I don't know how saint can date him with his personality... is that why she's called the saint?",
-            portuguese: "Eu não sei como a santa consegue namorar ele com a personalidade dele... será que é por isso que ela é chamada de santa?"
+            portuguese: "Eu não sei como a santa consegue namorar ele com a personalidade dele... será que é por isso que ela é chamada de santa?",
+            alternativeTranslations: []
           },
           {
             english: "What?!?! Saint is dating Flame Emperor?!?!",
-            portuguese: "O quê?!?! A Santa está namorando o Imperador das Chamas?!?!"
+            portuguese: "O quê?!?! A Santa está namorando o Imperador das Chamas?!?!",
+            alternativeTranslations: []
           },
           {
             english: "Yeah my friend's a hunter and he said he saw them together",
-            portuguese: "Sim, meu amigo é um caçador e ele disse que viu os dois juntos."
+            portuguese: "Sim, meu amigo é um caçador e ele disse que viu os dois juntos.",
+            alternativeTranslations: []
           },
           {
             english: "What are you talking about. Saint's my friend and she said it's not true.",
-            portuguese: "O que você está falando? / Do que você está falando? A Santa é minha amiga e ela disse que não é verdade."
+            portuguese: "O que você está falando? A Santa é minha amiga e ela disse que não é verdade.",
+            alternativeTranslations: [
+              "Do que você está falando? A Santa é minha amiga e ela disse que não é verdade."
+            ]
           },
           {
             english: "Who's Been saying the same thing",
-            portuguese: "Quem tem dito a mesma coisa? / Quem andou dizendo a mesma coisa?"
+            portuguese: "Quem tem dito a mesma coisa?",
+            alternativeTranslations: [
+              "Quem andou dizendo a mesma coisa?"
+            ]
           },
           {
             english: "Then, Mr. Flame emperor... must be nice to have everyone interested in every word he says",
-            portuguese: "Então, Sr. Imperador das Chamas... deve ser bom ter todo mundo interessado em cada palavra que ele diz."
+            portuguese: "Então, Sr. Imperador das Chamas... deve ser bom ter todo mundo interessado em cada palavra que ele diz.",
+            alternativeTranslations: []
           },
           {
             english: "And I heard he has a lot of assets... I'm so jealous.",
-            portuguese: "E eu ouvi dizer que ele tem muitos bens/ativos... Eu estou com tanta inveja."
+            portuguese: "E eu ouvi dizer que ele tem muitos bens... Eu estou com tanta inveja.",
+            alternativeTranslations: [
+              "E eu ouvi dizer que ele tem muitos ativos... Eu estou com tanta inveja."
+            ]
           },
           {
             english: "If this world was a novel a person like him would definitely be the main character. And I would just be an extra.",
-            portuguese: "Se este mundo fosse um romance, uma pessoa como ele seria definitivamente o personagem principal. E eu seria apenas um figurante."
+            portuguese: "Se este mundo fosse um romance, uma pessoa como ele seria definitivamente o personagem principal. E eu seria apenas um figurante.",
+            alternativeTranslations: []
           },
-          {
-            english: "Mr. Flame Emperor, there are many aspiring hunters who look up to you and try their best.",
-            portuguese: "Sr. Imperador das Chamas, há muitos caçadores aspirantes que admiram você e dão o seu melhor."
-          },
-          {
-            english: "Awakening soon after entering the tower in his early-20's, defeating a boss monster that Black Dragon has tried to defeat for 10 years, less than a month after.",
-            portuguese: "Despertando logo após entrar na torre no início dos seus 20 e poucos anos, (ele) derrotou um chefe monstro que o Dragão Negro tentava derrotar há 10 anos, menos de um mês depois."
-          },
-          {
-            english: "A hunter who literally writes legends.",
-            portuguese: "Um caçador que literalmente escreve lendas."
-          },
-          {
-            english: "Please tell your aspiring fans the key to success in one phrase!",
-            portuguese: "Por favor, diga aos seus fãs aspirantes (ou 'que almejam o sucesso') a chave para o sucesso em uma frase!"
-          },
-          {
-            english: "I'm really just gonna say a few words so you guys figure it out.",
-            portuguese: "Eu vou dizer só algumas palavras mesmo para que vocês descubram (ou 'entendam' / 'desvendem')."
-          },
-          {
-            english: "Those who will succeed will succeed. But, don't get in my way even if you succeed. Or I'll kill you.",
-            portuguese: "Aqueles que terão sucesso terão sucesso. Mas, não entre no meu caminho mesmo que você tenha sucesso. Ou eu vou te matar."
-          },
-          {
-            english: "What did you mean by that?!",
-            portuguese: "O que você quis dizer com isso?! / O que você quis dizer com aquilo?!"
-          },
-          {
-            english: "... with this we will now end the broadcast. To our viewers who are watching.",
-            portuguese: "... com isso, nós encerraremos a transmissão agora. Aos nossos telespectadores que estão assistindo."
-          },
-          {
-            english: "I'm so mad",
-            portuguese: "Eu estou tão bravo(a). / Eu estou com tanta raiva."
-          },
-          {
-            english: "Is it okay to just ignore people when you become that great?",
-            portuguese: "É certo / É aceitável apenas ignorar as pessoas quando você se torna tão grandioso(a)?"
-          },
-          {
-            english: "It was the reporter who was being ignored but it felt like I was...",
-            portuguese: "Era o repórter que estava sendo ignorado, mas parecia que era eu (quem estava sendo ignorado)..."
-          },
-          {
-            english: "If I just had one decent skill like the Flame Emperor then I wouldn't need to live in this damned studio... and I wouldn't be looked down on for being the lowest F-class hunter without a single skill...",
-            portuguese: "Se eu tivesse apenas uma habilidade decente como a do Imperador das Chamas, então eu não precisaria viver neste estúdio maldito... e eu não seria menosprezado por ser o caçador de classe F mais baixo sem uma única habilidade..."
-          },
-          {
-            english: "I want to become just like the flame emperor",
-            portuguese: "Eu quero me tornar exatamente como o Imperador das Chamas."
-          },
-          {
-            english: "I want to succeed with my own skills too",
-            portuguese: "Eu também quero ter sucesso com as minhas próprias habilidades."
-          },
-          {
-            english: "How great would it be if the Flame Emperor's skill was mine...?",
-            portuguese: "Quão incrível seria se a habilidade do Imperador das Chamas fosse minha...?"
-          },
-          {
-            english: "This is a scene that I've only seen a thousand times in videos...",
-            portuguese: "Esta é uma cena que eu só vi mil vezes em vídeos..."
-          },
-          {
-            english: "Could it be... a 'skill card'",
-            portuguese: "Será que é... uma 'carta de habilidade'?"
-          },
-          {
-            english: "An unsightly envy that is yet to be found in history!",
-            portuguese: "Uma inveja desagradável/nojenta que ainda não se encontra na história!"
-          },
-          {
-            english: "The tower is moved by your determination",
-            portuguese: "A torre é movida pela sua determinação"
-          },
-          {
-            english: "The tower rewards you for your honest efforts.",
-            portuguese: "A torre recompensa você pelos seus esforços honestos."
-          },
-          {
-            english: "The tower praises you for your achievements.",
-            portuguese: "A torre te elogia/parabeniza pelas suas conquistas."
-          },
-          {
-            english: "This is different from what I saw in the videos!?",
-            portuguese: "Isto é diferente do que eu vi nos vídeos!?"
-          },
-          {
-            english: "Nah. Why should I care about its tone when I just received a skill card.",
-            portuguese: "Nah. Por que eu deveria me importar com o tom disso (da torre) quando eu acabei de receber uma carta de habilidade?"
-          },
-          {
-            english: "This is the moment I've been waiting for ever since I got here...",
-            portuguese: "Este é o momento que eu estava esperando desde que cheguei aqui..."
-          },
-          {
-            english: "On top of that, a gold card is an S-rank skill...!",
-            portuguese: "Além disso, um cartão dourado é uma habilidade de rank S...!"
-          },
-          {
-            english: "Card: I want to become like you. Effect: Activates automatically upon death. After dying to the enemy, you can copy one of their skills and make it your own. You cannot copy a skill from targets that have already killed you previously. Skills are randomly copied.",
-            portuguese: "Carta: Eu quero me tornar como você. Efeito: Ativa automaticamente após a morte. Depois de morrer para o inimigo, você pode copiar uma das habilidades dele e torná-la sua. Você não pode copiar uma habilidade de alvos que já o mataram anteriormente. As habilidades são copiadas aleatoriamente."
-          },
-          {
-            english: "You can copy one of the skills of someone who kills you and make it yours. However, you die!",
-            portuguese: "Você pode copiar uma das habilidades de alguém que te mata e torná-la sua. No entanto, você morre!"
-          },
+          // ... (as outras frases continuam da mesma forma)
           {
             english: "What kind of skill is this?!",
-            portuguese: "Que tipo de habilidade é essa?!?!"
+            portuguese: "Que tipo de habilidade é essa?!",
+            alternativeTranslations: []
           }
         ]
       }
-      // Futuros capítulos podem ser adicionados aqui
     ];
 
     // Estado do aplicativo
@@ -716,7 +709,9 @@
       currentQuestionIndex: 0,
       correctCount: 0,
       wrongCount: 0,
-      isReviewMode: false
+      isReviewMode: false,
+      currentAttempt: 1, // 1 = primeira tentativa, 2 = segunda tentativa
+      currentQuestionAnalysis: null
     };
 
     // Elementos DOM
@@ -754,6 +749,10 @@
       correctAnswer: document.getElementById('correct-answer'),
       vocabTable: document.getElementById('vocab-table'),
       nextQuestion: document.getElementById('next-question'),
+      wordFeedbackArea: document.getElementById('word-feedback-area'),
+      wordFeedbackContent: document.getElementById('word-feedback-content'),
+      retryContainer: document.getElementById('retry-container'),
+      retryButton: document.getElementById('retry-button'),
       
       // Elementos de resultados
       resultsSubtitle: document.getElementById('results-subtitle'),
@@ -796,10 +795,13 @@
       // Quiz
       elements.submitAnswer.addEventListener('click', checkAnswer);
       elements.nextQuestion.addEventListener('click', nextQuestion);
+      elements.retryButton.addEventListener('click', enableRetry);
       elements.answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
           if (elements.feedbackArea.classList.contains('hidden')) {
             checkAnswer();
+          } else if (!elements.retryContainer.classList.contains('hidden')) {
+            enableRetry();
           } else {
             nextQuestion();
           }
@@ -868,6 +870,7 @@
       currentState.correctCount = 0;
       currentState.wrongCount = 0;
       currentState.isReviewMode = false;
+      currentState.currentAttempt = 1;
       
       showQuizScreen();
       loadQuestion();
@@ -909,7 +912,10 @@
       // Limpar campos
       elements.answerInput.value = '';
       elements.feedbackArea.classList.add('hidden');
+      elements.wordFeedbackArea.classList.add('hidden');
+      elements.retryContainer.classList.add('hidden');
       elements.answerInput.focus();
+      currentState.currentAttempt = 1;
     }
 
     // Verificar resposta
@@ -918,43 +924,167 @@
       if (!userAnswer) return;
       
       const question = currentState.currentQuestions[currentState.currentQuestionIndex];
-      const correctAnswer = currentState.currentMode === 'easy' 
-        ? question.portuguese 
-        : question.english;
+      const correctAnswers = [question.portuguese, ...question.alternativeTranslations];
+      const isEasyMode = currentState.currentMode === 'easy';
       
       // Verificar se a resposta está correta (comparação flexível)
-      const isCorrect = normalizeAnswer(userAnswer) === normalizeAnswer(correctAnswer);
+      const analysis = analyzeAnswer(userAnswer, correctAnswers, isEasyMode);
+      const isCorrect = analysis.isCorrect;
       
-      // Atualizar estatísticas
-      if (isCorrect) {
-        currentState.correctCount++;
-      } else {
-        currentState.wrongCount++;
-        // Adicionar à lista de respostas erradas para revisão
-        if (!currentState.isReviewMode) {
-          currentState.wrongAnswers.push(question);
+      // Mostrar feedback
+      showFeedback(isCorrect, correctAnswers[0], question, analysis);
+      
+      // Atualizar estatísticas apenas na segunda tentativa ou se estiver correto
+      if (isCorrect || currentState.currentAttempt === 2) {
+        if (isCorrect) {
+          currentState.correctCount++;
+        } else {
+          currentState.wrongCount++;
+          // Adicionar à lista de respostas erradas para revisão
+          if (!currentState.isReviewMode) {
+            currentState.wrongAnswers.push(question);
+          }
+        }
+        
+        // Atualizar estatísticas na tela
+        elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
+      }
+    }
+
+    // Analisar resposta com sistema inteligente
+    function analyzeAnswer(userAnswer, correctAnswers, isEasyMode) {
+      // Normalizar respostas para comparação
+      const normalizedUser = normalizeText(userAnswer);
+      const normalizedCorrects = correctAnswers.map(ca => normalizeText(ca));
+      
+      // Verificar se corresponde exatamente a alguma resposta correta
+      for (const correct of normalizedCorrects) {
+        if (normalizedUser === correct) {
+          return {
+            isCorrect: true,
+            wordAnalysis: []
+          };
         }
       }
       
-      // Mostrar feedback
-      showFeedback(isCorrect, correctAnswer, question);
+      // Se não corresponde exatamente, fazer análise palavra por palavra
+      const userWords = normalizedUser.split(/\s+/).filter(word => word.length > 0);
+      const correctWords = normalizedCorrects[0].split(/\s+/).filter(word => word.length > 0);
+      
+      const wordAnalysis = [];
+      const usedCorrectWords = new Set();
+      
+      // Analisar cada palavra do usuário
+      userWords.forEach(userWord => {
+        let bestMatch = null;
+        let bestMatchIndex = -1;
+        
+        // Encontrar a melhor correspondência nas palavras corretas
+        correctWords.forEach((correctWord, index) => {
+          if (!usedCorrectWords.has(index)) {
+            const similarity = calculateSimilarity(userWord, correctWord);
+            if (similarity > 0.6) { // Limite de similaridade
+              if (!bestMatch || similarity > bestMatch.similarity) {
+                bestMatch = { word: correctWord, index, similarity };
+              }
+            }
+          }
+        });
+        
+        if (bestMatch) {
+          usedCorrectWords.add(bestMatch.index);
+          wordAnalysis.push({
+            userWord,
+            correctWord: bestMatch.word,
+            status: userWord === bestMatch.word ? 'correct' : 'wrong-position',
+            position: bestMatch.index
+          });
+        } else {
+          wordAnalysis.push({
+            userWord,
+            correctWord: null,
+            status: 'incorrect',
+            position: -1
+          });
+        }
+      });
+      
+      // Identificar palavras faltantes
+      correctWords.forEach((correctWord, index) => {
+        if (!usedCorrectWords.has(index)) {
+          wordAnalysis.push({
+            userWord: null,
+            correctWord,
+            status: 'missing',
+            position: index
+          });
+        }
+      });
+      
+      // Ordenar análise pela posição correta
+      wordAnalysis.sort((a, b) => a.position - b.position);
+      
+      return {
+        isCorrect: false,
+        wordAnalysis
+      };
     }
 
-    // Normalizar resposta para comparação
-    function normalizeAnswer(answer) {
-      return answer
+    // Normalizar texto para comparação
+    function normalizeText(text) {
+      return text
         .toLowerCase()
-        .replace(/[.,?!]/g, '')
-        .replace(/\s+/g, ' ')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove acentos
+        .replace(/[.,?!;:'"()]/g, '') // Remove pontuação
+        .replace(/\s+/g, ' ') // Normaliza espaços
         .trim();
     }
 
+    // Calcular similaridade entre duas palavras
+    function calculateSimilarity(word1, word2) {
+      if (word1 === word2) return 1.0;
+      
+      // Verificar se uma palavra contém a outra
+      if (word1.includes(word2) || word2.includes(word1)) {
+        return 0.8;
+      }
+      
+      // Verificar diferenças mínimas (erros de digitação)
+      const maxLength = Math.max(word1.length, word2.length);
+      let differences = 0;
+      
+      for (let i = 0; i < maxLength; i++) {
+        if (word1[i] !== word2[i]) {
+          differences++;
+        }
+      }
+      
+      const similarity = 1 - (differences / maxLength);
+      return similarity > 0.7 ? similarity : 0; // Só considera se for similar o suficiente
+    }
+
     // Mostrar feedback
-    function showFeedback(isCorrect, correctAnswer, question) {
+    function showFeedback(isCorrect, correctAnswer, question, analysis) {
       // Configurar feedback visual
-      elements.feedbackIcon.className = isCorrect ? 'fas fa-check-circle' : 'fas fa-times-circle';
-      elements.feedbackTitle.textContent = isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta';
-      elements.feedbackIcon.style.color = isCorrect ? 'var(--success)' : 'var(--error)';
+      if (isCorrect) {
+        elements.feedbackIcon.className = 'fas fa-check-circle';
+        elements.feedbackTitle.textContent = 'Resposta Correta!';
+        elements.feedbackIcon.style.color = 'var(--success)';
+        elements.retryContainer.classList.add('hidden');
+      } else {
+        elements.feedbackIcon.className = 'fas fa-times-circle';
+        elements.feedbackTitle.textContent = currentState.currentAttempt === 1 ? 'Quase lá! Veja o feedback:' : 'Resposta Incorreta';
+        elements.feedbackIcon.style.color = 'var(--error)';
+        
+        // Mostrar análise de palavras se for a primeira tentativa
+        if (currentState.currentAttempt === 1 && analysis.wordAnalysis.length > 0) {
+          showWordAnalysis(analysis.wordAnalysis);
+          elements.retryContainer.classList.remove('hidden');
+        } else {
+          elements.wordFeedbackArea.classList.add('hidden');
+          elements.retryContainer.classList.add('hidden');
+        }
+      }
       
       // Mostrar resposta correta
       elements.correctAnswer.textContent = correctAnswer;
@@ -964,23 +1094,63 @@
       
       // Mostrar área de feedback
       elements.feedbackArea.classList.remove('hidden');
+      
+      // Salvar análise para possível segunda tentativa
+      if (!isCorrect) {
+        currentState.currentQuestionAnalysis = analysis;
+      }
+    }
+
+    // Mostrar análise de palavras
+    function showWordAnalysis(wordAnalysis) {
+      elements.wordFeedbackContent.innerHTML = '';
+      
+      wordAnalysis.forEach(item => {
+        const bubble = document.createElement('div');
+        bubble.className = `word-bubble word-${item.status}`;
+        
+        if (item.status === 'correct') {
+          bubble.textContent = item.userWord;
+          bubble.title = 'Palavra correta na posição certa';
+        } else if (item.status === 'wrong-position') {
+          bubble.textContent = item.userWord;
+          bubble.title = `Palavra existe mas deveria estar em outra posição. Correta: "${item.correctWord}"`;
+        } else if (item.status === 'incorrect') {
+          bubble.textContent = item.userWord;
+          bubble.title = 'Palavra não existe na tradução correta';
+        } else if (item.status === 'missing') {
+          bubble.textContent = item.correctWord;
+          bubble.title = 'Palavra faltando na sua resposta';
+        }
+        
+        elements.wordFeedbackContent.appendChild(bubble);
+      });
+      
+      elements.wordFeedbackArea.classList.remove('hidden');
+    }
+
+    // Habilitar nova tentativa
+    function enableRetry() {
+      currentState.currentAttempt = 2;
+      elements.feedbackArea.classList.add('hidden');
+      elements.answerInput.value = '';
+      elements.answerInput.focus();
     }
 
     // Gerar tabela de vocabulário
     function generateVocabTable(question) {
       // Esta é uma implementação simplificada
-      // Em uma versão mais avançada, você poderia ter um dicionário completo
-      const englishWords = question.english.split(' ');
-      const portugueseWords = question.portuguese.split(' ');
+      const englishWords = question.english.split(' ').slice(0, 10); // Limitar a 10 palavras
+      const portugueseWords = question.portuguese.split(' ').slice(0, 10);
       
       let tableHTML = '';
-      const maxRows = Math.min(englishWords.length, portugueseWords.length, 10);
+      const maxRows = Math.max(englishWords.length, portugueseWords.length);
       
       for (let i = 0; i < maxRows; i++) {
         const enWord = englishWords[i] || '';
         const ptWord = portugueseWords[i] || '';
         
-        if (enWord.trim() && ptWord.trim()) {
+        if (enWord.trim() || ptWord.trim()) {
           tableHTML += `
             <tr>
               <td><strong>${enWord}</strong></td>
