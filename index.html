@@ -3,45 +3,1069 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English Pro - Múltiplos Níveis</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>English Pro - Aprenda com Histórias</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #f59e0b;
+      --secondary-dark: #d97706;
+      --dark: #1e293b;
+      --darker: #0f172a;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --success: #10b981;
+      --error: #ef4444;
+      --warning: #f59e0b;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--darker), #1e1b4b);
+      color: var(--light);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background-color: rgba(30, 41, 59, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 32px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn:hover::after {
+      left: 100%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+      color: var(--darker);
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-small {
+      padding: 12px 20px;
+      font-size: 16px;
+      width: auto;
+      display: inline-block;
+      margin-right: 12px;
+    }
+
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .chapter-card {
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-color: var(--primary);
+    }
+
+    .chapter-number {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .chapter-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .chapter-stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .question-container {
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .question-number {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    .progress-bar {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: width 0.5s ease;
+    }
+
+    .question-text {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.5;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 12px;
+    }
+
+    .input-container {
+      margin-bottom: 24px;
+    }
+
+    .answer-input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.5);
+      color: white;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .answer-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .feedback-container {
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .feedback-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .correct-answer {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--success);
+      margin-bottom: 16px;
+      padding: 12px;
+      background: rgba(16, 185, 129, 0.1);
+      border-radius: 8px;
+    }
+
+    .vocab-section {
+      margin-top: 20px;
+    }
+
+    .vocab-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--secondary);
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .vocab-table th, .vocab-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .vocab-table th {
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-4 {
+      margin-top: 24px;
+    }
+
+    .mb-4 {
+      margin-bottom: 24px;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    .score-display {
+      text-align: center;
+      padding: 32px;
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(var(--primary) 0%, var(--dark) 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+    }
+
+    .score-circle::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: var(--darker);
+      border-radius: 50%;
+    }
+
+    .score-value {
+      position: relative;
+      z-index: 1;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .completion-message {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 24px 0;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--gray);
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+      
+      .header h1 {
+        font-size: 24px;
+      }
+      
+      .question-text {
+        font-size: 18px;
+      }
+      
+      .btn {
+        padding: 14px 20px;
+        font-size: 16px;
+      }
+      
+      .chapters-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div id="app" class="container">
-    <h1 class="title">English Pro - Prática Inteligente</h1>
-
+  <div class="container">
     <!-- Menu Principal -->
-    <div id="main-menu" class="main-menu"></div>
-
-    <!-- Quiz -->
-    <div id="quiz-container" class="quiz-container hidden">
-      <button id="back-to-menu-1" class="back-button">← Voltar ao Menu</button>
-      <p id="current-mode-level" class="mode-level"></p>
-      <div id="question-index" class="question-index"></div>
-      <div id="question-text" class="question-text"></div>
-      <div id="options-area" class="options-area"></div>
-      <button id="submit-button" class="submit-button hidden">Verificar</button>
-      <button id="next-button" class="next-button hidden">Próxima Questão</button>
+    <div id="main-menu">
+      <div class="header">
+        <h1><i class="fas fa-language icon"></i>English Pro</h1>
+        <p>Aprenda inglês com suas histórias favoritas</p>
+      </div>
+      <div class="content">
+        <button id="story-mode-btn" class="btn btn-primary">
+          <i class="fas fa-book-open icon"></i>Inglês com História
+        </button>
+        <button id="practice-mode-btn" class="btn btn-secondary">
+          <i class="fas fa-dumbbell icon"></i>Modo Prática
+        </button>
+      </div>
     </div>
 
-    <!-- Feedback -->
-    <div id="feedback-area" class="feedback-area hidden">
-      <button id="back-to-menu-2" class="back-button">← Voltar ao Menu</button>
-      <div id="feedback-message" class="feedback-message"></div>
-      <div id="correct-answer-display" class="correct-answer-display hidden"></div>
-      <div id="vocab-display" class="vocab-display"></div>
+    <!-- Seleção de Capítulo -->
+    <div id="chapters-menu" class="hidden">
+      <div class="header">
+        <button id="back-to-main" class="btn btn-outline btn-small">
+          <i class="fas fa-arrow-left icon"></i>Voltar
+        </button>
+        <h1><i class="fas fa-book icon"></i>Capítulos</h1>
+        <p>Selecione um capítulo para praticar</p>
+      </div>
+      <div class="content">
+        <div class="chapters-grid" id="chapters-grid">
+          <!-- Capítulos serão gerados dinamicamente -->
+        </div>
+      </div>
     </div>
 
-    <!-- Resultado Final -->
-    <div id="score-area" class="score-area hidden">
-      <button id="back-to-menu-3" class="back-button">← Voltar ao Menu</button>
-      <h2 class="score-title">Fim da Sessão!</h2>
-      <p id="final-score" class="final-score"></p>
-      <button id="restart-button" class="restart-button">Voltar ao Menu Principal</button>
+    <!-- Seleção de Modo de Prática -->
+    <div id="practice-mode-menu" class="hidden">
+      <div class="header">
+        <button id="back-to-chapters" class="btn btn-outline btn-small">
+          <i class="fas fa-arrow-left icon"></i>Voltar
+        </button>
+        <h1 id="chapter-practice-title">Capítulo </h1>
+        <p>Selecione o modo de prática</p>
+      </div>
+      <div class="content">
+        <button id="easy-practice-btn" class="btn btn-primary">
+          <i class="fas fa-star icon"></i>Prática Fácil
+          <br><small>Traduza do Inglês para Português</small>
+        </button>
+        <button id="hard-practice-btn" class="btn btn-secondary">
+          <i class="fas fa-fire icon"></i>Prática Difícil
+          <br><small>Traduza do Português para Inglês</small>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tela de Questões -->
+    <div id="quiz-screen" class="hidden">
+      <div class="header">
+        <button id="back-to-practice" class="btn btn-outline btn-small">
+          <i class="fas fa-arrow-left icon"></i>Voltar
+        </button>
+        <h1 id="quiz-title">Prática</h1>
+        <p id="quiz-subtitle">Traduza a frase abaixo</p>
+      </div>
+      <div class="content">
+        <div class="question-container">
+          <div class="question-header">
+            <div class="question-number" id="question-number">Questão 1 de 38</div>
+            <div class="question-stats" id="question-stats">Acertos: 0 | Erros: 0</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" id="progress-bar" style="width: 0%"></div>
+          </div>
+          <div class="question-text" id="question-text"></div>
+          <div class="input-container">
+            <input type="text" class="answer-input" id="answer-input" placeholder="Digite sua tradução aqui...">
+          </div>
+          <button id="submit-answer" class="btn btn-primary">Verificar Resposta</button>
+        </div>
+
+        <div id="feedback-area" class="feedback-container hidden">
+          <div class="feedback-title">
+            <i class="fas fa-info-circle" id="feedback-icon"></i>
+            <span id="feedback-title">Feedback</span>
+          </div>
+          <div class="correct-answer" id="correct-answer"></div>
+          <div class="vocab-section">
+            <div class="vocab-title">
+              <i class="fas fa-book icon"></i>Tradução das Palavras
+            </div>
+            <table class="vocab-table" id="vocab-table">
+              <!-- Conteúdo gerado dinamicamente -->
+            </table>
+          </div>
+          <button id="next-question" class="btn btn-primary mt-4">Próxima Questão</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela de Resultados -->
+    <div id="results-screen" class="hidden">
+      <div class="header">
+        <h1><i class="fas fa-trophy icon"></i>Resultados</h1>
+        <p id="results-subtitle">Desempenho no capítulo</p>
+      </div>
+      <div class="content">
+        <div class="score-display">
+          <div class="score-circle" id="score-circle">
+            <div class="score-value" id="score-value">0%</div>
+          </div>
+          <div class="completion-message" id="completion-message">Parabéns!</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value" id="correct-answers">0</div>
+              <div class="stat-label">Acertos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" id="wrong-answers">0</div>
+              <div class="stat-label">Erros</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" id="completion-rate">0%</div>
+              <div class="stat-label">Concluído</div>
+            </div>
+          </div>
+          <button id="restart-practice" class="btn btn-primary">Refazer Prática</button>
+          <button id="back-to-chapters-from-results" class="btn btn-outline mt-4">Voltar aos Capítulos</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Dados das frases organizadas por capítulo
+    const CHAPTERS = [
+      {
+        id: 1,
+        title: "Chapter 001",
+        description: "O Início da Jornada",
+        phrases: [
+          {
+            english: "I'm only stating facts. Who doesn't know what he's like? The broadcasting companies already know but they're still allowing it.",
+            portuguese: "Eu só estou declarando fatos. Quem não sabe como ele é? As emissoras de TV já sabem, mas ainda estão permitindo isso."
+          },
+          {
+            english: "I want to be like flame emperor too",
+            portuguese: "Eu também quero ser como o Imperador das Chamas."
+          },
+          {
+            english: "I don't know how saint can date him with his personality... is that why she's called the saint?",
+            portuguese: "Eu não sei como a santa consegue namorar ele com a personalidade dele... será que é por isso que ela é chamada de santa?"
+          },
+          {
+            english: "What?!?! Saint is dating Flame Emperor?!?!",
+            portuguese: "O quê?!?! A Santa está namorando o Imperador das Chamas?!?!"
+          },
+          {
+            english: "Yeah my friend's a hunter and he said he saw them together",
+            portuguese: "Sim, meu amigo é um caçador e ele disse que viu os dois juntos."
+          },
+          {
+            english: "What are you talking about. Saint's my friend and she said it's not true.",
+            portuguese: "O que você está falando? / Do que você está falando? A Santa é minha amiga e ela disse que não é verdade."
+          },
+          {
+            english: "Who's Been saying the same thing",
+            portuguese: "Quem tem dito a mesma coisa? / Quem andou dizendo a mesma coisa?"
+          },
+          {
+            english: "Then, Mr. Flame emperor... must be nice to have everyone interested in every word he says",
+            portuguese: "Então, Sr. Imperador das Chamas... deve ser bom ter todo mundo interessado em cada palavra que ele diz."
+          },
+          {
+            english: "And I heard he has a lot of assets... I'm so jealous.",
+            portuguese: "E eu ouvi dizer que ele tem muitos bens/ativos... Eu estou com tanta inveja."
+          },
+          {
+            english: "If this world was a novel a person like him would definitely be the main character. And I would just be an extra.",
+            portuguese: "Se este mundo fosse um romance, uma pessoa como ele seria definitivamente o personagem principal. E eu seria apenas um figurante."
+          },
+          {
+            english: "Mr. Flame Emperor, there are many aspiring hunters who look up to you and try their best.",
+            portuguese: "Sr. Imperador das Chamas, há muitos caçadores aspirantes que admiram você e dão o seu melhor."
+          },
+          {
+            english: "Awakening soon after entering the tower in his early-20's, defeating a boss monster that Black Dragon has tried to defeat for 10 years, less than a month after.",
+            portuguese: "Despertando logo após entrar na torre no início dos seus 20 e poucos anos, (ele) derrotou um chefe monstro que o Dragão Negro tentava derrotar há 10 anos, menos de um mês depois."
+          },
+          {
+            english: "A hunter who literally writes legends.",
+            portuguese: "Um caçador que literalmente escreve lendas."
+          },
+          {
+            english: "Please tell your aspiring fans the key to success in one phrase!",
+            portuguese: "Por favor, diga aos seus fãs aspirantes (ou 'que almejam o sucesso') a chave para o sucesso em uma frase!"
+          },
+          {
+            english: "I'm really just gonna say a few words so you guys figure it out.",
+            portuguese: "Eu vou dizer só algumas palavras mesmo para que vocês descubram (ou 'entendam' / 'desvendem')."
+          },
+          {
+            english: "Those who will succeed will succeed. But, don't get in my way even if you succeed. Or I'll kill you.",
+            portuguese: "Aqueles que terão sucesso terão sucesso. Mas, não entre no meu caminho mesmo que você tenha sucesso. Ou eu vou te matar."
+          },
+          {
+            english: "What did you mean by that?!",
+            portuguese: "O que você quis dizer com isso?! / O que você quis dizer com aquilo?!"
+          },
+          {
+            english: "... with this we will now end the broadcast. To our viewers who are watching.",
+            portuguese: "... com isso, nós encerraremos a transmissão agora. Aos nossos telespectadores que estão assistindo."
+          },
+          {
+            english: "I'm so mad",
+            portuguese: "Eu estou tão bravo(a). / Eu estou com tanta raiva."
+          },
+          {
+            english: "Is it okay to just ignore people when you become that great?",
+            portuguese: "É certo / É aceitável apenas ignorar as pessoas quando você se torna tão grandioso(a)?"
+          },
+          {
+            english: "It was the reporter who was being ignored but it felt like I was...",
+            portuguese: "Era o repórter que estava sendo ignorado, mas parecia que era eu (quem estava sendo ignorado)..."
+          },
+          {
+            english: "If I just had one decent skill like the Flame Emperor then I wouldn't need to live in this damned studio... and I wouldn't be looked down on for being the lowest F-class hunter without a single skill...",
+            portuguese: "Se eu tivesse apenas uma habilidade decente como a do Imperador das Chamas, então eu não precisaria viver neste estúdio maldito... e eu não seria menosprezado por ser o caçador de classe F mais baixo sem uma única habilidade..."
+          },
+          {
+            english: "I want to become just like the flame emperor",
+            portuguese: "Eu quero me tornar exatamente como o Imperador das Chamas."
+          },
+          {
+            english: "I want to succeed with my own skills too",
+            portuguese: "Eu também quero ter sucesso com as minhas próprias habilidades."
+          },
+          {
+            english: "How great would it be if the Flame Emperor's skill was mine...?",
+            portuguese: "Quão incrível seria se a habilidade do Imperador das Chamas fosse minha...?"
+          },
+          {
+            english: "This is a scene that I've only seen a thousand times in videos...",
+            portuguese: "Esta é uma cena que eu só vi mil vezes em vídeos..."
+          },
+          {
+            english: "Could it be... a 'skill card'",
+            portuguese: "Será que é... uma 'carta de habilidade'?"
+          },
+          {
+            english: "An unsightly envy that is yet to be found in history!",
+            portuguese: "Uma inveja desagradável/nojenta que ainda não se encontra na história!"
+          },
+          {
+            english: "The tower is moved by your determination",
+            portuguese: "A torre é movida pela sua determinação"
+          },
+          {
+            english: "The tower rewards you for your honest efforts.",
+            portuguese: "A torre recompensa você pelos seus esforços honestos."
+          },
+          {
+            english: "The tower praises you for your achievements.",
+            portuguese: "A torre te elogia/parabeniza pelas suas conquistas."
+          },
+          {
+            english: "This is different from what I saw in the videos!?",
+            portuguese: "Isto é diferente do que eu vi nos vídeos!?"
+          },
+          {
+            english: "Nah. Why should I care about its tone when I just received a skill card.",
+            portuguese: "Nah. Por que eu deveria me importar com o tom disso (da torre) quando eu acabei de receber uma carta de habilidade?"
+          },
+          {
+            english: "This is the moment I've been waiting for ever since I got here...",
+            portuguese: "Este é o momento que eu estava esperando desde que cheguei aqui..."
+          },
+          {
+            english: "On top of that, a gold card is an S-rank skill...!",
+            portuguese: "Além disso, um cartão dourado é uma habilidade de rank S...!"
+          },
+          {
+            english: "Card: I want to become like you. Effect: Activates automatically upon death. After dying to the enemy, you can copy one of their skills and make it your own. You cannot copy a skill from targets that have already killed you previously. Skills are randomly copied.",
+            portuguese: "Carta: Eu quero me tornar como você. Efeito: Ativa automaticamente após a morte. Depois de morrer para o inimigo, você pode copiar uma das habilidades dele e torná-la sua. Você não pode copiar uma habilidade de alvos que já o mataram anteriormente. As habilidades são copiadas aleatoriamente."
+          },
+          {
+            english: "You can copy one of the skills of someone who kills you and make it yours. However, you die!",
+            portuguese: "Você pode copiar uma das habilidades de alguém que te mata e torná-la sua. No entanto, você morre!"
+          },
+          {
+            english: "What kind of skill is this?!",
+            portuguese: "Que tipo de habilidade é essa?!?!"
+          }
+        ]
+      }
+      // Futuros capítulos podem ser adicionados aqui
+    ];
+
+    // Estado do aplicativo
+    let currentState = {
+      currentChapter: null,
+      currentMode: null, // 'easy' ou 'hard'
+      currentQuestions: [],
+      wrongAnswers: [],
+      currentQuestionIndex: 0,
+      correctCount: 0,
+      wrongCount: 0,
+      isReviewMode: false
+    };
+
+    // Elementos DOM
+    const elements = {
+      // Telas
+      mainMenu: document.getElementById('main-menu'),
+      chaptersMenu: document.getElementById('chapters-menu'),
+      practiceModeMenu: document.getElementById('practice-mode-menu'),
+      quizScreen: document.getElementById('quiz-screen'),
+      resultsScreen: document.getElementById('results-screen'),
+      
+      // Botões de navegação
+      storyModeBtn: document.getElementById('story-mode-btn'),
+      practiceModeBtn: document.getElementById('practice-mode-btn'),
+      backToMain: document.getElementById('back-to-main'),
+      backToChapters: document.getElementById('back-to-chapters'),
+      backToPractice: document.getElementById('back-to-practice'),
+      backToChaptersFromResults: document.getElementById('back-to-chapters-from-results'),
+      
+      // Elementos do quiz
+      chapterPracticeTitle: document.getElementById('chapter-practice-title'),
+      quizTitle: document.getElementById('quiz-title'),
+      quizSubtitle: document.getElementById('quiz-subtitle'),
+      questionNumber: document.getElementById('question-number'),
+      questionStats: document.getElementById('question-stats'),
+      progressBar: document.getElementById('progress-bar'),
+      questionText: document.getElementById('question-text'),
+      answerInput: document.getElementById('answer-input'),
+      submitAnswer: document.getElementById('submit-answer'),
+      
+      // Elementos de feedback
+      feedbackArea: document.getElementById('feedback-area'),
+      feedbackIcon: document.getElementById('feedback-icon'),
+      feedbackTitle: document.getElementById('feedback-title'),
+      correctAnswer: document.getElementById('correct-answer'),
+      vocabTable: document.getElementById('vocab-table'),
+      nextQuestion: document.getElementById('next-question'),
+      
+      // Elementos de resultados
+      resultsSubtitle: document.getElementById('results-subtitle'),
+      scoreCircle: document.getElementById('score-circle'),
+      scoreValue: document.getElementById('score-value'),
+      completionMessage: document.getElementById('completion-message'),
+      correctAnswers: document.getElementById('correct-answers'),
+      wrongAnswers: document.getElementById('wrong-answers'),
+      completionRate: document.getElementById('completion-rate'),
+      restartPractice: document.getElementById('restart-practice'),
+      
+      // Grid de capítulos
+      chaptersGrid: document.getElementById('chapters-grid'),
+      
+      // Botões de modo de prática
+      easyPracticeBtn: document.getElementById('easy-practice-btn'),
+      hardPracticeBtn: document.getElementById('hard-practice-btn')
+    };
+
+    // Inicialização
+    function init() {
+      renderChaptersGrid();
+      attachEventListeners();
+    }
+
+    // Anexar event listeners
+    function attachEventListeners() {
+      // Navegação principal
+      elements.storyModeBtn.addEventListener('click', showChaptersMenu);
+      elements.practiceModeBtn.addEventListener('click', showChaptersMenu);
+      elements.backToMain.addEventListener('click', showMainMenu);
+      elements.backToChapters.addEventListener('click', showChaptersMenu);
+      elements.backToPractice.addEventListener('click', showPracticeModeMenu);
+      elements.backToChaptersFromResults.addEventListener('click', showChaptersMenu);
+      
+      // Modos de prática
+      elements.easyPracticeBtn.addEventListener('click', () => startPractice('easy'));
+      elements.hardPracticeBtn.addEventListener('click', () => startPractice('hard'));
+      
+      // Quiz
+      elements.submitAnswer.addEventListener('click', checkAnswer);
+      elements.nextQuestion.addEventListener('click', nextQuestion);
+      elements.answerInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          if (elements.feedbackArea.classList.contains('hidden')) {
+            checkAnswer();
+          } else {
+            nextQuestion();
+          }
+        }
+      });
+      
+      // Reiniciar prática
+      elements.restartPractice.addEventListener('click', () => {
+        startPractice(currentState.currentMode);
+      });
+    }
+
+    // Renderizar grid de capítulos
+    function renderChaptersGrid() {
+      elements.chaptersGrid.innerHTML = CHAPTERS.map(chapter => `
+        <div class="chapter-card" data-chapter-id="${chapter.id}">
+          <div class="chapter-number">Capítulo ${chapter.id.toString().padStart(3, '0')}</div>
+          <div class="chapter-title">${chapter.title}</div>
+          <div class="chapter-stats">
+            <span>${chapter.phrases.length} frases</span>
+            <span><i class="fas fa-star"></i> ${chapter.id}.0</span>
+          </div>
+        </div>
+      `).join('');
+      
+      // Adicionar event listeners aos cards de capítulo
+      document.querySelectorAll('.chapter-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const chapterId = parseInt(card.getAttribute('data-chapter-id'));
+          const chapter = CHAPTERS.find(c => c.id === chapterId);
+          if (chapter) {
+            showPracticeModeMenu(chapter);
+          }
+        });
+      });
+    }
+
+    // Mostrar menu principal
+    function showMainMenu() {
+      hideAllScreens();
+      elements.mainMenu.classList.remove('hidden');
+    }
+
+    // Mostrar menu de capítulos
+    function showChaptersMenu() {
+      hideAllScreens();
+      elements.chaptersMenu.classList.remove('hidden');
+    }
+
+    // Mostrar menu de modo de prática
+    function showPracticeModeMenu(chapter) {
+      hideAllScreens();
+      if (chapter) {
+        currentState.currentChapter = chapter;
+        elements.chapterPracticeTitle.textContent = `Capítulo ${chapter.id.toString().padStart(3, '0')} - ${chapter.title}`;
+      }
+      elements.practiceModeMenu.classList.remove('hidden');
+    }
+
+    // Iniciar prática
+    function startPractice(mode) {
+      currentState.currentMode = mode;
+      currentState.currentQuestions = [...currentState.currentChapter.phrases];
+      currentState.wrongAnswers = [];
+      currentState.currentQuestionIndex = 0;
+      currentState.correctCount = 0;
+      currentState.wrongCount = 0;
+      currentState.isReviewMode = false;
+      
+      showQuizScreen();
+      loadQuestion();
+    }
+
+    // Mostrar tela de quiz
+    function showQuizScreen() {
+      hideAllScreens();
+      elements.quizScreen.classList.remove('hidden');
+      
+      const modeName = currentState.currentMode === 'easy' ? 'Fácil' : 'Difícil';
+      elements.quizTitle.textContent = `Prática ${modeName}`;
+      elements.quizSubtitle.textContent = currentState.currentMode === 'easy' 
+        ? 'Traduza do Inglês para Português' 
+        : 'Traduza do Português para Inglês';
+    }
+
+    // Carregar questão
+    function loadQuestion() {
+      const question = currentState.currentQuestions[currentState.currentQuestionIndex];
+      const totalQuestions = currentState.currentQuestions.length;
+      
+      // Atualizar interface
+      elements.questionNumber.textContent = currentState.isReviewMode 
+        ? `Revisão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`
+        : `Questão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`;
+      
+      elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
+      
+      // Atualizar barra de progresso
+      const progress = ((currentState.currentQuestionIndex) / totalQuestions) * 100;
+      elements.progressBar.style.width = `${progress}%`;
+      
+      // Definir texto da questão baseado no modo
+      elements.questionText.textContent = currentState.currentMode === 'easy' 
+        ? question.english 
+        : question.portuguese;
+      
+      // Limpar campos
+      elements.answerInput.value = '';
+      elements.feedbackArea.classList.add('hidden');
+      elements.answerInput.focus();
+    }
+
+    // Verificar resposta
+    function checkAnswer() {
+      const userAnswer = elements.answerInput.value.trim();
+      if (!userAnswer) return;
+      
+      const question = currentState.currentQuestions[currentState.currentQuestionIndex];
+      const correctAnswer = currentState.currentMode === 'easy' 
+        ? question.portuguese 
+        : question.english;
+      
+      // Verificar se a resposta está correta (comparação flexível)
+      const isCorrect = normalizeAnswer(userAnswer) === normalizeAnswer(correctAnswer);
+      
+      // Atualizar estatísticas
+      if (isCorrect) {
+        currentState.correctCount++;
+      } else {
+        currentState.wrongCount++;
+        // Adicionar à lista de respostas erradas para revisão
+        if (!currentState.isReviewMode) {
+          currentState.wrongAnswers.push(question);
+        }
+      }
+      
+      // Mostrar feedback
+      showFeedback(isCorrect, correctAnswer, question);
+    }
+
+    // Normalizar resposta para comparação
+    function normalizeAnswer(answer) {
+      return answer
+        .toLowerCase()
+        .replace(/[.,?!]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    // Mostrar feedback
+    function showFeedback(isCorrect, correctAnswer, question) {
+      // Configurar feedback visual
+      elements.feedbackIcon.className = isCorrect ? 'fas fa-check-circle' : 'fas fa-times-circle';
+      elements.feedbackTitle.textContent = isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta';
+      elements.feedbackIcon.style.color = isCorrect ? 'var(--success)' : 'var(--error)';
+      
+      // Mostrar resposta correta
+      elements.correctAnswer.textContent = correctAnswer;
+      
+      // Gerar tabela de vocabulário
+      generateVocabTable(question);
+      
+      // Mostrar área de feedback
+      elements.feedbackArea.classList.remove('hidden');
+    }
+
+    // Gerar tabela de vocabulário
+    function generateVocabTable(question) {
+      // Esta é uma implementação simplificada
+      // Em uma versão mais avançada, você poderia ter um dicionário completo
+      const englishWords = question.english.split(' ');
+      const portugueseWords = question.portuguese.split(' ');
+      
+      let tableHTML = '';
+      const maxRows = Math.min(englishWords.length, portugueseWords.length, 10);
+      
+      for (let i = 0; i < maxRows; i++) {
+        const enWord = englishWords[i] || '';
+        const ptWord = portugueseWords[i] || '';
+        
+        if (enWord.trim() && ptWord.trim()) {
+          tableHTML += `
+            <tr>
+              <td><strong>${enWord}</strong></td>
+              <td>${ptWord}</td>
+            </tr>
+          `;
+        }
+      }
+      
+      elements.vocabTable.innerHTML = tableHTML || `
+        <tr>
+          <td colspan="2" class="text-center">Não foi possível gerar o vocabulário para esta frase.</td>
+        </tr>
+      `;
+    }
+
+    // Próxima questão
+    function nextQuestion() {
+      currentState.currentQuestionIndex++;
+      
+      if (currentState.currentQuestionIndex < currentState.currentQuestions.length) {
+        loadQuestion();
+      } else {
+        // Verificar se há respostas erradas para revisão
+        if (!currentState.isReviewMode && currentState.wrongAnswers.length > 0) {
+          // Entrar no modo de revisão
+          currentState.isReviewMode = true;
+          currentState.currentQuestions = [...currentState.wrongAnswers];
+          currentState.currentQuestionIndex = 0;
+          currentState.wrongAnswers = [];
+          loadQuestion();
+        } else {
+          // Mostrar resultados finais
+          showResults();
+        }
+      }
+    }
+
+    // Mostrar resultados
+    function showResults() {
+      hideAllScreens();
+      elements.resultsScreen.classList.remove('hidden');
+      
+      const totalQuestions = currentState.currentChapter.phrases.length;
+      const correctPercentage = Math.round((currentState.correctCount / (currentState.correctCount + currentState.wrongCount)) * 100) || 0;
+      const completionPercentage = currentState.wrongCount === 0 ? 100 : Math.round((currentState.correctCount / totalQuestions) * 100);
+      
+      // Configurar círculo de pontuação
+      elements.scoreCircle.style.background = `conic-gradient(var(--primary) ${correctPercentage}%, var(--dark) 0%)`;
+      elements.scoreValue.textContent = `${correctPercentage}%`;
+      
+      // Mensagem de conclusão
+      if (completionPercentage === 100) {
+        elements.completionMessage.textContent = 'Parabéns! Domínio Total! 🎉';
+        elements.completionMessage.style.color = 'var(--success)';
+      } else if (completionPercentage >= 80) {
+        elements.completionMessage.textContent = 'Excelente! Quase Perfeito! 👏';
+        elements.completionMessage.style.color = 'var(--success)';
+      } else if (completionPercentage >= 60) {
+        elements.completionMessage.textContent = 'Bom Trabalho! Continue Assim! 💪';
+        elements.completionMessage.style.color = 'var(--warning)';
+      } else {
+        elements.completionMessage.textContent = 'Continue Praticando! Você Consegue! 📚';
+        elements.completionMessage.style.color = 'var(--error)';
+      }
+      
+      // Estatísticas
+      elements.correctAnswers.textContent = currentState.correctCount;
+      elements.wrongAnswers.textContent = currentState.wrongCount;
+      elements.completionRate.textContent = `${completionPercentage}%`;
+      
+      elements.resultsSubtitle.textContent = `Capítulo ${currentState.currentChapter.id.toString().padStart(3, '0')} - ${currentState.currentMode === 'easy' ? 'Prática Fácil' : 'Prática Difícil'}`;
+    }
+
+    // Esconder todas as telas
+    function hideAllScreens() {
+      elements.mainMenu.classList.add('hidden');
+      elements.chaptersMenu.classList.add('hidden');
+      elements.practiceModeMenu.classList.add('hidden');
+      elements.quizScreen.classList.add('hidden');
+      elements.resultsScreen.classList.add('hidden');
+    }
+
+    // Inicializar aplicativo quando a página carregar
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </body>
 </html>
