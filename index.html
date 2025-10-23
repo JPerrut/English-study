@@ -11,7 +11,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     :root {
       --primary: #6366f1;
       --primary-dark: #4f46e5;
@@ -25,7 +24,6 @@
       --error: #ef4444;
       --warning: #f59e0b;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, var(--darker), #1e1b4b);
@@ -36,7 +34,6 @@
       align-items: center;
       padding: 16px;
     }
-
     .container {
       width: 100%;
       max-width: 800px;
@@ -47,30 +44,25 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .header {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       padding: 24px;
       text-align: center;
       position: relative;
     }
-
     .header h1 {
       font-size: 32px;
       font-weight: 800;
       margin-bottom: 8px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
-
     .header p {
       font-size: 16px;
       opacity: 0.9;
     }
-
     .content {
       padding: 32px;
     }
-
     .btn {
       display: block;
       width: 100%;
@@ -86,7 +78,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .btn::after {
       content: '';
       position: absolute;
@@ -97,44 +88,36 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
       transition: left 0.5s;
     }
-
     .btn:hover::after {
       left: 100%;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
       box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
     }
-
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
     }
-
     .btn-secondary {
       background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
       color: var(--darker);
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
     }
-
     .btn-secondary:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
     }
-
     .btn-outline {
       background: transparent;
       border: 2px solid var(--primary);
       color: var(--primary);
     }
-
     .btn-outline:hover {
       background: var(--primary);
       color: white;
     }
-
     .btn-small {
       padding: 12px 20px;
       font-size: 16px;
@@ -142,14 +125,12 @@
       display: inline-block;
       margin-right: 12px;
     }
-
     .chapters-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 16px;
       margin-top: 24px;
     }
-
     .chapter-card {
       background: rgba(30, 41, 59, 0.7);
       border-radius: 12px;
@@ -159,32 +140,27 @@
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .chapter-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       border-color: var(--primary);
     }
-
     .chapter-number {
       font-size: 14px;
       color: var(--gray);
       margin-bottom: 8px;
     }
-
     .chapter-title {
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 12px;
     }
-
     .chapter-stats {
       display: flex;
       justify-content: space-between;
       font-size: 12px;
       color: var(--gray);
     }
-
     .question-container {
       background: rgba(30, 41, 59, 0.7);
       border-radius: 16px;
@@ -192,19 +168,16 @@
       margin-bottom: 24px;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .question-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
     }
-
     .question-number {
       font-size: 14px;
       color: var(--gray);
     }
-
     .progress-bar {
       height: 6px;
       background: rgba(255, 255, 255, 0.1);
@@ -212,13 +185,11 @@
       overflow: hidden;
       margin-bottom: 20px;
     }
-
     .progress {
       height: 100%;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
       transition: width 0.5s ease;
     }
-
     .question-text {
       font-size: 20px;
       font-weight: 600;
@@ -229,11 +200,9 @@
       background: rgba(15, 23, 42, 0.5);
       border-radius: 12px;
     }
-
     .input-container {
       margin-bottom: 24px;
     }
-
     .answer-input {
       width: 100%;
       padding: 16px 20px;
@@ -244,13 +213,11 @@
       font-size: 18px;
       transition: all 0.3s ease;
     }
-
     .answer-input:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
     }
-
     .feedback-container {
       background: rgba(15, 23, 42, 0.7);
       border-radius: 12px;
@@ -258,7 +225,6 @@
       margin-top: 20px;
       border-left: 4px solid var(--primary);
     }
-
     .feedback-title {
       font-size: 18px;
       font-weight: 600;
@@ -267,7 +233,6 @@
       align-items: center;
       gap: 8px;
     }
-
     .correct-answer {
       font-size: 18px;
       font-weight: 600;
@@ -277,87 +242,73 @@
       background: rgba(16, 185, 129, 0.1);
       border-radius: 8px;
     }
-
     .vocab-section {
       margin-top: 20px;
     }
-
     .vocab-title {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 12px;
       color: var(--secondary);
     }
-
     .vocab-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
     }
-
     .vocab-table th, .vocab-table td {
       padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .vocab-table th {
       color: var(--gray);
       font-weight: 500;
     }
-
     .word-feedback {
       margin: 16px 0;
       padding: 16px;
       background: rgba(15, 23, 42, 0.5);
       border-radius: 8px;
     }
-
     .word-feedback-title {
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 12px;
       color: var(--secondary);
     }
-
     .word-feedback-content {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
-
     .word-bubble {
       padding: 8px 12px;
       border-radius: 20px;
       font-size: 14px;
       font-weight: 500;
     }
-
     .word-correct {
       background: rgba(16, 185, 129, 0.2);
       color: var(--success);
       border: 1px solid var(--success);
     }
-
     .word-wrong-position {
       background: rgba(245, 158, 11, 0.2);
       color: var(--warning);
       border: 1px solid var(--warning);
     }
-
     .word-incorrect {
       background: rgba(239, 68, 68, 0.2);
       color: var(--error);
       border: 1px solid var(--error);
     }
-
     .word-missing {
       background: rgba(100, 116, 139, 0.2);
       color: var(--gray);
       border: 1px solid var(--gray);
       text-decoration: line-through;
     }
-
     .retry-container {
       text-align: center;
       margin-top: 20px;
@@ -366,38 +317,30 @@
       border-radius: 8px;
       border-left: 4px solid var(--warning);
     }
-
     .retry-message {
       font-size: 16px;
       margin-bottom: 12px;
       color: var(--warning);
     }
-
     .hidden {
       display: none !important;
     }
-
     .text-center {
       text-align: center;
     }
-
     .mt-4 {
       margin-top: 24px;
     }
-
     .mb-4 {
       margin-bottom: 24px;
     }
-
     .icon {
       margin-right: 8px;
     }
-
     .score-display {
       text-align: center;
       padding: 32px;
     }
-
     .score-circle {
       width: 120px;
       height: 120px;
@@ -409,7 +352,6 @@
       margin: 0 auto 24px;
       position: relative;
     }
-
     .score-circle::before {
       content: '';
       position: absolute;
@@ -418,59 +360,48 @@
       background: var(--darker);
       border-radius: 50%;
     }
-
     .score-value {
       position: relative;
       z-index: 1;
       font-size: 28px;
       font-weight: 700;
     }
-
     .completion-message {
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 16px;
     }
-
     .stats {
       display: flex;
       justify-content: space-around;
       margin: 24px 0;
     }
-
     .stat {
       text-align: center;
     }
-
     .stat-value {
       font-size: 24px;
       font-weight: 700;
       color: var(--primary);
     }
-
     .stat-label {
       font-size: 14px;
       color: var(--gray);
     }
-
     @media (max-width: 600px) {
       .content {
         padding: 20px;
       }
-      
       .header h1 {
         font-size: 24px;
       }
-      
       .question-text {
         font-size: 18px;
       }
-      
       .btn {
         padding: 14px 20px;
         font-size: 16px;
       }
-      
       .chapters-grid {
         grid-template-columns: 1fr;
       }
@@ -491,7 +422,6 @@
         </button>
       </div>
     </div>
-
     <!-- Seleção de Capítulo -->
     <div id="chapters-menu" class="hidden">
       <div class="header">
@@ -507,14 +437,26 @@
         </div>
       </div>
     </div>
-
-    <!-- Seleção de Modo de Prática -->
-    <div id="practice-mode-menu" class="hidden">
+    <!-- Seleção de Nível -->
+    <div id="level-menu" class="hidden">
       <div class="header">
         <button id="back-to-chapters" class="btn btn-outline btn-small">
           <i class="fas fa-arrow-left icon"></i>Voltar
         </button>
-        <h1 id="chapter-practice-title">Capítulo </h1>
+        <h1 id="chapter-level-title">Capítulo </h1>
+        <p>Escolha um nível para praticar</p>
+      </div>
+      <div class="content" id="levels-grid">
+        <!-- Níveis serão gerados dinamicamente -->
+      </div>
+    </div>
+    <!-- Seleção de Modo de Prática -->
+    <div id="practice-mode-menu" class="hidden">
+      <div class="header">
+        <button id="back-to-levels" class="btn btn-outline btn-small">
+          <i class="fas fa-arrow-left icon"></i>Voltar
+        </button>
+        <h1 id="chapter-practice-title">Nível </h1>
         <p>Selecione o modo de prática</p>
       </div>
       <div class="content">
@@ -528,7 +470,6 @@
         </button>
       </div>
     </div>
-
     <!-- Tela de Questões -->
     <div id="quiz-screen" class="hidden">
       <div class="header">
@@ -541,7 +482,7 @@
       <div class="content">
         <div class="question-container">
           <div class="question-header">
-            <div class="question-number" id="question-number">Questão 1 de 38</div>
+            <div class="question-number" id="question-number">Questão 1 de 5</div>
             <div class="question-stats" id="question-stats">Acertos: 0 | Erros: 0</div>
           </div>
           <div class="progress-bar">
@@ -552,15 +493,14 @@
             <input type="text" class="answer-input" id="answer-input" placeholder="Digite sua tradução aqui...">
           </div>
           <button id="submit-answer" class="btn btn-primary">Verificar Resposta</button>
+          <button id="skip-button" class="btn btn-outline mt-4">Pular Frase</button>
         </div>
-
         <div id="feedback-area" class="feedback-container hidden">
           <div class="feedback-title">
             <i class="fas fa-info-circle" id="feedback-icon"></i>
             <span id="feedback-title-text">Feedback</span>
           </div>
           <div class="correct-answer" id="correct-answer"></div>
-          
           <div id="word-feedback-area" class="word-feedback hidden">
             <div class="word-feedback-title">
               <i class="fas fa-spell-check icon"></i>Análise das Palavras:
@@ -569,14 +509,12 @@
               <!-- Conteúdo gerado dinamicamente -->
             </div>
           </div>
-
           <div id="retry-container" class="retry-container hidden">
             <div class="retry-message">
               <i class="fas fa-redo-alt icon"></i>Tente novamente corrigindo as palavras destacadas
             </div>
             <button id="retry-button" class="btn btn-primary btn-small">Tentar Novamente</button>
           </div>
-
           <div class="vocab-section">
             <div class="vocab-title">
               <i class="fas fa-book icon"></i>Tradução das Palavras
@@ -589,7 +527,6 @@
         </div>
       </div>
     </div>
-
     <!-- Tela de Resultados -->
     <div id="results-screen" class="hidden">
       <div class="header">
@@ -622,241 +559,69 @@
       </div>
     </div>
   </div>
-
   <script>
-    // Dados das frases organizadas por capítulo - TODAS AS 38 FRASES
+    // Dados organizados por capítulo e nível
     const CHAPTERS = [
       {
         id: 1,
         title: "Chapter 001",
         description: "O Início da Jornada",
-        phrases: [
+        levels: [
           {
-            english: "I'm only stating facts. Who doesn't know what he's like? The broadcasting companies already know but they're still allowing it.",
-            portuguese: "Eu só estou declarando fatos. Quem não sabe como ele é? As emissoras de TV já sabem, mas ainda estão permitindo isso.",
-            alternativeTranslations: []
-          },
-          {
-            english: "I want to be like flame emperor too",
-            portuguese: "Eu também quero ser como o Imperador das Chamas.",
-            alternativeTranslations: []
-          },
-          {
-            english: "I don't know how saint can date him with his personality... is that why she's called the saint?",
-            portuguese: "Eu não sei como a santa consegue namorar ele com a personalidade dele... será que é por isso que ela é chamada de santa?",
-            alternativeTranslations: []
-          },
-          {
-            english: "What?!?! Saint is dating Flame Emperor?!?!",
-            portuguese: "O quê?!?! A Santa está namorando o Imperador das Chamas?!?!",
-            alternativeTranslations: []
-          },
-          {
-            english: "Yeah my friend's a hunter and he said he saw them together",
-            portuguese: "Sim, meu amigo é um caçador e ele disse que viu os dois juntos.",
-            alternativeTranslations: []
-          },
-          {
-            english: "What are you talking about. Saint's my friend and she said it's not true.",
-            portuguese: "O que você está falando? A Santa é minha amiga e ela disse que não é verdade.",
-            alternativeTranslations: [
-              "Do que você está falando? A Santa é minha amiga e ela disse que não é verdade."
+            id: 1,
+            name: "Nível 1",
+            description: "Frases curtas e diretas",
+            estimatedTime: "~1 minuto",
+            phrases: [
+              { english: "I'm so mad", portuguese: "Eu estou tão bravo.", alternativeTranslations: ["Eu estou com tanta raiva.", "Eu estou tão irritado."] },
+              { english: "What kind of skill is this?!", portuguese: "Que tipo de habilidade é essa?!", alternativeTranslations: [] },
+              { english: "Who's Been saying the same thing", portuguese: "Quem tem dito a mesma coisa?", alternativeTranslations: ["Quem andou dizendo a mesma coisa?"] },
+              { english: "The tower is moved by your determination", portuguese: "A torre é movida pela sua determinação", alternativeTranslations: [] },
+              { english: "The tower praises you for your achievements.", portuguese: "A torre te elogia pelas suas conquistas.", alternativeTranslations: ["A torre te parabeniza pelas suas conquistas."] }
             ]
           },
           {
-            english: "Who's Been saying the same thing",
-            portuguese: "Quem tem dito a mesma coisa?",
-            alternativeTranslations: [
-              "Quem andou dizendo a mesma coisa?"
+            id: 2,
+            name: "Nível 2",
+            description: "Frases com um pouco mais de contexto",
+            estimatedTime: "~1 minuto",
+            phrases: [
+              { english: "Could it be... a 'skill card'", portuguese: "Será que é... uma 'carta de habilidade'?", alternativeTranslations: [] },
+              { english: "What did you mean by that?!", portuguese: "O que você quis dizer com isso?!", alternativeTranslations: ["O que você quis dizer com aquilo?!"] },
+              { english: "The tower rewards you for your honest efforts.", portuguese: "A torre recompensa você pelos seus esforços honestos.", alternativeTranslations: [] },
+              { english: "This is different from what I saw in the videos!?", portuguese: "Isto é diferente do que eu vi nos vídeos!?", alternativeTranslations: [] },
+              { english: "An unsightly envy that is yet to be found in history!", portuguese: "Uma inveja desagradável que ainda não se encontra na história!", alternativeTranslations: ["Uma inveja nojenta que ainda não se encontra na história!"] }
             ]
           },
           {
-            english: "Then, Mr. Flame emperor... must be nice to have everyone interested in every word he says",
-            portuguese: "Então, Sr. Imperador das Chamas... deve ser bom ter todo mundo interessado em cada palavra que ele diz.",
-            alternativeTranslations: []
-          },
-          {
-            english: "And I heard he has a lot of assets... I'm so jealous.",
-            portuguese: "E eu ouvi dizer que ele tem muitos bens... Eu estou com tanta inveja.",
-            alternativeTranslations: [
-              "E eu ouvi dizer que ele tem muitos ativos... Eu estou com tanta inveja."
+            id: 3,
+            name: "Nível 3",
+            description: "Frases com personagens e emoção",
+            estimatedTime: "~1 minuto",
+            phrases: [
+              { english: "I want to be like flame emperor too", portuguese: "Eu também quero ser como o Imperador das Chamas.", alternativeTranslations: [] },
+              { english: "What?!?! Saint is dating Flame Emperor?!?!", portuguese: "O quê?!?! A Santa está namorando o Imperador das Chamas?!?!", alternativeTranslations: [] },
+              { english: "I want to succeed with my own skills too", portuguese: "Eu também quero ter sucesso com as minhas próprias habilidades.", alternativeTranslations: [] },
+              { english: "On top of that, a gold card is an S-rank skill...!", portuguese: "Além disso, um cartão dourado é uma habilidade de rank S...!", alternativeTranslations: [] },
+              { english: "A hunter who literally writes legends.", portuguese: "Um caçador que literalmente escreve lendas.", alternativeTranslations: [] }
             ]
-          },
-          {
-            english: "If this world was a novel a person like him would definitely be the main character. And I would just be an extra.",
-            portuguese: "Se este mundo fosse um romance, uma pessoa como ele seria definitivamente o personagem principal. E eu seria apenas um figurante.",
-            alternativeTranslations: []
-          },
-          {
-            english: "Mr. Flame Emperor, there are many aspiring hunters who look up to you and try their best.",
-            portuguese: "Sr. Imperador das Chamas, há muitos caçadores aspirantes que admiram você e dão o seu melhor.",
-            alternativeTranslations: []
-          },
-          {
-            english: "Awakening soon after entering the tower in his early-20's, defeating a boss monster that Black Dragon has tried to defeat for 10 years, less than a month after.",
-            portuguese: "Despertando logo após entrar na torre no início dos seus 20 e poucos anos, (ele) derrotou um chefe monstro que o Dragão Negro tentava derrotar há 10 anos, menos de um mês depois.",
-            alternativeTranslations: []
-          },
-          {
-            english: "A hunter who literally writes legends.",
-            portuguese: "Um caçador que literalmente escreve lendas.",
-            alternativeTranslations: []
-          },
-          {
-            english: "Please tell your aspiring fans the key to success in one phrase!",
-            portuguese: "Por favor, diga aos seus fãs aspirantes a chave para o sucesso em uma frase!",
-            alternativeTranslations: []
-          },
-          {
-            english: "I'm really just gonna say a few words so you guys figure it out.",
-            portuguese: "Eu vou dizer só algumas palavras mesmo para que vocês descubram.",
-            alternativeTranslations: [
-              "Eu vou dizer só algumas palavras mesmo para que vocês entendam.",
-              "Eu vou dizer só algumas palavras mesmo para que vocês desvendem."
-            ]
-          },
-          {
-            english: "Those who will succeed will succeed. But, don't get in my way even if you succeed. Or I'll kill you.",
-            portuguese: "Aqueles que terão sucesso terão sucesso. Mas, não entre no meu caminho mesmo que você tenha sucesso. Ou eu vou te matar.",
-            alternativeTranslations: []
-          },
-          {
-            english: "What did you mean by that?!",
-            portuguese: "O que você quis dizer com isso?!",
-            alternativeTranslations: [
-              "O que você quis dizer com aquilo?!"
-            ]
-          },
-          {
-            english: "... with this we will now end the broadcast. To our viewers who are watching.",
-            portuguese: "... com isso, nós encerraremos a transmissão agora. Aos nossos telespectadores que estão assistindo.",
-            alternativeTranslations: []
-          },
-          {
-            english: "I'm so mad",
-            portuguese: "Eu estou tão bravo.",
-            alternativeTranslations: [
-              "Eu estou com tanta raiva.",
-              "Eu estou tão irritado."
-            ]
-          },
-          {
-            english: "Is it okay to just ignore people when you become that great?",
-            portuguese: "É certo apenas ignorar as pessoas quando você se torna tão grandioso?",
-            alternativeTranslations: [
-              "É aceitável apenas ignorar as pessoas quando você se torna tão grandioso?"
-            ]
-          },
-          {
-            english: "It was the reporter who was being ignored but it felt like I was...",
-            portuguese: "Era o repórter que estava sendo ignorado, mas parecia que era eu...",
-            alternativeTranslations: []
-          },
-          {
-            english: "If I just had one decent skill like the Flame Emperor then I wouldn't need to live in this damned studio... and I wouldn't be looked down on for being the lowest F-class hunter without a single skill...",
-            portuguese: "Se eu tivesse apenas uma habilidade decente como a do Imperador das Chamas, então eu não precisaria viver neste estúdio maldito... e eu não seria menosprezado por ser o caçador de classe F mais baixo sem uma única habilidade...",
-            alternativeTranslations: []
-          },
-          {
-            english: "I want to become just like the flame emperor",
-            portuguese: "Eu quero me tornar exatamente como o Imperador das Chamas.",
-            alternativeTranslations: []
-          },
-          {
-            english: "I want to succeed with my own skills too",
-            portuguese: "Eu também quero ter sucesso com as minhas próprias habilidades.",
-            alternativeTranslations: []
-          },
-          {
-            english: "How great would it be if the Flame Emperor's skill was mine...?",
-            portuguese: "Quão incrível seria se a habilidade do Imperador das Chamas fosse minha...?",
-            alternativeTranslations: []
-          },
-          {
-            english: "This is a scene that I've only seen a thousand times in videos...",
-            portuguese: "Esta é uma cena que eu só vi mil vezes em vídeos...",
-            alternativeTranslations: []
-          },
-          {
-            english: "Could it be... a 'skill card'",
-            portuguese: "Será que é... uma 'carta de habilidade'?",
-            alternativeTranslations: []
-          },
-          {
-            english: "An unsightly envy that is yet to be found in history!",
-            portuguese: "Uma inveja desagradável que ainda não se encontra na história!",
-            alternativeTranslations: [
-              "Uma inveja nojenta que ainda não se encontra na história!"
-            ]
-          },
-          {
-            english: "The tower is moved by your determination",
-            portuguese: "A torre é movida pela sua determinação",
-            alternativeTranslations: []
-          },
-          {
-            english: "The tower rewards you for your honest efforts.",
-            portuguese: "A torre recompensa você pelos seus esforços honestos.",
-            alternativeTranslations: []
-          },
-          {
-            english: "The tower praises you for your achievements.",
-            portuguese: "A torre te elogia pelas suas conquistas.",
-            alternativeTranslations: [
-              "A torre te parabeniza pelas suas conquistas."
-            ]
-          },
-          {
-            english: "This is different from what I saw in the videos!?",
-            portuguese: "Isto é diferente do que eu vi nos vídeos!?",
-            alternativeTranslations: []
-          },
-          {
-            english: "Nah. Why should I care about its tone when I just received a skill card.",
-            portuguese: "Nah. Por que eu deveria me importar com o tom disso quando eu acabei de receber uma carta de habilidade?",
-            alternativeTranslations: []
-          },
-          {
-            english: "This is the moment I've been waiting for ever since I got here...",
-            portuguese: "Este é o momento que eu estava esperando desde que cheguei aqui...",
-            alternativeTranslations: []
-          },
-          {
-            english: "On top of that, a gold card is an S-rank skill...!",
-            portuguese: "Além disso, um cartão dourado é uma habilidade de rank S...!",
-            alternativeTranslations: []
-          },
-          {
-            english: "Card: I want to become like you. Effect: Activates automatically upon death. After dying to the enemy, you can copy one of their skills and make it your own. You cannot copy a skill from targets that have already killed you previously. Skills are randomly copied.",
-            portuguese: "Carta: Eu quero me tornar como você. Efeito: Ativa automaticamente após a morte. Depois de morrer para o inimigo, você pode copiar uma das habilidades dele e torná-la sua. Você não pode copiar uma habilidade de alvos que já o mataram anteriormente. As habilidades são copiadas aleatoriamente.",
-            alternativeTranslations: []
-          },
-          {
-            english: "You can copy one of the skills of someone who kills you and make it yours. However, you die!",
-            portuguese: "Você pode copiar uma das habilidades de alguém que te mata e torná-la sua. No entanto, você morre!",
-            alternativeTranslations: []
-          },
-          {
-            english: "What kind of skill is this?!",
-            portuguese: "Que tipo de habilidade é essa?!",
-            alternativeTranslations: []
           }
         ]
       }
-      // Futuros capítulos podem ser adicionados aqui
     ];
 
     // Estado do aplicativo
     let currentState = {
       currentChapter: null,
-      currentMode: null, // 'easy' ou 'hard'
+      currentLevel: null,
+      currentMode: null,
       currentQuestions: [],
       wrongAnswers: [],
       currentQuestionIndex: 0,
       correctCount: 0,
       wrongCount: 0,
       isReviewMode: false,
-      currentAttempt: 1, // 1 = primeira tentativa, 2 = segunda tentativa
+      currentAttempt: 1,
       currentQuestionAnalysis: null
     };
 
@@ -865,18 +630,19 @@
       // Telas
       mainMenu: document.getElementById('main-menu'),
       chaptersMenu: document.getElementById('chapters-menu'),
+      levelMenu: document.getElementById('level-menu'),
       practiceModeMenu: document.getElementById('practice-mode-menu'),
       quizScreen: document.getElementById('quiz-screen'),
       resultsScreen: document.getElementById('results-screen'),
-      
       // Botões de navegação
       storyModeBtn: document.getElementById('story-mode-btn'),
       backToMain: document.getElementById('back-to-main'),
       backToChapters: document.getElementById('back-to-chapters'),
+      backToLevels: document.getElementById('back-to-levels'),
       backToPractice: document.getElementById('back-to-practice'),
       backToChaptersFromResults: document.getElementById('back-to-chapters-from-results'),
-      
       // Elementos do quiz
+      chapterLevelTitle: document.getElementById('chapter-level-title'),
       chapterPracticeTitle: document.getElementById('chapter-practice-title'),
       quizTitle: document.getElementById('quiz-title'),
       quizSubtitle: document.getElementById('quiz-subtitle'),
@@ -886,7 +652,7 @@
       questionText: document.getElementById('question-text'),
       answerInput: document.getElementById('answer-input'),
       submitAnswer: document.getElementById('submit-answer'),
-      
+      skipButton: document.getElementById('skip-button'),
       // Elementos de feedback
       feedbackArea: document.getElementById('feedback-area'),
       feedbackIcon: document.getElementById('feedback-icon'),
@@ -898,7 +664,6 @@
       wordFeedbackContent: document.getElementById('word-feedback-content'),
       retryContainer: document.getElementById('retry-container'),
       retryButton: document.getElementById('retry-button'),
-      
       // Elementos de resultados
       resultsSubtitle: document.getElementById('results-subtitle'),
       scoreCircle: document.getElementById('score-circle'),
@@ -908,10 +673,9 @@
       wrongAnswers: document.getElementById('wrong-answers'),
       completionRate: document.getElementById('completion-rate'),
       restartPractice: document.getElementById('restart-practice'),
-      
-      // Grid de capítulos
+      // Grids
       chaptersGrid: document.getElementById('chapters-grid'),
-      
+      levelsGrid: document.getElementById('levels-grid'),
       // Botões de modo de prática
       easyPracticeBtn: document.getElementById('easy-practice-btn'),
       hardPracticeBtn: document.getElementById('hard-practice-btn')
@@ -925,19 +689,24 @@
 
     // Anexar event listeners
     function attachEventListeners() {
-      // Navegação principal
       elements.storyModeBtn.addEventListener('click', showChaptersMenu);
       elements.backToMain.addEventListener('click', showMainMenu);
       elements.backToChapters.addEventListener('click', showChaptersMenu);
-      elements.backToPractice.addEventListener('click', () => showPracticeModeMenu(currentState.currentChapter));
+      elements.backToLevels.addEventListener('click', () => {
+        if (currentState.currentChapter) {
+          showLevelMenu(currentState.currentChapter);
+        }
+      });
+      elements.backToPractice.addEventListener('click', () => {
+        if (currentState.currentLevel) {
+          showPracticeModeMenu(currentState.currentLevel);
+        }
+      });
       elements.backToChaptersFromResults.addEventListener('click', showChaptersMenu);
-      
-      // Modos de prática
       elements.easyPracticeBtn.addEventListener('click', () => startPractice('easy'));
       elements.hardPracticeBtn.addEventListener('click', () => startPractice('hard'));
-      
-      // Quiz
       elements.submitAnswer.addEventListener('click', checkAnswer);
+      elements.skipButton.addEventListener('click', skipQuestion);
       elements.nextQuestion.addEventListener('click', nextQuestion);
       elements.retryButton.addEventListener('click', enableRetry);
       elements.answerInput.addEventListener('keypress', (e) => {
@@ -951,71 +720,82 @@
           }
         }
       });
-      
-      // Reiniciar prática
       elements.restartPractice.addEventListener('click', () => {
         startPractice(currentState.currentMode);
       });
     }
 
-    // Renderizar grid de capítulos
+    // Renderizar capítulos
     function renderChaptersGrid() {
       elements.chaptersGrid.innerHTML = CHAPTERS.map(chapter => `
         <div class="chapter-card" data-chapter-id="${chapter.id}">
           <div class="chapter-number">Capítulo ${chapter.id.toString().padStart(3, '0')}</div>
           <div class="chapter-title">${chapter.title}</div>
           <div class="chapter-stats">
-            <span>${chapter.phrases.length} frases</span>
+            <span>3 níveis</span>
             <span><i class="fas fa-star"></i> ${chapter.id}.0</span>
           </div>
         </div>
       `).join('');
-      
-      // Adicionar event listeners aos cards de capítulo
+
       document.querySelectorAll('.chapter-card').forEach(card => {
         card.addEventListener('click', () => {
           const chapterId = parseInt(card.getAttribute('data-chapter-id'));
           const chapter = CHAPTERS.find(c => c.id === chapterId);
           if (chapter) {
-            showPracticeModeMenu(chapter);
+            showLevelMenu(chapter);
           }
         });
       });
     }
 
-    // Mostrar menu principal
-    function showMainMenu() {
+    // Mostrar menu de níveis
+    function showLevelMenu(chapter) {
       hideAllScreens();
-      elements.mainMenu.classList.remove('hidden');
-    }
+      currentState.currentChapter = chapter;
+      elements.chapterLevelTitle.textContent = `Capítulo ${chapter.id.toString().padStart(3, '0')} - ${chapter.title}`;
+      elements.levelsGrid.innerHTML = chapter.levels.map(level => `
+        <div class="chapter-card" data-level-id="${level.id}">
+          <div class="chapter-number">${level.name}</div>
+          <div class="chapter-title">${level.description}</div>
+          <div class="chapter-stats">
+            <span>5 frases</span>
+            <span>${level.estimatedTime}</span>
+          </div>
+        </div>
+      `).join('');
 
-    // Mostrar menu de capítulos
-    function showChaptersMenu() {
-      hideAllScreens();
-      elements.chaptersMenu.classList.remove('hidden');
+      document.querySelectorAll('.chapter-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const levelId = parseInt(card.getAttribute('data-level-id'));
+          const level = chapter.levels.find(l => l.id === levelId);
+          if (level) {
+            showPracticeModeMenu(level);
+          }
+        });
+      });
+
+      elements.levelMenu.classList.remove('hidden');
     }
 
     // Mostrar menu de modo de prática
-    function showPracticeModeMenu(chapter) {
+    function showPracticeModeMenu(level) {
       hideAllScreens();
-      if (chapter) {
-        currentState.currentChapter = chapter;
-        elements.chapterPracticeTitle.textContent = `Capítulo ${chapter.id.toString().padStart(3, '0')} - ${chapter.title}`;
-      }
+      currentState.currentLevel = level;
+      elements.chapterPracticeTitle.textContent = `${level.name} - ${level.description}`;
       elements.practiceModeMenu.classList.remove('hidden');
     }
 
     // Iniciar prática
     function startPractice(mode) {
       currentState.currentMode = mode;
-      currentState.currentQuestions = [...currentState.currentChapter.phrases];
+      currentState.currentQuestions = [...currentState.currentLevel.phrases];
       currentState.wrongAnswers = [];
       currentState.currentQuestionIndex = 0;
       currentState.correctCount = 0;
       currentState.wrongCount = 0;
       currentState.isReviewMode = false;
       currentState.currentAttempt = 1;
-      
       showQuizScreen();
       loadQuestion();
     }
@@ -1024,11 +804,10 @@
     function showQuizScreen() {
       hideAllScreens();
       elements.quizScreen.classList.remove('hidden');
-      
       const modeName = currentState.currentMode === 'easy' ? 'Fácil' : 'Difícil';
       elements.quizTitle.textContent = `Prática ${modeName}`;
-      elements.quizSubtitle.textContent = currentState.currentMode === 'easy' 
-        ? 'Traduza do Inglês para Português' 
+      elements.quizSubtitle.textContent = currentState.currentMode === 'easy'
+        ? 'Traduza do Inglês para Português'
         : 'Traduza do Português para Inglês';
     }
 
@@ -1036,24 +815,13 @@
     function loadQuestion() {
       const question = currentState.currentQuestions[currentState.currentQuestionIndex];
       const totalQuestions = currentState.currentQuestions.length;
-      
-      // Atualizar interface
-      elements.questionNumber.textContent = currentState.isReviewMode 
-        ? `Revisão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`
-        : `Questão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`;
-      
+      elements.questionNumber.textContent = `Questão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`;
       elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
-      
-      // Atualizar barra de progresso
-      const progress = ((currentState.currentQuestionIndex) / totalQuestions) * 100;
+      const progress = (currentState.currentQuestionIndex / totalQuestions) * 100;
       elements.progressBar.style.width = `${progress}%`;
-      
-      // Definir texto da questão baseado no modo
-      elements.questionText.textContent = currentState.currentMode === 'easy' 
-        ? question.english 
+      elements.questionText.textContent = currentState.currentMode === 'easy'
+        ? question.english
         : question.portuguese;
-      
-      // Limpar campos
       elements.answerInput.value = '';
       elements.feedbackArea.classList.add('hidden');
       elements.wordFeedbackArea.classList.add('hidden');
@@ -1062,154 +830,100 @@
       currentState.currentAttempt = 1;
     }
 
+    // Pular questão
+    function skipQuestion() {
+      currentState.wrongCount++;
+      currentState.currentQuestionIndex++;
+      if (currentState.currentQuestionIndex < currentState.currentQuestions.length) {
+        loadQuestion();
+      } else {
+        showResults();
+      }
+    }
+
     // Verificar resposta
     function checkAnswer() {
       const userAnswer = elements.answerInput.value.trim();
       if (!userAnswer) return;
-      
       const question = currentState.currentQuestions[currentState.currentQuestionIndex];
       const correctAnswers = [question.portuguese, ...question.alternativeTranslations];
       const isEasyMode = currentState.currentMode === 'easy';
-      
-      // Verificar se a resposta está correta (comparação flexível)
       const analysis = analyzeAnswer(userAnswer, correctAnswers, isEasyMode);
       const isCorrect = analysis.isCorrect;
-      
-      // Mostrar feedback
       showFeedback(isCorrect, correctAnswers[0], question, analysis);
-      
-      // Atualizar estatísticas apenas na segunda tentativa ou se estiver correto
       if (isCorrect || currentState.currentAttempt === 2) {
         if (isCorrect) {
           currentState.correctCount++;
         } else {
           currentState.wrongCount++;
-          // Adicionar à lista de respostas erradas para revisão
           if (!currentState.isReviewMode) {
             currentState.wrongAnswers.push(question);
           }
         }
-        
-        // Atualizar estatísticas na tela
         elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
       }
     }
 
-    // Analisar resposta com sistema inteligente
+    // Funções de análise (mantidas do original)
     function analyzeAnswer(userAnswer, correctAnswers, isEasyMode) {
-      // Normalizar respostas para comparação
       const normalizedUser = normalizeText(userAnswer);
       const normalizedCorrects = correctAnswers.map(ca => normalizeText(ca));
-      
-      // Verificar se corresponde exatamente a alguma resposta correta
       for (const correct of normalizedCorrects) {
         if (normalizedUser === correct) {
-          return {
-            isCorrect: true,
-            wordAnalysis: []
-          };
+          return { isCorrect: true, wordAnalysis: [] };
         }
       }
-      
-      // Se não corresponde exatamente, fazer análise palavra por palavra
-      const userWords = normalizedUser.split(/\s+/).filter(word => word.length > 0);
-      const correctWords = normalizedCorrects[0].split(/\s+/).filter(word => word.length > 0);
-      
+      const userWords = normalizedUser.split(/\s+/).filter(w => w);
+      const correctWords = normalizedCorrects[0].split(/\s+/).filter(w => w);
       const wordAnalysis = [];
-      const usedCorrectWords = new Set();
-      
-      // Analisar cada palavra do usuário
-      userWords.forEach(userWord => {
-        let bestMatch = null;
-        let bestMatchIndex = -1;
-        
-        // Encontrar a melhor correspondência nas palavras corretas
-        correctWords.forEach((correctWord, index) => {
-          if (!usedCorrectWords.has(index)) {
-            const similarity = calculateSimilarity(userWord, correctWord);
-            if (similarity > 0.6) { // Limite de similaridade
-              if (!bestMatch || similarity > bestMatch.similarity) {
-                bestMatch = { word: correctWord, index, similarity };
-              }
+      const used = new Set();
+      userWords.forEach(uw => {
+        let best = null;
+        correctWords.forEach((cw, i) => {
+          if (!used.has(i)) {
+            const sim = calculateSimilarity(uw, cw);
+            if (sim > 0.6 && (!best || sim > best.similarity)) {
+              best = { word: cw, index: i, similarity: sim };
             }
           }
         });
-        
-        if (bestMatch) {
-          usedCorrectWords.add(bestMatch.index);
-          wordAnalysis.push({
-            userWord,
-            correctWord: bestMatch.word,
-            status: userWord === bestMatch.word ? 'correct' : 'wrong-position',
-            position: bestMatch.index
-          });
+        if (best) {
+          used.add(best.index);
+          wordAnalysis.push({ userWord: uw, correctWord: best.word, status: uw === best.word ? 'correct' : 'wrong-position', position: best.index });
         } else {
-          wordAnalysis.push({
-            userWord,
-            correctWord: null,
-            status: 'incorrect',
-            position: -1
-          });
+          wordAnalysis.push({ userWord: uw, correctWord: null, status: 'incorrect', position: -1 });
         }
       });
-      
-      // Identificar palavras faltantes
-      correctWords.forEach((correctWord, index) => {
-        if (!usedCorrectWords.has(index)) {
-          wordAnalysis.push({
-            userWord: null,
-            correctWord,
-            status: 'missing',
-            position: index
-          });
+      correctWords.forEach((cw, i) => {
+        if (!used.has(i)) {
+          wordAnalysis.push({ userWord: null, correctWord: cw, status: 'missing', position: i });
         }
       });
-      
-      // Ordenar análise pela posição correta
       wordAnalysis.sort((a, b) => a.position - b.position);
-      
-      return {
-        isCorrect: false,
-        wordAnalysis
-      };
+      return { isCorrect: false, wordAnalysis };
     }
 
-    // Normalizar texto para comparação
     function normalizeText(text) {
-      return text
-        .toLowerCase()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove acentos
-        .replace(/[.,?!;:'"()]/g, '') // Remove pontuação
-        .replace(/\s+/g, ' ') // Normaliza espaços
-        .trim();
+      return text.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[.,?!;:'"()]/g, '')
+        .replace(/\s+/g, ' ').trim();
     }
 
-    // Calcular similaridade entre duas palavras
-    function calculateSimilarity(word1, word2) {
-      if (word1 === word2) return 1.0;
-      
-      // Verificar se uma palavra contém a outra
-      if (word1.includes(word2) || word2.includes(word1)) {
-        return 0.8;
+    function calculateSimilarity(w1, w2) {
+      if (w1 === w2) return 1;
+      if (w1.includes(w2) || w2.includes(w1)) return 0.8;
+      const max = Math.max(w1.length, w2.length);
+      let diff = 0;
+      for (let i = 0; i < max; i++) {
+        if (w1[i] !== w2[i]) diff++;
       }
-      
-      // Verificar diferenças mínimas (erros de digitação)
-      const maxLength = Math.max(word1.length, word2.length);
-      let differences = 0;
-      
-      for (let i = 0; i < maxLength; i++) {
-        if (word1[i] !== word2[i]) {
-          differences++;
-        }
-      }
-      
-      const similarity = 1 - (differences / maxLength);
-      return similarity > 0.7 ? similarity : 0; // Só considera se for similar o suficiente
+      const sim = 1 - (diff / max);
+      return sim > 0.7 ? sim : 0;
     }
 
-    // Mostrar feedback
+    // Feedback
     function showFeedback(isCorrect, correctAnswer, question, analysis) {
-      // Configurar feedback visual
       if (isCorrect) {
         elements.feedbackIcon.className = 'fas fa-check-circle';
         elements.feedbackTitle.textContent = 'Resposta Correta!';
@@ -1219,8 +933,6 @@
         elements.feedbackIcon.className = 'fas fa-times-circle';
         elements.feedbackTitle.textContent = currentState.currentAttempt === 1 ? 'Quase lá! Veja o feedback:' : 'Resposta Incorreta';
         elements.feedbackIcon.style.color = 'var(--error)';
-        
-        // Mostrar análise de palavras se for a primeira tentativa
         if (currentState.currentAttempt === 1 && analysis.wordAnalysis.length > 0) {
           showWordAnalysis(analysis.wordAnalysis);
           elements.retryContainer.classList.remove('hidden');
@@ -1229,30 +941,17 @@
           elements.retryContainer.classList.add('hidden');
         }
       }
-      
-      // Mostrar resposta correta
       elements.correctAnswer.textContent = correctAnswer;
-      
-      // Gerar tabela de vocabulário
       generateVocabTable(question);
-      
-      // Mostrar área de feedback
       elements.feedbackArea.classList.remove('hidden');
-      
-      // Salvar análise para possível segunda tentativa
-      if (!isCorrect) {
-        currentState.currentQuestionAnalysis = analysis;
-      }
+      if (!isCorrect) currentState.currentQuestionAnalysis = analysis;
     }
 
-    // Mostrar análise de palavras
     function showWordAnalysis(wordAnalysis) {
       elements.wordFeedbackContent.innerHTML = '';
-      
       wordAnalysis.forEach(item => {
         const bubble = document.createElement('div');
         bubble.className = `word-bubble word-${item.status}`;
-        
         if (item.status === 'correct') {
           bubble.textContent = item.userWord;
           bubble.title = 'Palavra correta na posição certa';
@@ -1266,14 +965,11 @@
           bubble.textContent = item.correctWord;
           bubble.title = 'Palavra faltando na sua resposta';
         }
-        
         elements.wordFeedbackContent.appendChild(bubble);
       });
-      
       elements.wordFeedbackArea.classList.remove('hidden');
     }
 
-    // Habilitar nova tentativa
     function enableRetry() {
       currentState.currentAttempt = 2;
       elements.feedbackArea.classList.add('hidden');
@@ -1281,104 +977,78 @@
       elements.answerInput.focus();
     }
 
-    // Gerar tabela de vocabulário
     function generateVocabTable(question) {
-      // Esta é uma implementação simplificada
-      const englishWords = question.english.split(' ').slice(0, 10); // Limitar a 10 palavras
-      const portugueseWords = question.portuguese.split(' ').slice(0, 10);
-      
-      let tableHTML = '';
-      const maxRows = Math.max(englishWords.length, portugueseWords.length);
-      
-      for (let i = 0; i < maxRows; i++) {
-        const enWord = englishWords[i] || '';
-        const ptWord = portugueseWords[i] || '';
-        
-        if (enWord.trim() || ptWord.trim()) {
-          tableHTML += `
-            <tr>
-              <td><strong>${enWord}</strong></td>
-              <td>${ptWord}</td>
-            </tr>
-          `;
+      const enWords = question.english.split(' ').slice(0, 10);
+      const ptWords = question.portuguese.split(' ').slice(0, 10);
+      let html = '';
+      const max = Math.max(enWords.length, ptWords.length);
+      for (let i = 0; i < max; i++) {
+        const en = enWords[i] || '';
+        const pt = ptWords[i] || '';
+        if (en.trim() || pt.trim()) {
+          html += `<tr><td><strong>${en}</strong></td><td>${pt}</td></tr>`;
         }
       }
-      
-      elements.vocabTable.innerHTML = tableHTML || `
-        <tr>
-          <td colspan="2" class="text-center">Não foi possível gerar o vocabulário para esta frase.</td>
-        </tr>
-      `;
+      elements.vocabTable.innerHTML = html || `<tr><td colspan="2" class="text-center">Não foi possível gerar o vocabulário.</td></tr>`;
     }
 
     // Próxima questão
     function nextQuestion() {
       currentState.currentQuestionIndex++;
-      
       if (currentState.currentQuestionIndex < currentState.currentQuestions.length) {
         loadQuestion();
       } else {
-        // Verificar se há respostas erradas para revisão
         if (!currentState.isReviewMode && currentState.wrongAnswers.length > 0) {
-          // Entrar no modo de revisão
           currentState.isReviewMode = true;
           currentState.currentQuestions = [...currentState.wrongAnswers];
           currentState.currentQuestionIndex = 0;
           currentState.wrongAnswers = [];
           loadQuestion();
         } else {
-          // Mostrar resultados finais
           showResults();
         }
       }
     }
 
-    // Mostrar resultados
+    // Resultados
     function showResults() {
       hideAllScreens();
       elements.resultsScreen.classList.remove('hidden');
-      
-      const totalQuestions = currentState.currentChapter.phrases.length;
-      const correctPercentage = Math.round((currentState.correctCount / (currentState.correctCount + currentState.wrongCount)) * 100) || 0;
-      const completionPercentage = currentState.wrongCount === 0 ? 100 : Math.round((currentState.correctCount / totalQuestions) * 100);
-      
-      // Configurar círculo de pontuação
-      elements.scoreCircle.style.background = `conic-gradient(var(--primary) ${correctPercentage}%, var(--dark) 0%)`;
-      elements.scoreValue.textContent = `${correctPercentage}%`;
-      
-      // Mensagem de conclusão
-      if (completionPercentage === 100) {
+      const total = currentState.currentLevel.phrases.length;
+      const totalAttempts = currentState.correctCount + currentState.wrongCount;
+      const correctPerc = totalAttempts ? Math.round((currentState.correctCount / totalAttempts) * 100) : 0;
+      const completionPerc = Math.round((currentState.correctCount / total) * 100);
+      elements.scoreCircle.style.background = `conic-gradient(var(--primary) ${correctPerc}%, var(--dark) 0%)`;
+      elements.scoreValue.textContent = `${correctPerc}%`;
+      if (completionPerc === 100) {
         elements.completionMessage.textContent = 'Parabéns! Domínio Total! 🎉';
         elements.completionMessage.style.color = 'var(--success)';
-      } else if (completionPercentage >= 80) {
+      } else if (completionPerc >= 80) {
         elements.completionMessage.textContent = 'Excelente! Quase Perfeito! 👏';
         elements.completionMessage.style.color = 'var(--success)';
-      } else if (completionPercentage >= 60) {
+      } else if (completionPerc >= 60) {
         elements.completionMessage.textContent = 'Bom Trabalho! Continue Assim! 💪';
         elements.completionMessage.style.color = 'var(--warning)';
       } else {
         elements.completionMessage.textContent = 'Continue Praticando! Você Consegue! 📚';
         elements.completionMessage.style.color = 'var(--error)';
       }
-      
-      // Estatísticas
       elements.correctAnswers.textContent = currentState.correctCount;
       elements.wrongAnswers.textContent = currentState.wrongCount;
-      elements.completionRate.textContent = `${completionPercentage}%`;
-      
-      elements.resultsSubtitle.textContent = `Capítulo ${currentState.currentChapter.id.toString().padStart(3, '0')} - ${currentState.currentMode === 'easy' ? 'Prática Fácil' : 'Prática Difícil'}`;
+      elements.completionRate.textContent = `${completionPerc}%`;
+      elements.resultsSubtitle.textContent = `Capítulo ${currentState.currentChapter.id.toString().padStart(3, '0')} - ${currentState.currentLevel.name}`;
     }
 
     // Esconder todas as telas
     function hideAllScreens() {
       elements.mainMenu.classList.add('hidden');
       elements.chaptersMenu.classList.add('hidden');
+      elements.levelMenu.classList.add('hidden');
       elements.practiceModeMenu.classList.add('hidden');
       elements.quizScreen.classList.add('hidden');
       elements.resultsScreen.classList.add('hidden');
     }
 
-    // Inicializar aplicativo quando a página carregar
     document.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
