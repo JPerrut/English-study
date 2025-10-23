@@ -489,9 +489,6 @@
         <button id="story-mode-btn" class="btn btn-primary">
           <i class="fas fa-book-open icon"></i>Inglês com História
         </button>
-        <button id="practice-mode-btn" class="btn btn-secondary">
-          <i class="fas fa-dumbbell icon"></i>Modo Prática
-        </button>
       </div>
     </div>
 
@@ -560,7 +557,7 @@
         <div id="feedback-area" class="feedback-container hidden">
           <div class="feedback-title">
             <i class="fas fa-info-circle" id="feedback-icon"></i>
-            <span id="feedback-title">Feedback</span>
+            <span id="feedback-title-text">Feedback</span>
           </div>
           <div class="correct-answer" id="correct-answer"></div>
           
@@ -627,7 +624,7 @@
   </div>
 
   <script>
-    // Dados das frases organizadas por capítulo
+    // Dados das frases organizadas por capítulo - TODAS AS 38 FRASES
     const CHAPTERS = [
       {
         id: 1,
@@ -690,7 +687,155 @@
             portuguese: "Se este mundo fosse um romance, uma pessoa como ele seria definitivamente o personagem principal. E eu seria apenas um figurante.",
             alternativeTranslations: []
           },
-          // ... (as outras frases continuam da mesma forma)
+          {
+            english: "Mr. Flame Emperor, there are many aspiring hunters who look up to you and try their best.",
+            portuguese: "Sr. Imperador das Chamas, há muitos caçadores aspirantes que admiram você e dão o seu melhor.",
+            alternativeTranslations: []
+          },
+          {
+            english: "Awakening soon after entering the tower in his early-20's, defeating a boss monster that Black Dragon has tried to defeat for 10 years, less than a month after.",
+            portuguese: "Despertando logo após entrar na torre no início dos seus 20 e poucos anos, (ele) derrotou um chefe monstro que o Dragão Negro tentava derrotar há 10 anos, menos de um mês depois.",
+            alternativeTranslations: []
+          },
+          {
+            english: "A hunter who literally writes legends.",
+            portuguese: "Um caçador que literalmente escreve lendas.",
+            alternativeTranslations: []
+          },
+          {
+            english: "Please tell your aspiring fans the key to success in one phrase!",
+            portuguese: "Por favor, diga aos seus fãs aspirantes a chave para o sucesso em uma frase!",
+            alternativeTranslations: []
+          },
+          {
+            english: "I'm really just gonna say a few words so you guys figure it out.",
+            portuguese: "Eu vou dizer só algumas palavras mesmo para que vocês descubram.",
+            alternativeTranslations: [
+              "Eu vou dizer só algumas palavras mesmo para que vocês entendam.",
+              "Eu vou dizer só algumas palavras mesmo para que vocês desvendem."
+            ]
+          },
+          {
+            english: "Those who will succeed will succeed. But, don't get in my way even if you succeed. Or I'll kill you.",
+            portuguese: "Aqueles que terão sucesso terão sucesso. Mas, não entre no meu caminho mesmo que você tenha sucesso. Ou eu vou te matar.",
+            alternativeTranslations: []
+          },
+          {
+            english: "What did you mean by that?!",
+            portuguese: "O que você quis dizer com isso?!",
+            alternativeTranslations: [
+              "O que você quis dizer com aquilo?!"
+            ]
+          },
+          {
+            english: "... with this we will now end the broadcast. To our viewers who are watching.",
+            portuguese: "... com isso, nós encerraremos a transmissão agora. Aos nossos telespectadores que estão assistindo.",
+            alternativeTranslations: []
+          },
+          {
+            english: "I'm so mad",
+            portuguese: "Eu estou tão bravo.",
+            alternativeTranslations: [
+              "Eu estou com tanta raiva.",
+              "Eu estou tão irritado."
+            ]
+          },
+          {
+            english: "Is it okay to just ignore people when you become that great?",
+            portuguese: "É certo apenas ignorar as pessoas quando você se torna tão grandioso?",
+            alternativeTranslations: [
+              "É aceitável apenas ignorar as pessoas quando você se torna tão grandioso?"
+            ]
+          },
+          {
+            english: "It was the reporter who was being ignored but it felt like I was...",
+            portuguese: "Era o repórter que estava sendo ignorado, mas parecia que era eu...",
+            alternativeTranslations: []
+          },
+          {
+            english: "If I just had one decent skill like the Flame Emperor then I wouldn't need to live in this damned studio... and I wouldn't be looked down on for being the lowest F-class hunter without a single skill...",
+            portuguese: "Se eu tivesse apenas uma habilidade decente como a do Imperador das Chamas, então eu não precisaria viver neste estúdio maldito... e eu não seria menosprezado por ser o caçador de classe F mais baixo sem uma única habilidade...",
+            alternativeTranslations: []
+          },
+          {
+            english: "I want to become just like the flame emperor",
+            portuguese: "Eu quero me tornar exatamente como o Imperador das Chamas.",
+            alternativeTranslations: []
+          },
+          {
+            english: "I want to succeed with my own skills too",
+            portuguese: "Eu também quero ter sucesso com as minhas próprias habilidades.",
+            alternativeTranslations: []
+          },
+          {
+            english: "How great would it be if the Flame Emperor's skill was mine...?",
+            portuguese: "Quão incrível seria se a habilidade do Imperador das Chamas fosse minha...?",
+            alternativeTranslations: []
+          },
+          {
+            english: "This is a scene that I've only seen a thousand times in videos...",
+            portuguese: "Esta é uma cena que eu só vi mil vezes em vídeos...",
+            alternativeTranslations: []
+          },
+          {
+            english: "Could it be... a 'skill card'",
+            portuguese: "Será que é... uma 'carta de habilidade'?",
+            alternativeTranslations: []
+          },
+          {
+            english: "An unsightly envy that is yet to be found in history!",
+            portuguese: "Uma inveja desagradável que ainda não se encontra na história!",
+            alternativeTranslations: [
+              "Uma inveja nojenta que ainda não se encontra na história!"
+            ]
+          },
+          {
+            english: "The tower is moved by your determination",
+            portuguese: "A torre é movida pela sua determinação",
+            alternativeTranslations: []
+          },
+          {
+            english: "The tower rewards you for your honest efforts.",
+            portuguese: "A torre recompensa você pelos seus esforços honestos.",
+            alternativeTranslations: []
+          },
+          {
+            english: "The tower praises you for your achievements.",
+            portuguese: "A torre te elogia pelas suas conquistas.",
+            alternativeTranslations: [
+              "A torre te parabeniza pelas suas conquistas."
+            ]
+          },
+          {
+            english: "This is different from what I saw in the videos!?",
+            portuguese: "Isto é diferente do que eu vi nos vídeos!?",
+            alternativeTranslations: []
+          },
+          {
+            english: "Nah. Why should I care about its tone when I just received a skill card.",
+            portuguese: "Nah. Por que eu deveria me importar com o tom disso quando eu acabei de receber uma carta de habilidade?",
+            alternativeTranslations: []
+          },
+          {
+            english: "This is the moment I've been waiting for ever since I got here...",
+            portuguese: "Este é o momento que eu estava esperando desde que cheguei aqui...",
+            alternativeTranslations: []
+          },
+          {
+            english: "On top of that, a gold card is an S-rank skill...!",
+            portuguese: "Além disso, um cartão dourado é uma habilidade de rank S...!",
+            alternativeTranslations: []
+          },
+          {
+            english: "Card: I want to become like you. Effect: Activates automatically upon death. After dying to the enemy, you can copy one of their skills and make it your own. You cannot copy a skill from targets that have already killed you previously. Skills are randomly copied.",
+            portuguese: "Carta: Eu quero me tornar como você. Efeito: Ativa automaticamente após a morte. Depois de morrer para o inimigo, você pode copiar uma das habilidades dele e torná-la sua. Você não pode copiar uma habilidade de alvos que já o mataram anteriormente. As habilidades são copiadas aleatoriamente.",
+            alternativeTranslations: []
+          },
+          {
+            english: "You can copy one of the skills of someone who kills you and make it yours. However, you die!",
+            portuguese: "Você pode copiar uma das habilidades de alguém que te mata e torná-la sua. No entanto, você morre!",
+            alternativeTranslations: []
+          },
           {
             english: "What kind of skill is this?!",
             portuguese: "Que tipo de habilidade é essa?!",
@@ -698,6 +843,7 @@
           }
         ]
       }
+      // Futuros capítulos podem ser adicionados aqui
     ];
 
     // Estado do aplicativo
@@ -725,7 +871,6 @@
       
       // Botões de navegação
       storyModeBtn: document.getElementById('story-mode-btn'),
-      practiceModeBtn: document.getElementById('practice-mode-btn'),
       backToMain: document.getElementById('back-to-main'),
       backToChapters: document.getElementById('back-to-chapters'),
       backToPractice: document.getElementById('back-to-practice'),
@@ -745,7 +890,7 @@
       // Elementos de feedback
       feedbackArea: document.getElementById('feedback-area'),
       feedbackIcon: document.getElementById('feedback-icon'),
-      feedbackTitle: document.getElementById('feedback-title'),
+      feedbackTitle: document.getElementById('feedback-title-text'),
       correctAnswer: document.getElementById('correct-answer'),
       vocabTable: document.getElementById('vocab-table'),
       nextQuestion: document.getElementById('next-question'),
@@ -782,10 +927,9 @@
     function attachEventListeners() {
       // Navegação principal
       elements.storyModeBtn.addEventListener('click', showChaptersMenu);
-      elements.practiceModeBtn.addEventListener('click', showChaptersMenu);
       elements.backToMain.addEventListener('click', showMainMenu);
       elements.backToChapters.addEventListener('click', showChaptersMenu);
-      elements.backToPractice.addEventListener('click', showPracticeModeMenu);
+      elements.backToPractice.addEventListener('click', () => showPracticeModeMenu(currentState.currentChapter));
       elements.backToChaptersFromResults.addEventListener('click', showChaptersMenu);
       
       // Modos de prática
