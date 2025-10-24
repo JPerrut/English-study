@@ -125,13 +125,13 @@
       display: inline-block;
       margin-right: 12px;
     }
-    .chapters-grid, .levels-grid {
+    .chapters-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 16px;
       margin-top: 24px;
     }
-    .chapter-card, .level-card {
+    .chapter-card {
       background: rgba(30, 41, 59, 0.7);
       border-radius: 12px;
       padding: 20px;
@@ -140,22 +140,22 @@
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .chapter-card:hover, .level-card:hover {
+    .chapter-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       border-color: var(--primary);
     }
-    .chapter-number, .level-number {
+    .chapter-number {
       font-size: 14px;
       color: var(--gray);
       margin-bottom: 8px;
     }
-    .chapter-title, .level-title {
+    .chapter-title {
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 12px;
     }
-    .chapter-stats, .level-stats {
+    .chapter-stats {
       display: flex;
       justify-content: space-between;
       font-size: 12px;
@@ -402,7 +402,7 @@
         padding: 14px 20px;
         font-size: 16px;
       }
-      .chapters-grid, .levels-grid {
+      .chapters-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -422,7 +422,6 @@
         </button>
       </div>
     </div>
-
     <!-- Seleção de Capítulo -->
     <div id="chapters-menu" class="hidden">
       <div class="header">
@@ -433,10 +432,11 @@
         <p>Selecione um capítulo para praticar</p>
       </div>
       <div class="content">
-        <div class="chapters-grid" id="chapters-grid"></div>
+        <div class="chapters-grid" id="chapters-grid">
+          <!-- Capítulos serão gerados dinamicamente -->
+        </div>
       </div>
     </div>
-
     <!-- Seleção de Nível -->
     <div id="level-menu" class="hidden">
       <div class="header">
@@ -446,31 +446,31 @@
         <h1 id="chapter-level-title">Capítulo </h1>
         <p>Escolha um nível para praticar</p>
       </div>
-      <div class="content">
-        <div class="levels-grid" id="levels-grid"></div>
+      <div class="content" id="levels-grid">
+        <!-- Níveis serão gerados dinamicamente -->
       </div>
     </div>
-
-    <!-- Modo de Prática -->
+    <!-- Seleção de Modo de Prática -->
     <div id="practice-mode-menu" class="hidden">
       <div class="header">
         <button id="back-to-levels" class="btn btn-outline btn-small">
           <i class="fas fa-arrow-left icon"></i>Voltar
         </button>
-        <h1 id="level-practice-title">Nível </h1>
+        <h1 id="chapter-practice-title">Nível </h1>
         <p>Selecione o modo de prática</p>
       </div>
       <div class="content">
         <button id="easy-practice-btn" class="btn btn-primary">
-          <i class="fas fa-star icon"></i>Prática Fácil<br><small>Traduza do Inglês para Português</small>
+          <i class="fas fa-star icon"></i>Prática Fácil
+          <br><small>Traduza do Inglês para Português</small>
         </button>
         <button id="hard-practice-btn" class="btn btn-secondary">
-          <i class="fas fa-fire icon"></i>Prática Difícil<br><small>Traduza do Português para Inglês</small>
+          <i class="fas fa-fire icon"></i>Prática Difícil
+          <br><small>Traduza do Português para Inglês</small>
         </button>
       </div>
     </div>
-
-    <!-- Quiz -->
+    <!-- Tela de Questões -->
     <div id="quiz-screen" class="hidden">
       <div class="header">
         <button id="back-to-practice" class="btn btn-outline btn-small">
@@ -505,7 +505,9 @@
             <div class="word-feedback-title">
               <i class="fas fa-spell-check icon"></i>Análise das Palavras:
             </div>
-            <div class="word-feedback-content" id="word-feedback-content"></div>
+            <div class="word-feedback-content" id="word-feedback-content">
+              <!-- Conteúdo gerado dinamicamente -->
+            </div>
           </div>
           <div id="retry-container" class="retry-container hidden">
             <div class="retry-message">
@@ -517,18 +519,19 @@
             <div class="vocab-title">
               <i class="fas fa-book icon"></i>Tradução das Palavras
             </div>
-            <table class="vocab-table" id="vocab-table"></table>
+            <table class="vocab-table" id="vocab-table">
+              <!-- Conteúdo gerado dinamicamente -->
+            </table>
           </div>
           <button id="next-question" class="btn btn-primary mt-4">Próxima Questão</button>
         </div>
       </div>
     </div>
-
-    <!-- Resultados -->
+    <!-- Tela de Resultados -->
     <div id="results-screen" class="hidden">
       <div class="header">
         <h1><i class="fas fa-trophy icon"></i>Resultados</h1>
-        <p id="results-subtitle">Desempenho no nível</p>
+        <p id="results-subtitle">Desempenho no capítulo</p>
       </div>
       <div class="content">
         <div class="score-display">
@@ -556,8 +559,8 @@
       </div>
     </div>
   </div>
-
-  <script>
+<script>
+    // Dados organizados por capítulo e nível
     const CHAPTERS = [
       {
         id: 1,
@@ -607,6 +610,7 @@
       }
     ];
 
+    // Estado do aplicativo
     let currentState = {
       currentChapter: null,
       currentLevel: null,
@@ -617,26 +621,29 @@
       correctCount: 0,
       wrongCount: 0,
       isReviewMode: false,
-      currentAttempt: 1
+      currentAttempt: 1,
+      currentQuestionAnalysis: null
     };
 
+    // Elementos DOM
     const elements = {
+      // Telas
       mainMenu: document.getElementById('main-menu'),
       chaptersMenu: document.getElementById('chapters-menu'),
       levelMenu: document.getElementById('level-menu'),
       practiceModeMenu: document.getElementById('practice-mode-menu'),
       quizScreen: document.getElementById('quiz-screen'),
       resultsScreen: document.getElementById('results-screen'),
+      // Botões de navegação
       storyModeBtn: document.getElementById('story-mode-btn'),
       backToMain: document.getElementById('back-to-main'),
       backToChapters: document.getElementById('back-to-chapters'),
       backToLevels: document.getElementById('back-to-levels'),
       backToPractice: document.getElementById('back-to-practice'),
       backToChaptersFromResults: document.getElementById('back-to-chapters-from-results'),
-      chaptersGrid: document.getElementById('chapters-grid'),
-      levelsGrid: document.getElementById('levels-grid'),
+      // Elementos do quiz
       chapterLevelTitle: document.getElementById('chapter-level-title'),
-      levelPracticeTitle: document.getElementById('level-practice-title'),
+      chapterPracticeTitle: document.getElementById('chapter-practice-title'),
       quizTitle: document.getElementById('quiz-title'),
       quizSubtitle: document.getElementById('quiz-subtitle'),
       questionNumber: document.getElementById('question-number'),
@@ -646,16 +653,18 @@
       answerInput: document.getElementById('answer-input'),
       submitAnswer: document.getElementById('submit-answer'),
       skipButton: document.getElementById('skip-button'),
+      // Elementos de feedback
       feedbackArea: document.getElementById('feedback-area'),
       feedbackIcon: document.getElementById('feedback-icon'),
       feedbackTitle: document.getElementById('feedback-title-text'),
       correctAnswer: document.getElementById('correct-answer'),
       vocabTable: document.getElementById('vocab-table'),
+      nextQuestion: document.getElementById('next-question'),
       wordFeedbackArea: document.getElementById('word-feedback-area'),
       wordFeedbackContent: document.getElementById('word-feedback-content'),
       retryContainer: document.getElementById('retry-container'),
       retryButton: document.getElementById('retry-button'),
-      nextQuestion: document.getElementById('next-question'),
+      // Elementos de resultados
       resultsSubtitle: document.getElementById('results-subtitle'),
       scoreCircle: document.getElementById('score-circle'),
       scoreValue: document.getElementById('score-value'),
@@ -664,79 +673,90 @@
       wrongAnswers: document.getElementById('wrong-answers'),
       completionRate: document.getElementById('completion-rate'),
       restartPractice: document.getElementById('restart-practice'),
+      // Grids
+      chaptersGrid: document.getElementById('chapters-grid'),
+      levelsGrid: document.getElementById('levels-grid'),
+      // Botões de modo de prática
       easyPracticeBtn: document.getElementById('easy-practice-btn'),
       hardPracticeBtn: document.getElementById('hard-practice-btn')
     };
 
+    // Inicialização
     function init() {
-      renderChapters();
-      attachListeners();
+      // Garante que apenas o menu principal está visível no início
+      hideAllScreens();
+      elements.mainMenu.classList.remove('hidden');
+      
+      renderChaptersGrid();
+      attachEventListeners();
     }
 
-    function attachListeners() {
-      elements.storyModeBtn.addEventListener('click', () => {
-        hideAll();
-        elements.chaptersMenu.classList.remove('hidden');
-      });
-      elements.backToMain.addEventListener('click', () => {
-        hideAll();
-        elements.mainMenu.classList.remove('hidden');
-      });
-      elements.backToChapters.addEventListener('click', () => {
-        hideAll();
-        elements.chaptersMenu.classList.remove('hidden');
-      });
+    // Anexar event listeners
+    function attachEventListeners() {
+      elements.storyModeBtn.addEventListener('click', showChaptersMenu);
+      elements.backToMain.addEventListener('click', showMainMenu);
+      elements.backToChapters.addEventListener('click', showChaptersMenu);
       elements.backToLevels.addEventListener('click', () => {
-        showLevelMenu(currentState.currentChapter);
+        if (currentState.currentChapter) {
+          showLevelMenu(currentState.currentChapter);
+        }
       });
       elements.backToPractice.addEventListener('click', () => {
-        showPracticeModeMenu(currentState.currentLevel);
+        if (currentState.currentLevel) {
+          showPracticeModeMenu(currentState.currentLevel);
+        }
       });
-      elements.backToChaptersFromResults.addEventListener('click', () => {
-        hideAll();
-        elements.chaptersMenu.classList.remove('hidden');
-      });
+      elements.backToChaptersFromResults.addEventListener('click', showChaptersMenu);
       elements.easyPracticeBtn.addEventListener('click', () => startPractice('easy'));
       elements.hardPracticeBtn.addEventListener('click', () => startPractice('hard'));
       elements.submitAnswer.addEventListener('click', checkAnswer);
       elements.skipButton.addEventListener('click', skipQuestion);
       elements.nextQuestion.addEventListener('click', nextQuestion);
-      elements.retryButton.addEventListener('click', () => {
-        currentState.currentAttempt = 2;
-        elements.feedbackArea.classList.add('hidden');
-        elements.answerInput.value = '';
-        elements.answerInput.focus();
-      });
-      elements.restartPractice.addEventListener('click', () => startPractice(currentState.currentMode));
+      elements.retryButton.addEventListener('click', enableRetry);
       elements.answerInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
           if (elements.feedbackArea.classList.contains('hidden')) {
             checkAnswer();
           } else if (!elements.retryContainer.classList.contains('hidden')) {
-            elements.retryButton.click();
+            enableRetry();
           } else {
-            elements.nextQuestion.click();
+            nextQuestion();
           }
         }
       });
+      elements.restartPractice.addEventListener('click', () => {
+        startPractice(currentState.currentMode);
+      });
     }
 
-    function renderChapters() {
-      elements.chaptersGrid.innerHTML = CHAPTERS.map(ch => `
-        <div class="chapter-card" data-id="${ch.id}">
-          <div class="chapter-number">Capítulo ${ch.id.toString().padStart(3, '0')}</div>
-          <div class="chapter-title">${ch.title}</div>
+    // Funções de navegação
+    function showMainMenu() {
+      hideAllScreens();
+      elements.mainMenu.classList.remove('hidden');
+    }
+
+    function showChaptersMenu() {
+      hideAllScreens();
+      elements.chaptersMenu.classList.remove('hidden');
+    }
+
+    // Renderizar capítulos
+    function renderChaptersGrid() {
+      elements.chaptersGrid.innerHTML = CHAPTERS.map(chapter => `
+        <div class="chapter-card" data-chapter-id="${chapter.id}">
+          <div class="chapter-number">Capítulo ${chapter.id.toString().padStart(3, '0')}</div>
+          <div class="chapter-title">${chapter.title}</div>
           <div class="chapter-stats">
             <span>3 níveis</span>
-            <span><i class="fas fa-star"></i> ${ch.id}.0</span>
+            <span><i class="fas fa-star"></i> ${chapter.id}.0</span>
           </div>
         </div>
       `).join('');
 
       document.querySelectorAll('.chapter-card').forEach(card => {
         card.addEventListener('click', () => {
-          const id = parseInt(card.dataset.id);
-          const chapter = CHAPTERS.find(c => c.id === id);
+          const chapterId = parseInt(card.getAttribute('data-chapter-id'));
+          const chapter = CHAPTERS.find(c => c.id === chapterId);
           if (chapter) {
             showLevelMenu(chapter);
           }
@@ -744,41 +764,44 @@
       });
     }
 
+    // Mostrar menu de níveis
     function showLevelMenu(chapter) {
+      hideAllScreens();
       currentState.currentChapter = chapter;
       elements.chapterLevelTitle.textContent = `Capítulo ${chapter.id.toString().padStart(3, '0')} - ${chapter.title}`;
       elements.levelsGrid.innerHTML = chapter.levels.map(level => `
-        <div class="level-card" data-id="${level.id}">
-          <div class="level-number">${level.name}</div>
-          <div class="level-title">${level.description}</div>
-          <div class="level-stats">
+        <div class="chapter-card" data-level-id="${level.id}">
+          <div class="chapter-number">${level.name}</div>
+          <div class="chapter-title">${level.description}</div>
+          <div class="chapter-stats">
             <span>5 frases</span>
             <span>${level.estimatedTime}</span>
           </div>
         </div>
       `).join('');
 
-      document.querySelectorAll('.level-card').forEach(card => {
+      document.querySelectorAll('.chapter-card').forEach(card => {
         card.addEventListener('click', () => {
-          const id = parseInt(card.dataset.id);
-          const level = chapter.levels.find(l => l.id === id);
+          const levelId = parseInt(card.getAttribute('data-level-id'));
+          const level = chapter.levels.find(l => l.id === levelId);
           if (level) {
             showPracticeModeMenu(level);
           }
         });
       });
 
-      hideAll();
       elements.levelMenu.classList.remove('hidden');
     }
 
+    // Mostrar menu de modo de prática
     function showPracticeModeMenu(level) {
+      hideAllScreens();
       currentState.currentLevel = level;
-      elements.levelPracticeTitle.textContent = `${level.name} - ${level.description}`;
-      hideAll();
+      elements.chapterPracticeTitle.textContent = `${level.name} - ${level.description}`;
       elements.practiceModeMenu.classList.remove('hidden');
     }
 
+    // Iniciar prática
     function startPractice(mode) {
       currentState.currentMode = mode;
       currentState.currentQuestions = [...currentState.currentLevel.phrases];
@@ -788,26 +811,32 @@
       currentState.wrongCount = 0;
       currentState.isReviewMode = false;
       currentState.currentAttempt = 1;
-      showQuiz();
+      showQuizScreen();
       loadQuestion();
     }
 
-    function showQuiz() {
-      hideAll();
+    // Mostrar tela de quiz
+    function showQuizScreen() {
+      hideAllScreens();
       elements.quizScreen.classList.remove('hidden');
-      elements.quizTitle.textContent = `Prática ${currentState.currentMode === 'easy' ? 'Fácil' : 'Difícil'}`;
+      const modeName = currentState.currentMode === 'easy' ? 'Fácil' : 'Difícil';
+      elements.quizTitle.textContent = `Prática ${modeName}`;
       elements.quizSubtitle.textContent = currentState.currentMode === 'easy'
         ? 'Traduza do Inglês para Português'
         : 'Traduza do Português para Inglês';
     }
 
+    // Carregar questão
     function loadQuestion() {
-      const q = currentState.currentQuestions[currentState.currentQuestionIndex];
-      const total = currentState.currentQuestions.length;
-      elements.questionNumber.textContent = `Questão ${currentState.currentQuestionIndex + 1} de ${total}`;
+      const question = currentState.currentQuestions[currentState.currentQuestionIndex];
+      const totalQuestions = currentState.currentQuestions.length;
+      elements.questionNumber.textContent = `Questão ${currentState.currentQuestionIndex + 1} de ${totalQuestions}`;
       elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
-      elements.progressBar.style.width = `${(currentState.currentQuestionIndex / total) * 100}%`;
-      elements.questionText.textContent = currentState.currentMode === 'easy' ? q.english : q.portuguese;
+      const progress = (currentState.currentQuestionIndex / totalQuestions) * 100;
+      elements.progressBar.style.width = `${progress}%`;
+      elements.questionText.textContent = currentState.currentMode === 'easy'
+        ? question.english
+        : question.portuguese;
       elements.answerInput.value = '';
       elements.feedbackArea.classList.add('hidden');
       elements.wordFeedbackArea.classList.add('hidden');
@@ -816,6 +845,7 @@
       currentState.currentAttempt = 1;
     }
 
+    // Pular questão
     function skipQuestion() {
       currentState.wrongCount++;
       currentState.currentQuestionIndex++;
@@ -826,71 +856,182 @@
       }
     }
 
+    // Verificar resposta
     function checkAnswer() {
-      const user = elements.answerInput.value.trim();
-      if (!user) return;
-      const q = currentState.currentQuestions[currentState.currentQuestionIndex];
-      const correctList = [q.portuguese, ...q.alternativeTranslations];
-      const isEasy = currentState.currentMode === 'easy';
-      const normUser = normalize(user);
-      const normCorrect = correctList.map(c => normalize(c));
-      let isCorrect = normCorrect.includes(normUser);
-
-      if (isCorrect) {
-        currentState.correctCount++;
-        showFeedback(true, correctList[0], q);
-      } else {
-        currentState.wrongCount++;
-        showFeedback(false, correctList[0], q);
+      const userAnswer = elements.answerInput.value.trim();
+      if (!userAnswer) return;
+      const question = currentState.currentQuestions[currentState.currentQuestionIndex];
+      const correctAnswers = [question.portuguese, ...question.alternativeTranslations];
+      const isEasyMode = currentState.currentMode === 'easy';
+      const analysis = analyzeAnswer(userAnswer, correctAnswers, isEasyMode);
+      const isCorrect = analysis.isCorrect;
+      showFeedback(isCorrect, correctAnswers[0], question, analysis);
+      if (isCorrect || currentState.currentAttempt === 2) {
+        if (isCorrect) {
+          currentState.correctCount++;
+        } else {
+          currentState.wrongCount++;
+          if (!currentState.isReviewMode) {
+            currentState.wrongAnswers.push(question);
+          }
+        }
+        elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
       }
-
-      elements.questionStats.textContent = `Acertos: ${currentState.correctCount} | Erros: ${currentState.wrongCount}`;
     }
 
-    function normalize(text) {
+    // Funções de análise
+    function analyzeAnswer(userAnswer, correctAnswers, isEasyMode) {
+      const normalizedUser = normalizeText(userAnswer);
+      const normalizedCorrects = correctAnswers.map(ca => normalizeText(ca));
+      for (const correct of normalizedCorrects) {
+        if (normalizedUser === correct) {
+          return { isCorrect: true, wordAnalysis: [] };
+        }
+      }
+      const userWords = normalizedUser.split(/\s+/).filter(w => w);
+      const correctWords = normalizedCorrects[0].split(/\s+/).filter(w => w);
+      const wordAnalysis = [];
+      const used = new Set();
+      userWords.forEach(uw => {
+        let best = null;
+        correctWords.forEach((cw, i) => {
+          if (!used.has(i)) {
+            const sim = calculateSimilarity(uw, cw);
+            if (sim > 0.6 && (!best || sim > best.similarity)) {
+              best = { word: cw, index: i, similarity: sim };
+            }
+          }
+        });
+        if (best) {
+          used.add(best.index);
+          wordAnalysis.push({ userWord: uw, correctWord: best.word, status: uw === best.word ? 'correct' : 'wrong-position', position: best.index });
+        } else {
+          wordAnalysis.push({ userWord: uw, correctWord: null, status: 'incorrect', position: -1 });
+        }
+      });
+      correctWords.forEach((cw, i) => {
+        if (!used.has(i)) {
+          wordAnalysis.push({ userWord: null, correctWord: cw, status: 'missing', position: i });
+        }
+      });
+      wordAnalysis.sort((a, b) => a.position - b.position);
+      return { isCorrect: false, wordAnalysis };
+    }
+
+    function normalizeText(text) {
       return text.toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
         .replace(/[.,?!;:'"()]/g, '')
         .replace(/\s+/g, ' ').trim();
     }
 
-    function showFeedback(isCorrect, correctAnswer, question) {
-      elements.feedbackIcon.className = isCorrect ? 'fas fa-check-circle' : 'fas fa-times-circle';
-      elements.feedbackIcon.style.color = isCorrect ? 'var(--success)' : 'var(--error)';
-      elements.feedbackTitle.textContent = isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta';
+    function calculateSimilarity(w1, w2) {
+      if (w1 === w2) return 1;
+      if (w1.includes(w2) || w2.includes(w1)) return 0.8;
+      const max = Math.max(w1.length, w2.length);
+      let diff = 0;
+      for (let i = 0; i < max; i++) {
+        if (w1[i] !== w2[i]) diff++;
+      }
+      const sim = 1 - (diff / max);
+      return sim > 0.7 ? sim : 0;
+    }
+
+    // Feedback
+    function showFeedback(isCorrect, correctAnswer, question, analysis) {
+      if (isCorrect) {
+        elements.feedbackIcon.className = 'fas fa-check-circle';
+        elements.feedbackTitle.textContent = 'Resposta Correta!';
+        elements.feedbackIcon.style.color = 'var(--success)';
+        elements.retryContainer.classList.add('hidden');
+      } else {
+        elements.feedbackIcon.className = 'fas fa-times-circle';
+        elements.feedbackTitle.textContent = currentState.currentAttempt === 1 ? 'Quase lá! Veja o feedback:' : 'Resposta Incorreta';
+        elements.feedbackIcon.style.color = 'var(--error)';
+        if (currentState.currentAttempt === 1 && analysis.wordAnalysis.length > 0) {
+          showWordAnalysis(analysis.wordAnalysis);
+          elements.retryContainer.classList.remove('hidden');
+        } else {
+          elements.wordFeedbackArea.classList.add('hidden');
+          elements.retryContainer.classList.add('hidden');
+        }
+      }
       elements.correctAnswer.textContent = correctAnswer;
       generateVocabTable(question);
-      elements.retryContainer.classList.add('hidden');
-      elements.wordFeedbackArea.classList.add('hidden');
       elements.feedbackArea.classList.remove('hidden');
+      if (!isCorrect) currentState.currentQuestionAnalysis = analysis;
+    }
+
+    function showWordAnalysis(wordAnalysis) {
+      elements.wordFeedbackContent.innerHTML = '';
+      wordAnalysis.forEach(item => {
+        const bubble = document.createElement('div');
+        bubble.className = `word-bubble word-${item.status}`;
+        if (item.status === 'correct') {
+          bubble.textContent = item.userWord;
+          bubble.title = 'Palavra correta na posição certa';
+        } else if (item.status === 'wrong-position') {
+          bubble.textContent = item.userWord;
+          bubble.title = `Palavra existe mas deveria estar em outra posição. Correta: "${item.correctWord}"`;
+        } else if (item.status === 'incorrect') {
+          bubble.textContent = item.userWord;
+          bubble.title = 'Palavra não existe na tradução correta';
+        } else if (item.status === 'missing') {
+          bubble.textContent = item.correctWord;
+          bubble.title = 'Palavra faltando na sua resposta';
+        }
+        elements.wordFeedbackContent.appendChild(bubble);
+      });
+      elements.wordFeedbackArea.classList.remove('hidden');
+    }
+
+    function enableRetry() {
+      currentState.currentAttempt = 2;
+      elements.feedbackArea.classList.add('hidden');
+      elements.answerInput.value = '';
+      elements.answerInput.focus();
     }
 
     function generateVocabTable(question) {
-      const en = question.english.split(' ').slice(0, 8);
-      const pt = question.portuguese.split(' ').slice(0, 8);
+      const enWords = question.english.split(' ').slice(0, 10);
+      const ptWords = question.portuguese.split(' ').slice(0, 10);
       let html = '';
-      for (let i = 0; i < Math.max(en.length, pt.length); i++) {
-        if ((en[i] || pt[i]) && en[i]?.trim() !== '' && pt[i]?.trim() !== '') {
-          html += `<tr><td><strong>${en[i] || ''}</strong></td><td>${pt[i] || ''}</td></tr>`;
+      const max = Math.max(enWords.length, ptWords.length);
+      for (let i = 0; i < max; i++) {
+        const en = enWords[i] || '';
+        const pt = ptWords[i] || '';
+        if (en.trim() || pt.trim()) {
+          html += `<tr><td><strong>${en}</strong></td><td>${pt}</td></tr>`;
         }
       }
-      elements.vocabTable.innerHTML = html || '<tr><td colspan="2">Vocabulário não disponível.</td></tr>';
+      elements.vocabTable.innerHTML = html || `<tr><td colspan="2" class="text-center">Não foi possível gerar o vocabulário.</td></tr>`;
     }
 
+    // Próxima questão
     function nextQuestion() {
       currentState.currentQuestionIndex++;
       if (currentState.currentQuestionIndex < currentState.currentQuestions.length) {
         loadQuestion();
       } else {
-        showResults();
+        if (!currentState.isReviewMode && currentState.wrongAnswers.length > 0) {
+          currentState.isReviewMode = true;
+          currentState.currentQuestions = [...currentState.wrongAnswers];
+          currentState.currentQuestionIndex = 0;
+          currentState.wrongAnswers = [];
+          loadQuestion();
+        } else {
+          showResults();
+        }
       }
     }
 
+    // Resultados
     function showResults() {
-      hideAll();
+      hideAllScreens();
       elements.resultsScreen.classList.remove('hidden');
       const total = currentState.currentLevel.phrases.length;
-      const correctPerc = Math.round((currentState.correctCount / (currentState.correctCount + currentState.wrongCount)) * 100) || 0;
+      const totalAttempts = currentState.correctCount + currentState.wrongCount;
+      const correctPerc = totalAttempts ? Math.round((currentState.correctCount / totalAttempts) * 100) : 0;
       const completionPerc = Math.round((currentState.correctCount / total) * 100);
       elements.scoreCircle.style.background = `conic-gradient(var(--primary) ${correctPerc}%, var(--dark) 0%)`;
       elements.scoreValue.textContent = `${correctPerc}%`;
@@ -910,13 +1051,17 @@
       elements.correctAnswers.textContent = currentState.correctCount;
       elements.wrongAnswers.textContent = currentState.wrongCount;
       elements.completionRate.textContent = `${completionPerc}%`;
-      elements.resultsSubtitle.textContent = `${currentState.currentChapter.title} - ${currentState.currentLevel.name}`;
+      elements.resultsSubtitle.textContent = `Capítulo ${currentState.currentChapter.id.toString().padStart(3, '0')} - ${currentState.currentLevel.name}`;
     }
 
-    function hideAll() {
-      Object.values(elements).forEach(el => {
-        if (el && el.classList) el.classList.add('hidden');
-      });
+    // Esconder todas as telas
+    function hideAllScreens() {
+      elements.mainMenu.classList.add('hidden');
+      elements.chaptersMenu.classList.add('hidden');
+      elements.levelMenu.classList.add('hidden');
+      elements.practiceModeMenu.classList.add('hidden');
+      elements.quizScreen.classList.add('hidden');
+      elements.resultsScreen.classList.add('hidden');
     }
 
     document.addEventListener('DOMContentLoaded', init);
