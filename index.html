@@ -561,174 +561,222 @@
   </div>
 <script>
     // Dados organizados por capítulo e nível
+
     const CHAPTERS = [
+  {
+    id: 1,
+    title: "Chapter 001",
+    description: "Vida Cotidiana em Inglês",
+    levels: [
+      {
+        id: 1,
+        name: "Nível 1",
+        description: "Frases simples do dia a dia",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { english: "I’m hungry.", portuguese: "Estou com fome.", alternativeTranslations: ["Eu estou com fome."] },
+          { english: "She works at a hospital.", portuguese: "Ela trabalha em um hospital.", alternativeTranslations: ["Ela trabalha num hospital."] },
+          { english: "They live in São Paulo.", portuguese: "Eles moram em São Paulo.", alternativeTranslations: [] },
+          { english: "It’s raining outside.", portuguese: "Está chovendo lá fora.", alternativeTranslations: ["Está chovendo lá fora."] },
+          { english: "We need to buy groceries.", portuguese: "Precisamos comprar mantimentos.", alternativeTranslations: ["Precisamos fazer compras.", "Precisamos ir ao mercado."] }
+        ]
+      },
       {
         id: 2,
-        title: "Chapter 002",
-        description: "Rotina, Trabalho e Pequenos Problemas do Dia a Dia",
-        levels: [
-          {
-            id: 1,
-            name: "Nível 1",
-            description: "Frases simples sobre rotina e necessidades básicas",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "I wake up at 7 a.m. every day.", 
-                portuguese: "Eu acordo às 7 da manhã todos os dias.", 
-                alternativeTranslations: [
-                  "Acordo às sete da manhã todo dia.",
-                  "Todo dia eu levanto às 7h.",
-                  "Levanto às sete da manhã diariamente."
-                ] 
-              },
-              { 
-                english: "The bus is always late.", 
-                portuguese: "O ônibus sempre atrasa.", 
-                alternativeTranslations: [
-                  "O ônibus sempre chega atrasado.",
-                  "Esse ônibus nunca chega na hora.",
-                  "O coletivo sempre atrasa."
-                ] 
-              },
-              { 
-                english: "I need to charge my phone.", 
-                portuguese: "Preciso carregar meu celular.", 
-                alternativeTranslations: [
-                  "Tenho que botar meu celular pra carregar.",
-                  "Meu celular precisa ser carregado.",
-                  "Tô precisando carregar o celular."
-                ] 
-              },
-              { 
-                english: "She drinks coffee in the morning.", 
-                portuguese: "Ela toma café de manhã.", 
-                alternativeTranslations: [
-                  "Ela bebe café pela manhã.",
-                  "De manhã, ela toma um café.",
-                  "Ela toma um cafezinho de manhã."
-                ] 
-              },
-              { 
-                english: "We eat dinner at 8 p.m.", 
-                portuguese: "Nós jantamos às 8 da noite.", 
-                alternativeTranslations: [
-                  "Jantamos às oito.",
-                  "O jantar é às 20h.",
-                  "A gente janta às oito da noite."
-                ] 
-              }
-            ]
+        name: "Nível 2",
+        description: "Conversas comuns e pequenas opiniões",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { english: "I think this movie is really boring.", portuguese: "Acho que este filme é muito chato.", alternativeTranslations: ["Eu acho esse filme bem chato."] },
+          { english: "He said he would call me later.", portuguese: "Ele disse que me ligaria mais tarde.", alternativeTranslations: ["Ele falou que ia me ligar depois."] },
+          { english: "Can you help me with this bag?", portuguese: "Você pode me ajudar com esta bolsa?", alternativeTranslations: ["Pode me ajudar com essa sacola?", "Dá pra me ajudar com essa mala?"] },
+          { english: "I’ve never been to Europe before.", portuguese: "Nunca fui à Europa antes.", alternativeTranslations: ["Eu nunca tinha ido à Europa."] },
+          { english: "My phone battery died again.", portuguese: "A bateria do meu celular acabou de novo.", alternativeTranslations: ["Meu celular descarregou de novo."] }
+        ]
+      },
+      {
+        id: 3,
+        name: "Nível 3",
+        description: "Expressões naturais e nuances",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { english: "I’d rather stay home tonight.", portuguese: "Prefiro ficar em casa hoje à noite.", alternativeTranslations: ["Eu preferia ficar em casa hoje."] },
+          { english: "She’s been feeling under the weather lately.", portuguese: "Ela tem se sentido meio indisposta ultimamente.", alternativeTranslations: ["Ela andou se sentindo mal nos últimos dias."] },
+          { english: "It’s not that I don’t like it — it’s just too expensive.", portuguese: "Não é que eu não goste — é só que é caro demais.", alternativeTranslations: ["Não que eu não goste, mas é muito caro."] },
+          { english: "We’re running out of time!", portuguese: "Estamos ficando sem tempo!", alternativeTranslations: ["O tempo está acabando!"] },
+          { english: "Could you please speak a bit slower?", portuguese: "Você poderia falar um pouco mais devagar, por favor?", alternativeTranslations: ["Dá pra falar mais devagar, por favor?"] }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Chapter 002",
+    description: "Rotina, Trabalho e Pequenos Problemas do Dia a Dia",
+    levels: [
+      {
+        id: 1,
+        name: "Nível 1",
+        description: "Frases simples sobre rotina e necessidades básicas",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "I wake up at 7 a.m. every day.", 
+            portuguese: "Eu acordo às 7 da manhã todos os dias.", 
+            alternativeTranslations: [
+              "Acordo às sete da manhã todo dia.",
+              "Todo dia eu levanto às 7h.",
+              "Levanto às sete da manhã diariamente."
+            ] 
           },
-          {
-            id: 2,
-            name: "Nível 2",
-            description: "Situações sociais e pequenas frustrações cotidianas",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "Sorry, I didn’t catch your name.", 
-                portuguese: "Desculpe, não entendi seu nome.", 
-                alternativeTranslations: [
-                  "Desculpa, não peguei seu nome.",
-                  "Pode repetir seu nome? Não ouvi direito.",
-                  "Não consegui ouvir seu nome, desculpe."
-                ] 
-              },
-              { 
-                english: "My internet connection is really slow today.", 
-                portuguese: "Minha internet está muito lenta hoje.", 
-                alternativeTranslations: [
-                  "A internet tá uma bosta hoje.",
-                  "Hoje a internet tá travando demais.",
-                  "Meu sinal de internet tá péssimo hoje."
-                ] 
-              },
-              { 
-                english: "Could I borrow your pen for a second?", 
-                portuguese: "Posso pegar sua caneta emprestada por um segundo?", 
-                alternativeTranslations: [
-                  "Dá pra eu usar sua caneta um instante?",
-                  "Me empresta sua caneta rapidinho?",
-                  "Pode me emprestar sua caneta por um segundo?"
-                ] 
-              },
-              { 
-                english: "I forgot my keys again.", 
-                portuguese: "Esqueci minhas chaves de novo.", 
-                alternativeTranslations: [
-                  "De novo esqueci as chaves.",
-                  "Tô sempre esquecendo as chaves.",
-                  "Esqueci as chaves outra vez."
-                ] 
-              },
-              { 
-                english: "This traffic is driving me crazy.", 
-                portuguese: "Esse trânsito está me deixando louco.", 
-                alternativeTranslations: [
-                  "Esse trânsito tá me matando.",
-                  "Não aguento mais esse trânsito.",
-                  "Tô pirando com esse trânsito."
-                ] 
-              }
-            ]
+          { 
+            english: "The bus is always late.", 
+            portuguese: "O ônibus sempre atrasa.", 
+            alternativeTranslations: [
+              "O ônibus sempre chega atrasado.",
+              "Esse ônibus nunca chega na hora.",
+              "O coletivo sempre atrasa."
+            ] 
           },
-          {
-            id: 3,
-            name: "Nível 3",
-            description: "Expressões idiomáticas e reações naturais",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "I’m swamped with work this week.", 
-                portuguese: "Estou atolado de trabalho esta semana.", 
-                alternativeTranslations: [
-                  "Tô afogado em trabalho essa semana.",
-                  "Essa semana tô cheio de serviço.",
-                  "Não tô dando conta do trabalho essa semana."
-                ] 
-              },
-              { 
-                english: "Let’s play it by ear.", 
-                portuguese: "Vamos decidir na hora.", 
-                alternativeTranslations: [
-                  "Vamos ver como as coisas vão e decidir depois.",
-                  "Deixa pra lá, a gente vê no dia.",
-                  "Melhor ir no improviso."
-                ] 
-              },
-              { 
-                english: "It slipped my mind.", 
-                portuguese: "Passou batido na minha cabeça.", 
-                alternativeTranslations: [
-                  "Esqueci completamente.",
-                  "Saiu da minha mente.",
-                  "Deu um branco."
-                ] 
-              },
-              { 
-                english: "I’m beat after that meeting.", 
-                portuguese: "Estou exausto depois dessa reunião.", 
-                alternativeTranslations: [
-                  "Tô morto depois dessa reunião.",
-                  "Essa reunião me deixou derrubado.",
-                  "Fiquei sem energia depois da reunião."
-                ] 
-              },
-              { 
-                english: "Don’t put all your eggs in one basket.", 
-                portuguese: "Não coloque todos os seus ovos numa única cesta.", 
-                alternativeTranslations: [
-                  "Não aposte tudo numa só coisa.",
-                  "É arriscado depender só disso.",
-                  "Melhor não concentrar tudo num único lugar."
-                ] 
-              }
-            ]
+          { 
+            english: "I need to charge my phone.", 
+            portuguese: "Preciso carregar meu celular.", 
+            alternativeTranslations: [
+              "Tenho que botar meu celular pra carregar.",
+              "Meu celular precisa ser carregado.",
+              "Tô precisando carregar o celular."
+            ] 
+          },
+          { 
+            english: "She drinks coffee in the morning.", 
+            portuguese: "Ela toma café de manhã.", 
+            alternativeTranslations: [
+              "Ela bebe café pela manhã.",
+              "De manhã, ela toma um café.",
+              "Ela toma um cafezinho de manhã."
+            ] 
+          },
+          { 
+            english: "We eat dinner at 8 p.m.", 
+            portuguese: "Nós jantamos às 8 da noite.", 
+            alternativeTranslations: [
+              "Jantamos às oito.",
+              "O jantar é às 20h.",
+              "A gente janta às oito da noite."
+            ] 
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: "Nível 2",
+        description: "Situações sociais e pequenas frustrações cotidianas",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "Sorry, I didn’t catch your name.", 
+            portuguese: "Desculpe, não entendi seu nome.", 
+            alternativeTranslations: [
+              "Desculpa, não peguei seu nome.",
+              "Pode repetir seu nome? Não ouvi direito.",
+              "Não consegui ouvir seu nome, desculpe."
+            ] 
+          },
+          { 
+            english: "My internet connection is really slow today.", 
+            portuguese: "Minha internet está muito lenta hoje.", 
+            alternativeTranslations: [
+              "A internet tá uma bosta hoje.",
+              "Hoje a internet tá travando demais.",
+              "Meu sinal de internet tá péssimo hoje."
+            ] 
+          },
+          { 
+            english: "Could I borrow your pen for a second?", 
+            portuguese: "Posso pegar sua caneta emprestada por um segundo?", 
+            alternativeTranslations: [
+              "Dá pra eu usar sua caneta um instante?",
+              "Me empresta sua caneta rapidinho?",
+              "Pode me emprestar sua caneta por um segundo?"
+            ] 
+          },
+          { 
+            english: "I forgot my keys again.", 
+            portuguese: "Esqueci minhas chaves de novo.", 
+            alternativeTranslations: [
+              "De novo esqueci as chaves.",
+              "Tô sempre esquecendo as chaves.",
+              "Esqueci as chaves outra vez."
+            ] 
+          },
+          { 
+            english: "This traffic is driving me crazy.", 
+            portuguese: "Esse trânsito está me deixando louco.", 
+            alternativeTranslations: [
+              "Esse trânsito tá me matando.",
+              "Não aguento mais esse trânsito.",
+              "Tô pirando com esse trânsito."
+            ] 
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: "Nível 3",
+        description: "Expressões idiomáticas e reações naturais",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "I’m swamped with work this week.", 
+            portuguese: "Estou atolado de trabalho esta semana.", 
+            alternativeTranslations: [
+              "Tô afogado em trabalho essa semana.",
+              "Essa semana tô cheio de serviço.",
+              "Não tô dando conta do trabalho essa semana."
+            ] 
+          },
+          { 
+            english: "Let’s play it by ear.", 
+            portuguese: "Vamos decidir na hora.", 
+            alternativeTranslations: [
+              "Vamos ver como as coisas vão e decidir depois.",
+              "Deixa pra lá, a gente vê no dia.",
+              "Melhor ir no improviso."
+            ] 
+          },
+          { 
+            english: "It slipped my mind.", 
+            portuguese: "Passou batido na minha cabeça.", 
+            alternativeTranslations: [
+              "Esqueci completamente.",
+              "Saiu da minha mente.",
+              "Deu um branco."
+            ] 
+          },
+          { 
+            english: "I’m beat after that meeting.", 
+            portuguese: "Estou exausto depois dessa reunião.", 
+            alternativeTranslations: [
+              "Tô morto depois dessa reunião.",
+              "Essa reunião me deixou derrubado.",
+              "Fiquei sem energia depois da reunião."
+            ] 
+          },
+          { 
+            english: "Don’t put all your eggs in one basket.", 
+            portuguese: "Não coloque todos os seus ovos numa única cesta.", 
+            alternativeTranslations: [
+              "Não aposte tudo numa só coisa.",
+              "É arriscado depender só disso.",
+              "Melhor não concentrar tudo num único lugar."
+            ] 
           }
         ]
       }
-    ];
+    ]
+  }
+];
+
     // Estado do aplicativo
     let currentState = {
       currentChapter: null,
