@@ -561,311 +561,529 @@
   </div>
 <script>
     // Dados organizados por capítulo e nível
-    const CHAPTERS = [
+  const CHAPTERS = [
+  {
+    id: 1,
+    title: "Chapter 001",
+    description: "Encontros no Trem",
+    levels: [
       {
         id: 1,
-        title: "Chapter 001",
-        description: "Encontros no Trem",
-        levels: [
-          {
-            id: 1,
-            name: "Nível 1",
-            description: "Encontros casuais",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "That Girl Again.", 
-                portuguese: "Aquela Garota de Novo.", 
-                alternativeTranslations: [
-                  "Aquela garota outra vez.",
-                  "Aquela menina de novo.",
-                  "Ela novamente."
-                ] 
-              },
-              { 
-                english: "I've run into her here several times already.", 
-                portuguese: "Eu já cruzei com ela aqui várias vezes.", 
-                alternativeTranslations: [
-                  "Já encontrei ela aqui várias vezes.",
-                  "Eu já me deparei com ela aqui várias vezes."
-                ] 
-              },
-              { 
-                english: "She's going late again today.", 
-                portuguese: "Ela está indo tarde de novo hoje.", 
-                alternativeTranslations: [
-                  "Ela está saindo tarde outra vez hoje.",
-                  "Hoje ela está atrasada de novo."
-                ] 
-              },
-              { 
-                english: "That person and I today too.", 
-                portuguese: "Aquela pessoa e eu hoje também.", 
-                alternativeTranslations: [
-                  "Eu e aquela pessoa hoje também.",
-                  "Aquela pessoa e eu, hoje de novo."
-                ] 
-              },
-              { 
-                english: "We will take the same last train.", 
-                portuguese: "Nós vamos pegar o mesmo último trem.", 
-                alternativeTranslations: [
-                  "Vamos pegar o mesmo último trem.",
-                  "Pegaremos o mesmo último trem."
-                ] 
-              }
+        name: "Nível 1",
+        description: "Encontros casuais",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "That Girl Again.", 
+            portuguese: "Aquela Garota de Novo.", 
+            alternativeTranslations: [
+              "Aquela garota outra vez.",
+              "Aquela menina de novo."
+            ],
+            wordByWord: [
+              { english: "That", portuguese: "Aquela" },
+              { english: "Girl", portuguese: "Garota" },
+              { english: "Again", portuguese: "de Novo" }
             ]
           },
-          {
-            id: 2,
-            name: "Nível 2",
-            description: "Pensamentos e curiosidades",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "Or maybe she's in a band?", 
-                portuguese: "Ou talvez ela esteja em uma banda?", 
-                alternativeTranslations: [
-                  "Ou será que toca numa banda?",
-                  "Ou talvez participe de um grupo musical?"
-                ] 
-              },
-              { 
-                english: "Ah! We made eye contact!", 
-                portuguese: "Ah! Nós fizemos contato visual!", 
-                alternativeTranslations: [
-                  "Ah! Nossos olhos se encontraram!",
-                  "Ah! Ela me olhou!"
-                ] 
-              },
-              { 
-                english: "I was lost in thought and stared... like a pervert...!!", 
-                portuguese: "Eu estava perdido em pensamentos e encarei... como um pervertido...!!", 
-                alternativeTranslations: [
-                  "Estava distraído e fiquei encarando... que nem um pervertido...!!",
-                  "Viajei nos pensamentos e fiquei olhando... igual um tarado...!!"
-                ] 
-              },
-              { 
-                english: "Even though we run into each other here often...", 
-                portuguese: "Embora a gente se encontre aqui frequentemente...", 
-                alternativeTranslations: [
-                  "Apesar de nos encontrarmos aqui com frequência...",
-                  "Mesmo nos cruzando aqui sempre..."
-                ] 
-              },
-              { 
-                english: "I guess it's only me who's aware of it.", 
-                portuguese: "Eu acho que sou só eu que estou ciente disso.", 
-                alternativeTranslations: [
-                  "Acho que só eu percebi isso.",
-                  "Creio que só eu notei isso."
-                ] 
-              }
+          { 
+            english: "I've run into her here several times already.", 
+            portuguese: "Eu já cruzei com ela aqui várias vezes.", 
+            alternativeTranslations: [
+              "Já encontrei ela aqui várias vezes.",
+              "Eu já me deparei com ela aqui várias vezes."
+            ],
+            wordByWord: [
+              { english: "I've", portuguese: "Eu" },
+              { english: "run into", portuguese: "cruzei com" },
+              { english: "her", portuguese: "ela" },
+              { english: "here", portuguese: "aqui" },
+              { english: "several times", portuguese: "várias vezes" },
+              { english: "already", portuguese: "já" }
             ]
           },
-          {
-            id: 3,
-            name: "Nível 3",
-            description: "Reflexões e coincidências",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "Things like this are just coincidences, not fate.", 
-                portuguese: "Coisas como essa são apenas coincidências, não destino.", 
-                alternativeTranslations: [
-                  "Essas coisas são só coincidências, não destino.",
-                  "Situações assim são meras coincidências, não sina do destino."
-                ] 
-              },
-              { 
-                english: "Ah... I can't concentrate on reading either.", 
-                portuguese: "Ah... Eu não consigo me concentrar na leitura também.", 
-                alternativeTranslations: [
-                  "Ah... Também não consigo focar na leitura.",
-                  "Ah... Nem pra ler eu consigo me concentrar."
-                ] 
-              },
-              { 
-                english: "Let's Listen to music.", 
-                portuguese: "Vamos ouvir música.", 
-                alternativeTranslations: [
-                  "Bora ouvir música.",
-                  "Vamos escutar um som."
-                ] 
-              },
-              { 
-                english: "Should I listen to this song again today?", 
-                portuguese: "Devo ouvir esta música de novo hoje?", 
-                alternativeTranslations: [
-                  "Será que ouço essa música outra vez hoje?",
-                  "Será que devo escutar essa música novamente hoje?"
-                ] 
-              },
-              { 
-                english: "The intro of this song is the best!", 
-                portuguese: "A introdução desta música é a melhor!", 
-                alternativeTranslations: [
-                  "A intro dessa música é incrível!",
-                  "O começo dessa música é o máximo!"
-                ] 
-              }
+          { 
+            english: "She's going late again today.", 
+            portuguese: "Ela está indo tarde de novo hoje.", 
+            alternativeTranslations: [
+              "Ela está saindo tarde outra vez hoje.",
+              "Hoje ela está atrasada de novo."
+            ],
+            wordByWord: [
+              { english: "She's", portuguese: "Ela está" },
+              { english: "going", portuguese: "indo" },
+              { english: "late", portuguese: "tarde" },
+              { english: "again", portuguese: "de novo" },
+              { english: "today", portuguese: "hoje" }
+            ]
+          },
+          { 
+            english: "That person and I today too.", 
+            portuguese: "Aquela pessoa e eu hoje também.", 
+            alternativeTranslations: [
+              "Eu e aquela pessoa hoje também.",
+              "Aquela pessoa e eu, hoje de novo."
+            ],
+            wordByWord: [
+              { english: "That", portuguese: "Aquela" },
+              { english: "person", portuguese: "pessoa" },
+              { english: "and", portuguese: "e" },
+              { english: "I", portuguese: "eu" },
+              { english: "today", portuguese: "hoje" },
+              { english: "too", portuguese: "também" }
+            ]
+          },
+          { 
+            english: "We will take the same last train.", 
+            portuguese: "Nós vamos pegar o mesmo último trem.", 
+            alternativeTranslations: [
+              "Vamos pegar o mesmo último trem.",
+              "Pegaremos o mesmo último trem."
+            ],
+            wordByWord: [
+              { english: "We", portuguese: "Nós" },
+              { english: "will take", portuguese: "vamos pegar" },
+              { english: "the same", portuguese: "o mesmo" },
+              { english: "last", portuguese: "último" },
+              { english: "train", portuguese: "trem" }
             ]
           }
         ]
       },
       {
         id: 2,
-        title: "Chapter 002",
-        description: "A Música e os Fones",
-        levels: [
-          {
-            id: 1,
-            name: "Nível 1",
-            description: "Apreciação musical",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "The first verse is so good too!", 
-                portuguese: "O primeiro verso é tão bom também!", 
-                alternativeTranslations: [
-                  "A primeira parte é muito boa também!",
-                  "O começo da letra é ótimo também!"
-                ] 
-              },
-              { 
-                english: "It's such a great song...", 
-                portuguese: "É uma música tão ótima...", 
-                alternativeTranslations: [
-                  "É uma canção tão boa...",
-                  "Que música fantástica..."
-                ] 
-              },
-              { 
-                english: "But hardly anyone knows it...", 
-                portuguese: "Mas quase ninguém a conhece...", 
-                alternativeTranslations: [
-                  "Mas praticamente ninguém conhece...",
-                  "Porém quase ninguém sabe dela..."
-                ] 
-              },
-              { 
-                english: "I wish there were someone to talk to about this song...", 
-                portuguese: "Eu queria que houvesse alguém para conversar sobre esta música...", 
-                alternativeTranslations: [
-                  "Queria ter alguém pra conversar sobre essa música...",
-                  "Desejava que existisse alguém para falar sobre essa canção..."
-                ] 
-              },
-              { 
-                english: "and about the long afternoon too...", 
-                portuguese: "e sobre a longa tarde, também...", 
-                alternativeTranslations: [
-                  "e também sobre a tarde longa...",
-                  "e sobre a longa tarde também..."
-                ] 
-              }
+        name: "Nível 2",
+        description: "Pensamentos e curiosidades",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "Or maybe she's in a band?", 
+            portuguese: "Ou talvez ela esteja em uma banda?", 
+            alternativeTranslations: [
+              "Ou será que toca numa banda?",
+              "Ou talvez participe de um grupo musical?"
+            ],
+            wordByWord: [
+              { english: "Or", portuguese: "Ou" },
+              { english: "maybe", portuguese: "talvez" },
+              { english: "she's", portuguese: "ela esteja" },
+              { english: "in", portuguese: "em" },
+              { english: "a", portuguese: "uma" },
+              { english: "band", portuguese: "banda" }
             ]
           },
-          {
-            id: 2,
-            name: "Nível 2",
-            description: "Problemas técnicos",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "huh? But why does it sound muffled today?", 
-                portuguese: "Hã? Mas por que está abafado hoje?", 
-                alternativeTranslations: [
-                  "Hã? Mas por que está embolado hoje?",
-                  "Hein? Mas por que está abafado hoje?"
-                ] 
-              },
-              { 
-                english: "Did the cheap earphones break already?", 
-                portuguese: "Os fones de ouvido baratos já quebraram?", 
-                alternativeTranslations: [
-                  "Os fones baratos já pifaram?",
-                  "Os fones de ouvido econômicos já estragaram?"
-                ] 
-              },
-              { 
-                english: "Should I turn up the volume a little more...", 
-                portuguese: "Devo aumentar o volume um pouco mais...", 
-                alternativeTranslations: [
-                  "Será que aumento o volume mais um pouco...",
-                  "Devo botar o volume mais alto..."
-                ] 
-              },
-              { 
-                english: "Excuse me!", 
-                portuguese: "Com licença!", 
-                alternativeTranslations: [
-                  "Licença!",
-                  "Perdão!"
-                ] 
-              },
-              { 
-                english: "could you turn down your phone's volume?", 
-                portuguese: "Você poderia abaixar o volume do seu celular?", 
-                alternativeTranslations: [
-                  "pode baixar o volume do seu celular?",
-                  "dá pra diminuir o volume do seu telefone?"
-                ] 
-              }
+          { 
+            english: "Ah! We made eye contact!", 
+            portuguese: "Ah! Nós fizemos contato visual!", 
+            alternativeTranslations: [
+              "Ah! Nossos olhos se encontraram!",
+              "Ah! Ela me olhou!"
+            ],
+            wordByWord: [
+              { english: "Ah!", portuguese: "Ah!" },
+              { english: "We", portuguese: "Nós" },
+              { english: "made", portuguese: "fizemos" },
+              { english: "eye contact", portuguese: "contato visual" }
             ]
           },
-          {
-            id: 3,
-            name: "Nível 3",
-            description: "Interações inesperadas",
-            estimatedTime: "~1 minuto",
-            phrases: [
-              { 
-                english: "I can hear it from over there!", 
-                portuguese: "Eu consigo ouvir daqui!", 
-                alternativeTranslations: [
-                  "Estou ouvindo daqui!",
-                  "Dá pra ouvir daqui!"
-                ] 
-              },
-              { 
-                english: "Ah! The earphones weren't paired!", 
-                portuguese: "Ah! Os fones de ouvido não estavam pareados!", 
-                alternativeTranslations: [
-                  "Ah! Os fones não estavam conectados!",
-                  "Ah! Os fones não tinham sido emparelhados!"
-                ] 
-              },
-              { 
-                english: "These cheap earphones again...!!", 
-                portuguese: "Estes fones de ouvido baratos de novo...!!", 
-                alternativeTranslations: [
-                  "Esses fones baratos outra vez...!!",
-                  "Esses fones vagabundos de novo...!!"
-                ] 
-              },
-              { 
-                english: "Do you like that song?", 
-                portuguese: "Você gosta daquela música?", 
-                alternativeTranslations: [
-                  "Gosta dessa música?",
-                  "Você curte essa música?"
-                ] 
-              },
-              { 
-                english: "That song from the Long Afternoon", 
-                portuguese: "Aquela música da 'Long Afternoon'", 
-                alternativeTranslations: [
-                  "Aquela música do Long Afternoon",
-                  "Aquela canção da Long Afternoon"
-                ] 
-              }
+          { 
+            english: "I was lost in thought and stared... like a pervert...!!", 
+            portuguese: "Eu estava perdido em pensamentos e encarei... como um pervertido...!!", 
+            alternativeTranslations: [
+              "Estava distraído e fiquei encarando... que nem um pervertido...!!",
+              "Viajei nos pensamentos e fiquei olhando... igual um tarado...!!"
+            ],
+            wordByWord: [
+              { english: "I was", portuguese: "Eu estava" },
+              { english: "lost in", portuguese: "perdido em" },
+              { english: "thought", portuguese: "pensamentos" },
+              { english: "and", portuguese: "e" },
+              { english: "stared", portuguese: "encarei" },
+              { english: "like", portuguese: "como" },
+              { english: "a", portuguese: "um" },
+              { english: "pervert", portuguese: "pervertido" }
+            ]
+          },
+          { 
+            english: "Even though we run into each other here often...", 
+            portuguese: "Embora a gente se encontre aqui frequentemente...", 
+            alternativeTranslations: [
+              "Apesar de nos encontrarmos aqui com frequência...",
+              "Mesmo nos cruzando aqui sempre..."
+            ],
+            wordByWord: [
+              { english: "Even though", portuguese: "Embora" },
+              { english: "we", portuguese: "a gente" },
+              { english: "run into", portuguese: "se encontre" },
+              { english: "each other", portuguese: "um ao outro" },
+              { english: "here", portuguese: "aqui" },
+              { english: "often", portuguese: "frequentemente" }
+            ]
+          },
+          { 
+            english: "I guess it's only me who's aware of it.", 
+            portuguese: "Eu acho que sou só eu que estou ciente disso.", 
+            alternativeTranslations: [
+              "Acho que só eu percebi isso.",
+              "Creio que só eu notei isso."
+            ],
+            wordByWord: [
+              { english: "I guess", portuguese: "Eu acho" },
+              { english: "it's", portuguese: "que é" },
+              { english: "only me", portuguese: "só eu" },
+              { english: "who's", portuguese: "que estou" },
+              { english: "aware of", portuguese: "ciente de" },
+              { english: "it", portuguese: "isso" }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: "Nível 3",
+        description: "Reflexões e coincidências",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "Things like this are just coincidences, not fate.", 
+            portuguese: "Coisas como essa são apenas coincidências, não destino.", 
+            alternativeTranslations: [
+              "Essas coisas são só coincidências, não destino.",
+              "Situações assim são meras coincidências, não sina do destino."
+            ],
+            wordByWord: [
+              { english: "Things", portuguese: "Coisas" },
+              { english: "like this", portuguese: "como essa" },
+              { english: "are", portuguese: "são" },
+              { english: "just", portuguese: "apenas" },
+              { english: "coincidences", portuguese: "coincidências" },
+              { english: "not", portuguese: "não" },
+              { english: "fate", portuguese: "destino" }
+            ]
+          },
+          { 
+            english: "Ah... I can't concentrate on reading either.", 
+            portuguese: "Ah... Eu não consigo me concentrar na leitura também.", 
+            alternativeTranslations: [
+              "Ah... Também não consigo focar na leitura.",
+              "Ah... Nem pra ler eu consigo me concentrar."
+            ],
+            wordByWord: [
+              { english: "Ah...", portuguese: "Ah..." },
+              { english: "I", portuguese: "Eu" },
+              { english: "can't", portuguese: "não consigo" },
+              { english: "concentrate on", portuguese: "me concentrar na" },
+              { english: "reading", portuguese: "leitura" },
+              { english: "either", portuguese: "também" }
+            ]
+          },
+          { 
+            english: "Let's Listen to music.", 
+            portuguese: "Vamos ouvir música.", 
+            alternativeTranslations: [
+              "Bora ouvir música.",
+              "Vamos escutar um som."
+            ],
+            wordByWord: [
+              { english: "Let's", portuguese: "Vamos" },
+              { english: "Listen to", portuguese: "ouvir" },
+              { english: "music", portuguese: "música" }
+            ]
+          },
+          { 
+            english: "Should I listen to this song again today?", 
+            portuguese: "Devo ouvir esta música de novo hoje?", 
+            alternativeTranslations: [
+              "Será que ouço essa música outra vez hoje?",
+              "Será que devo escutar essa música novamente hoje?"
+            ],
+            wordByWord: [
+              { english: "Should I", portuguese: "Devo" },
+              { english: "listen to", portuguese: "ouvir" },
+              { english: "this", portuguese: "esta" },
+              { english: "song", portuguese: "música" },
+              { english: "again", portuguese: "de novo" },
+              { english: "today", portuguese: "hoje" }
+            ]
+          },
+          { 
+            english: "The intro of this song is the best!", 
+            portuguese: "A introdução desta música é a melhor!", 
+            alternativeTranslations: [
+              "A intro dessa música é incrível!",
+              "O começo dessa música é o máximo!"
+            ],
+            wordByWord: [
+              { english: "The", portuguese: "A" },
+              { english: "intro", portuguese: "introdução" },
+              { english: "of", portuguese: "de" },
+              { english: "this", portuguese: "esta" },
+              { english: "song", portuguese: "música" },
+              { english: "is", portuguese: "é" },
+              { english: "the best", portuguese: "a melhor" }
             ]
           }
         ]
       }
-    ];
+    ]
+  },
+  {
+    id: 2,
+    title: "Chapter 002",
+    description: "A Música e os Fones",
+    levels: [
+      {
+        id: 1,
+        name: "Nível 1",
+        description: "Apreciação musical",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "The first verse is so good too!", 
+            portuguese: "O primeiro verso é tão bom também!", 
+            alternativeTranslations: [
+              "A primeira parte é muito boa também!",
+              "O começo da letra é ótimo também!"
+            ],
+            wordByWord: [
+              { english: "The", portuguese: "O" },
+              { english: "first", portuguese: "primeiro" },
+              { english: "verse", portuguese: "verso" },
+              { english: "is", portuguese: "é" },
+              { english: "so good", portuguese: "tão bom" },
+              { english: "too", portuguese: "também" }
+            ]
+          },
+          { 
+            english: "It's such a great song...", 
+            portuguese: "É uma música tão ótima...", 
+            alternativeTranslations: [
+              "É uma canção tão boa...",
+              "Que música fantástica..."
+            ],
+            wordByWord: [
+              { english: "It's", portuguese: "É" },
+              { english: "such a", portuguese: "uma" },
+              { english: "great", portuguese: "tão ótima" },
+              { english: "song", portuguese: "música" }
+            ]
+          },
+          { 
+            english: "But hardly anyone knows it...", 
+            portuguese: "Mas quase ninguém a conhece...", 
+            alternativeTranslations: [
+              "Mas praticamente ninguém conhece...",
+              "Porém quase ninguém sabe dela..."
+            ],
+            wordByWord: [
+              { english: "But", portuguese: "Mas" },
+              { english: "hardly anyone", portuguese: "quase ninguém" },
+              { english: "knows", portuguese: "conhece" },
+              { english: "it", portuguese: "a" }
+            ]
+          },
+          { 
+            english: "I wish there were someone to talk to about this song...", 
+            portuguese: "Eu queria que houvesse alguém para conversar sobre esta música...", 
+            alternativeTranslations: [
+              "Queria ter alguém pra conversar sobre essa música...",
+              "Desejava que existisse alguém para falar sobre essa canção..."
+            ],
+            wordByWord: [
+              { english: "I wish", portuguese: "Eu queria" },
+              { english: "there were", portuguese: "que houvesse" },
+              { english: "someone", portuguese: "alguém" },
+              { english: "to talk to", portuguese: "para conversar" },
+              { english: "about", portuguese: "sobre" },
+              { english: "this", portuguese: "esta" },
+              { english: "song", portuguese: "música" }
+            ]
+          },
+          { 
+            english: "and about the long afternoon too...", 
+            portuguese: "e sobre a longa tarde, também...", 
+            alternativeTranslations: [
+              "e também sobre a tarde longa...",
+              "e sobre a longa tarde também..."
+            ],
+            wordByWord: [
+              { english: "and", portuguese: "e" },
+              { english: "about", portuguese: "sobre" },
+              { english: "the", portuguese: "a" },
+              { english: "long", portuguese: "longa" },
+              { english: "afternoon", portuguese: "tarde" },
+              { english: "too", portuguese: "também" }
+            ]
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: "Nível 2",
+        description: "Problemas técnicos",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "huh? But why does it sound muffled today?", 
+            portuguese: "Hã? Mas por que está abafado hoje?", 
+            alternativeTranslations: [
+              "Hã? Mas por que está embolado hoje?",
+              "Hein? Mas por que está abafado hoje?"
+            ],
+            wordByWord: [
+              { english: "huh?", portuguese: "Hã?" },
+              { english: "But", portuguese: "Mas" },
+              { english: "why", portuguese: "por que" },
+              { english: "does it", portuguese: "está" },
+              { english: "sound", portuguese: "" },
+              { english: "muffled", portuguese: "abafado" },
+              { english: "today", portuguese: "hoje" }
+            ]
+          },
+          { 
+            english: "Did the cheap earphones break already?", 
+            portuguese: "Os fones de ouvido baratos já quebraram?", 
+            alternativeTranslations: [
+              "Os fones baratos já pifaram?",
+              "Os fones de ouvido econômicos já estragaram?"
+            ],
+            wordByWord: [
+              { english: "Did", portuguese: "" },
+              { english: "the", portuguese: "Os" },
+              { english: "cheap", portuguese: "baratos" },
+              { english: "earphones", portuguese: "fones de ouvido" },
+              { english: "break", portuguese: "quebraram" },
+              { english: "already", portuguese: "já" }
+            ]
+          },
+          { 
+            english: "Should I turn up the volume a little more...", 
+            portuguese: "Devo aumentar o volume um pouco mais...", 
+            alternativeTranslations: [
+              "Será que aumento o volume mais um pouco...",
+              "Devo botar o volume mais alto..."
+            ],
+            wordByWord: [
+              { english: "Should I", portuguese: "Devo" },
+              { english: "turn up", portuguese: "aumentar" },
+              { english: "the", portuguese: "o" },
+              { english: "volume", portuguese: "volume" },
+              { english: "a little", portuguese: "um pouco" },
+              { english: "more", portuguese: "mais" }
+            ]
+          },
+          { 
+            english: "Excuse me!", 
+            portuguese: "Com licença!", 
+            alternativeTranslations: [
+              "Licença!",
+              "Perdão!"
+            ],
+            wordByWord: [
+              { english: "Excuse", portuguese: "Com" },
+              { english: "me", portuguese: "licença" }
+            ]
+          },
+          { 
+            english: "could you turn down your phone's volume?", 
+            portuguese: "Você poderia abaixar o volume do seu celular?", 
+            alternativeTranslations: [
+              "pode baixar o volume do seu celular?",
+              "dá pra diminuir o volume do seu telefone?"
+            ],
+            wordByWord: [
+              { english: "could you", portuguese: "Você poderia" },
+              { english: "turn down", portuguese: "abaixar" },
+              { english: "your", portuguese: "o" },
+              { english: "phone's", portuguese: "do seu celular" },
+              { english: "volume", portuguese: "volume" }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: "Nível 3",
+        description: "Interações inesperadas",
+        estimatedTime: "~1 minuto",
+        phrases: [
+          { 
+            english: "I can hear it from over there!", 
+            portuguese: "Eu consigo ouvir daqui!", 
+            alternativeTranslations: [
+              "Estou ouvindo daqui!",
+              "Dá pra ouvir daqui!"
+            ],
+            wordByWord: [
+              { english: "I", portuguese: "Eu" },
+              { english: "can hear", portuguese: "consigo ouvir" },
+              { english: "it", portuguese: "" },
+              { english: "from over there", portuguese: "daqui" }
+            ]
+          },
+          { 
+            english: "Ah! The earphones weren't paired!", 
+            portuguese: "Ah! Os fones de ouvido não estavam pareados!", 
+            alternativeTranslations: [
+              "Ah! Os fones não estavam conectados!",
+              "Ah! Os fones não tinham sido emparelhados!"
+            ],
+            wordByWord: [
+              { english: "Ah!", portuguese: "Ah!" },
+              { english: "The", portuguese: "Os" },
+              { english: "earphones", portuguese: "fones de ouvido" },
+              { english: "weren't", portuguese: "não estavam" },
+              { english: "paired", portuguese: "pareados" }
+            ]
+          },
+          { 
+            english: "These cheap earphones again...!!", 
+            portuguese: "Estes fones de ouvido baratos de novo...!!", 
+            alternativeTranslations: [
+              "Esses fones baratos outra vez...!!",
+              "Esses fones vagabundos de novo...!!"
+            ],
+            wordByWord: [
+              { english: "These", portuguese: "Estes" },
+              { english: "cheap", portuguese: "baratos" },
+              { english: "earphones", portuguese: "fones de ouvido" },
+              { english: "again", portuguese: "de novo" }
+            ]
+          },
+          { 
+            english: "Do you like that song?", 
+            portuguese: "Você gosta daquela música?", 
+            alternativeTranslations: [
+              "Gosta dessa música?",
+              "Você curte essa música?"
+            ],
+            wordByWord: [
+              { english: "Do you", portuguese: "Você" },
+              { english: "like", portuguese: "gosta" },
+              { english: "that", portuguese: "daquela" },
+              { english: "song", portuguese: "música" }
+            ]
+          },
+          { 
+            english: "That song from the Long Afternoon", 
+            portuguese: "Aquela música da 'Long Afternoon'", 
+            alternativeTranslations: [
+              "Aquela música do Long Afternoon",
+              "Aquela canção da Long Afternoon"
+            ],
+            wordByWord: [
+              { english: "That", portuguese: "Aquela" },
+              { english: "song", portuguese: "música" },
+              { english: "from", portuguese: "da" },
+              { english: "the", portuguese: "" },
+              { english: "Long Afternoon", portuguese: "'Long Afternoon'" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
 
     // Sistema de sinônimos
     const SYNONYMS = {
@@ -1387,153 +1605,130 @@
     }
 
     function generateVocabTable(question) {
-      // Grupos de palavras que devem ficar juntas
-      const englishGroups = groupWords(question.english, 'en');
-      const portugueseGroups = groupWords(question.portuguese, 'pt');
-      
+    // Se existir tradução palavra por palavra definida, use-a
+    if (question.wordByWord) {
       let html = '';
-      const max = Math.max(englishGroups.length, portugueseGroups.length);
-      
-      for (let i = 0; i < max; i++) {
-        const en = englishGroups[i] || '';
-        const pt = portugueseGroups[i] || '';
-        if (en.trim() || pt.trim()) {
-          html += `<tr><td><strong>${en}</strong></td><td>${pt}</td></tr>`;
-        }
-      }
-      
-      elements.vocabTable.innerHTML = html || `<tr><td colspan="2" class="text-center">Não foi possível gerar o vocabulário.</td></tr>`;
+      question.wordByWord.forEach(pair => {
+        html += `<tr><td><strong>${pair.english}</strong></td><td>${pair.portuguese}</td></tr>`;
+      });
+      elements.vocabTable.innerHTML = html;
+      return;
     }
+    
+    // Fallback para o método antigo (caso alguma frase não tenha wordByWord)
+    const englishGroups = groupWords(question.english, 'en');
+    const portugueseGroups = groupWords(question.portuguese, 'pt');
+    
+    let html = '';
+    const max = Math.max(englishGroups.length, portugueseGroups.length);
+    
+    for (let i = 0; i < max; i++) {
+      const en = englishGroups[i] || '';
+      const pt = portugueseGroups[i] || '';
+      if (en.trim() || pt.trim()) {
+        html += `<tr><td><strong>${en}</strong></td><td>${pt}</td></tr>`;
+      }
+    }
+    
+    elements.vocabTable.innerHTML = html || `<tr><td colspan="2" class="text-center">Não foi possível gerar o vocabulário.</td></tr>`;
+  }
 
     function groupWords(text, language) {
-      const words = text.split(' ').filter(w => w.trim() !== '');
+      // Remove pontuação no final mas mantém para análise
+      const cleanText = text.replace(/[.,?!;:]$/, '');
+      const words = cleanText.split(' ').filter(w => w.trim() !== '');
       const groups = [];
       let i = 0;
       
       while (i < words.length) {
-        let group = words[i];
-        let nextIndex = i + 1;
+        let currentWord = words[i];
         
-        // Tenta formar grupos de 2 palavras
-        if (nextIndex < words.length) {
-          const twoWordGroup = `${words[i]} ${words[nextIndex]}`.toLowerCase();
+        // Verifica contrações e expressões comuns
+        if (language === 'en') {
+          // Contrações em inglês
+          const contractions = ["i'm", "you're", "he's", "she's", "it's", "we're", "they're", 
+                              "i've", "you've", "we've", "they've", "can't", "don't", "doesn't", 
+                              "didn't", "isn't", "aren't", "wasn't", "weren't"];
           
-          if (language === 'en') {
-            // Expressões comuns em inglês
+          if (contractions.includes(currentWord.toLowerCase())) {
+            groups.push(currentWord);
+            i++;
+            continue;
+          }
+          
+          // Expressões de 2 palavras em inglês
+          if (i + 1 < words.length) {
+            const twoWords = `${currentWord} ${words[i + 1]}`.toLowerCase();
             const englishPhrases = [
-              "i've", "you've", "we've", "they've", "i'm", "you're", "he's", "she's", "it's", "we're", "they're",
-              "don't", "doesn't", "didn't", "isn't", "aren't", "wasn't", "weren't", "haven't", "hasn't", "hadn't",
-              "can't", "couldn't", "won't", "wouldn't", "shouldn't", "mightn't", "mustn't",
-              "run into", "eye contact", "lost in", "a little", "a few", "a long", "all of", "turn up", "turn down",
-              "such a", "hardly anyone", "no matter", "how many", "each other", "looking at", "wonder if", 
-              "music major", "made eye", "even though", "i guess", "things like", "can't concentrate", 
-              "let's listen", "should i", "this song", "the intro", "no matter", "i've heard", "first verse",
-              "so good", "such a", "great song", "hardly anyone", "knows it", "i wish", "there were", 
-              "talk to", "about this", "long afternoon", "why does", "sound muffled", "cheap earphones", 
-              "break already", "turn up", "the volume", "a little", "excuse me", "turn down", "phone's volume",
-              "hear it", "from over", "earphones weren't", "these cheap", "do you", "like that", 
-              "that song", "from the", "long afternoon", "i like", "i do", "he doesn't", "fit the",
-              "current trend", "promote himself", "communicate at", "if he", "did a", "would get", 
-              "spread everywhere", "doesn't do", "he should", "show his", "i'd like", "meet him",
-              "as a", "i'm curious", "what he", "looks like", "it's also", "to just", "watch him",
-              "live the", "way he", "it's good", "focuses on", "doesn't do", "anything else", 
-              "mysterious concept", "is fine", "i liked", "the way", "just as", "we have", 
-              "run into", "each other", "a few", "let's just", "we don't", "know each", "otherwise she",
-              "will know", "i was", "the train", "is arriving", "i thought", "you knew", "since you've",
-              "always been", "staring at", "did some", "rating attack", "what should", "what if",
-              "i'm mistaken", "for a", "stalker or", "what's that", "all of", "a sudden", 
-              "it just", "means that", "was also", "aware of", "i'm worried", "creeped her", 
-              "if she", "thought i", "was a", "she wouldn't", "have kept", "going to", 
-              "same platform", "she'd have", "avoided it", "long time", "if you're", "you should",
-              "talk to", "next time", "why? you're", "also aware", "aren't you", "why does",
-              "she go", "go home", "what does", "she do", "isn't that", "how it", "starts usually",
-              "as i", "that's how", "relationships usually", "gotta clear", "things up", "so she",
-              "doesn't think", "i'm a", "i hope", "she thinks", "same way", "as i", "now i",
-              "can't sit", "on the", "bench next", "to her", "and start", "casual conversation",
-              "i guess", "it can't", "be helped", "i'll just", "study standing", "it's weird",
-              "to force", "i don't", "want to", "approach her", "and cause", "i don't", "want to",
-              "get even", "further away", "from her", "today, i'll", "just pass", "without saying",
-              "are you", "really gonna", "wait standing", "there's no", "feel free", "to sit",
-              "for a"
+              "such a", "great song", "run into", "eye contact", "lost in", 
+              "a little", "a few", "a long", "all of", "turn up", "turn down",
+              "hardly anyone", "no matter", "how many", "each other", "looking at",
+              "wonder if", "music major", "made eye", "even though", "i guess",
+              "things like", "can't concentrate", "let's listen", "should i",
+              "this song", "the intro", "i've heard", "first verse", "so good",
+              "i wish", "there were", "talk to", "about this", "long afternoon",
+              "why does", "sound muffled", "cheap earphones", "break already",
+              "the volume", "excuse me", "phone's volume", "hear it", "from over",
+              "earphones weren't", "these cheap", "do you", "like that", "that song",
+              "from the", "i like", "i do", "he doesn't", "fit the", "current trend",
+              "promote himself", "communicate at", "if he", "did a", "would get",
+              "spread everywhere", "doesn't do", "he should", "show his", "i'd like",
+              "meet him", "as a", "i'm curious", "what he", "looks like", "it's also",
+              "to just", "watch him", "live the", "way he", "it's good", "focuses on",
+              "anything else", "mysterious concept", "is fine", "i liked", "the way",
+              "just as", "we have", "each other", "let's just", "we don't", "know each",
+              "otherwise she", "will know", "i was", "the train", "is arriving",
+              "i thought", "you knew", "since you've", "always been", "staring at"
             ];
             
-            if (englishPhrases.some(phrase => twoWordGroup.includes(phrase))) {
-              group = twoWordGroup;
-              nextIndex = i + 2;
+            if (englishPhrases.includes(twoWords)) {
+              groups.push(twoWords);
+              i += 2;
+              continue;
             }
-          } else {
-            // Expressões comuns em português
+          }
+        } else {
+          // Português
+          // Expressões de 2 palavras em português
+          if (i + 1 < words.length) {
+            const twoWords = `${currentWord} ${words[i + 1]}`.toLowerCase();
             const portuguesePhrases = [
-              "de novo", "várias vezes", "contato visual", "perdido em", "um pouco", "algumas vezes",
-              "há muito", "da próxima", "por que", "o que", "que eu", "se ela", "eu me", "me pergunto",
-              "se eu", "eu estava", "ela está", "nós vamos", "você poderia", "é bom", "é uma", "é assim",
-              "não é", "também é", "é só", "se concentre", "na criação", "mais nada", "tão bom", 
-              "quase ninguém", "se eu for", "com um", "ou um", "ela vai", "eu vou", "ela teria",
-              "você também", "está preocupado", "de repente", "significa que", "estou preocupado",
-              "ela pensasse", "que eu era", "a mesma", "há muito tempo", "da mesma forma", "ao lado",
-              "em pé", "mal-entendidos", "mais longe", "sem dizer", "fique à vontade", "aquela garota",
-              "já cruzei", "com ela", "está indo", "aquela pessoa", "vamos pegar", "mesmo último",
-              "olhando para", "o instrumento", "ela carrega", "estudante de", "ou talvez", 
-              "em uma", "nós fizemos", "como um", "embora a", "gente se", "encontre aqui", 
-              "com frequência", "só eu", "estou ciente", "coisas como", "apenas coincidências",
+              "é uma", "tão ótima", "de novo", "várias vezes", "contato visual", 
+              "perdido em", "um pouco", "algumas vezes", "há muito", "da próxima",
+              "por que", "o que", "que eu", "se ela", "eu me", "me pergunto", "se eu",
+              "eu estava", "ela está", "nós vamos", "você poderia", "é bom", "é assim",
+              "não é", "também é", "é só", "se concentre", "na criação", "mais nada",
+              "tão bom", "quase ninguém", "se eu for", "com um", "ou um", "ela vai",
+              "eu vou", "ela teria", "você também", "está preocupado", "de repente",
+              "significa que", "estou preocupado", "ela pensasse", "que eu era",
+              "a mesma", "há muito tempo", "da mesma forma", "ao lado", "em pé",
+              "mal-entendidos", "mais longe", "sem dizer", "fique à vontade",
+              "aquela garota", "já cruzei", "com ela", "está indo", "aquela pessoa",
+              "vamos pegar", "mesmo último", "olhando para", "o instrumento",
+              "ela carrega", "estudante de", "ou talvez", "em uma", "nós fizemos",
+              "como um", "embora a", "gente se", "encontre aqui", "com frequência",
+              "só eu", "estou ciente", "coisas como", "apenas coincidências",
               "não destino", "não consigo", "me concentrar", "na leitura", "vamos ouvir",
-              "devo ouvir", "esta música", "a introdução", "desta música", "é a", "não importa",
-              "quantas vezes", "tenha ouvido", "primeiro verso", "tão bom", "uma música", 
-              "tão ótima", "mas quase", "ninguém a", "eu queria", "que houvesse", "alguém para",
-              "conversar sobre", "e sobre", "longa tarde", "mas por", "está abafado", 
-              "fones de", "ouvido baratos", "já quebraram", "aumentar o", "um pouco", 
-              "com licença", "abaixar o", "volume do", "seu celular", "consigo ouvir", 
-              "os fones", "não estavam", "estes fones", "você gosta", "daquela música",
-              "aquela música", "eu gosto", "sim, eu", "gosto, eu", "ele não", "se encaixa",
-              "tendência atual", "se promove", "se comunica", "jeito nenhum", "se ele",
-              "fez um", "vídeos seriam", "feitos e", "espalhados por", "toda parte", 
-              "não faz", "ele deveria", "mostrar o", "rosto dele", "eu gostaria", 
-              "encontrá-lo como", "estou curioso", "para saber", "como ele", "mas é", 
-              "também é", "apenas observá-lo", "do jeito", "ele quer", "é bom", 
-              "que ele", "se concentre", "e não", "faça mais", "e o", "conceito misterioso",
-              "também é", "eu gostei", "do jeito", "exatamente como", "nós temos",
-              "nos encontramos", "aqui algumas", "não é", "vamos apenas", 
-              "que não", "nos conhecemos", "senão ela", "saberá que", "estava encarando",
-              "o trem", "está chegando", "eu pensei", "que você", "já soubesse", 
-              "já que", "você sempre", "esteve me", "algum idiota", "ataque de", 
-              "chefe! o", "que eu", "devo fazer", "e se", "for confundido", 
-              "stalker ou", "o que", "é isso", "de repente", "isso apenas", 
-              "aquela garota", "também estava", "ciente de", "estou preocupado",
-              "de tê-la", "se ela", "pensasse que", "pervertido, ela", 
-              "não continuaria", "indo para", "plataforma, certo", "ela teria",
-              "evitado isso", "muito tempo", "se você", "está preocupado", 
-              "deveria falar", "com ela", "direito da", "próxima vez", 
-              "por quê?", "você também", "está ciente", "dela, não", "por que",
-              "ela volta", "para casa", "o que", "ela faz", "não é", 
-              "assim que", "geralmente começa", "como eu", "disse, é", 
-              "assim que", "os relacionamentos", "geralmente começam", 
-              "tenho que", "esclarecer as", "para que", "ela não", 
-              "pense que", "um esquisito", "eu espero", "que ela", 
-              "pense da", "mesma forma", "agora eu", "não consigo", 
-              "sentar no", "banco ao", "lado dela", "e começar", 
-              "conversa casual", "eu acho", "que não", "tem jeito", 
-              "vou apenas", "estudar em", "é estranho", "forçar uma", 
-              "eu não", "quero me", "aproximar dela", "e causar", 
-              "eu não", "quero ficar", "ainda mais", "longe dela", 
-              "hoje, eu", "só vou", "passar sem", "dizer nada", 
-              "você realmente", "vai esperar", "não há", "fique à", 
-              "vontade para", "se sentar", "por um"
+              "devo ouvir", "esta música", "a introdução", "desta música", "não importa",
+              "quantas vezes", "tenha ouvido", "primeiro verso", "uma música"
             ];
             
-            if (portuguesePhrases.some(phrase => twoWordGroup.includes(phrase))) {
-              group = twoWordGroup;
-              nextIndex = i + 2;
+            if (portuguesePhrases.includes(twoWords)) {
+              groups.push(twoWords);
+              i += 2;
+              continue;
             }
           }
         }
         
-        groups.push(group);
-        i = nextIndex;
+        // Palavra individual
+        groups.push(currentWord);
+        i++;
       }
       
       return groups;
     }
-
+    
     // Próxima questão
     function nextQuestion() {
       currentState.currentQuestionIndex++;
