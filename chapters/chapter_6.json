@@ -1,0 +1,97 @@
+{
+  "id": 6,
+  "title": "Chapter 006",
+  "description": "No Trabalho",
+  "phrases": [
+    {
+      "english": "Good morning, everyone!",
+      "portuguese": "Bom dia a todos!",
+      "alternativeTranslations": ["Bom dia, pessoal!", "Bom dia, galera!"],
+      "wordByWord": [{"english": "Good morning", "portuguese": "Bom dia"}, {"english": "everyone", "portuguese": "a todos"}]
+    },
+    {
+      "english": "Did you have a good weekend?",
+      "portuguese": "Você teve um bom fim de semana?",
+      "alternativeTranslations": ["Como foi seu final de semana?", "O fim de semana foi bom?"],
+      "wordByWord": [{"english": "Did you", "portuguese": "Você"}, {"english": "have", "portuguese": "teve"}, {"english": "a", "portuguese": "um"}, {"english": "good", "portuguese": "bom"}, {"english": "weekend", "portuguese": "fim de semana"}]
+    },
+    {
+      "english": "I have a meeting at ten.",
+      "portuguese": "Tenho uma reunião às dez.",
+      "alternativeTranslations": ["Tenho meeting às dez horas.", "Às dez tenho reunião."],
+      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "have", "portuguese": "tenho"}, {"english": "a", "portuguese": "uma"}, {"english": "meeting", "portuguese": "reunião"}, {"english": "at", "portuguese": "às"}, {"english": "ten", "portuguese": "dez"}]
+    },
+    {
+      "english": "Let me check my calendar.",
+      "portuguese": "Deixe-me verificar minha agenda.",
+      "alternativeTranslations": ["Vou checar meu calendário.", "Deixa eu ver na agenda."],
+      "wordByWord": [{"english": "Let me", "portuguese": "Deixe-me"}, {"english": "check", "portuguese": "verificar"}, {"english": "my", "portuguese": "minha"}, {"english": "calendar", "portuguese": "agenda"}]
+    },
+    {
+      "english": "I need to finish this report.",
+      "portuguese": "Preciso terminar este relatório.",
+      "alternativeTranslations": ["Tenho que finalizar esse relatório.", "Devo concluir este relatório."],
+      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "finish", "portuguese": "terminar"}, {"english": "this", "portuguese": "este"}, {"english": "report", "portuguese": "relatório"}]
+    },
+    {
+      "english": "Can you send me that file by email?",
+      "portuguese": "Você pode me enviar aquele arquivo por email?",
+      "alternativeTranslations": ["Pode mandar esse arquivo por e-mail?", "Consegue me passar o arquivo via email?"],
+      "wordByWord": [{"english": "Can you", "portuguese": "Você pode"}, {"english": "send", "portuguese": "enviar"}, {"english": "me", "portuguese": "me"}, {"english": "that", "portuguese": "aquele"}, {"english": "file", "portuguese": "arquivo"}, {"english": "by", "portuguese": "por"}, {"english": "email", "portuguese": "email"}]
+    },
+    {
+      "english": "I'm working on the presentation right now.",
+      "portuguese": "Estou trabalhando na apresentação agora mesmo.",
+      "alternativeTranslations": ["Estou fazendo a apresentação neste momento.", "Estou preparando o slide agora."],
+      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "working on", "portuguese": "trabalhando na"}, {"english": "the", "portuguese": "a"}, {"english": "presentation", "portuguese": "apresentação"}, {"english": "right now", "portuguese": "agora mesmo"}]
+    },
+    {
+      "english": "Could we reschedule the meeting?",
+      "portuguese": "Poderíamos remarcar a reunião?",
+      "alternativeTranslations": ["Dá para reagendar o meeting?", "Podemos mudar o horário da reunião?"],
+      "wordByWord": [{"english": "Could we", "portuguese": "Poderíamos"}, {"english": "reschedule", "portuguese": "remarcar"}, {"english": "the", "portuguese": "a"}, {"english": "meeting", "portuguese": "reunião"}]
+    },
+    {
+      "english": "I'll be out of the office tomorrow.",
+      "portuguese": "Estarei fora do escritório amanhã.",
+      "alternativeTranslations": ["Não estarei no escritório amanhã.", "Amanhã não venho ao trabalho."],
+      "wordByWord": [{"english": "I'll be", "portuguese": "Estarei"}, {"english": "out of", "portuguese": "fora do"}, {"english": "the", "portuguese": ""}, {"english": "office", "portuguese": "escritório"}, {"english": "tomorrow", "portuguese": "amanhã"}]
+    },
+    {
+      "english": "Let's take a coffee break.",
+      "portuguese": "Vamos fazer uma pausa para o café.",
+      "alternativeTranslations": ["Bora tomar um café.", "Vamos dar um tempo para o café."],
+      "wordByWord": [{"english": "Let's", "portuguese": "Vamos"}, {"english": "take", "portuguese": "fazer"}, {"english": "a", "portuguese": "uma"}, {"english": "coffee", "portuguese": "para o café"}, {"english": "break", "portuguese": "pausa"}]
+    },
+    {
+      "english": "I need to wrap up a few things before leaving.",
+      "portuguese": "Preciso finalizar algumas coisas antes de sair.",
+      "alternativeTranslations": ["Tenho que terminar umas coisas antes de ir.", "Preciso concluir algumas tarefas antes de ir embora."],
+      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "wrap up", "portuguese": "finalizar"}, {"english": "a few", "portuguese": "algumas"}, {"english": "things", "portuguese": "coisas"}, {"english": "before", "portuguese": "antes de"}, {"english": "leaving", "portuguese": "sair"}]
+    },
+    {
+      "english": "Don't forget to save your work.",
+      "portuguese": "Não esqueça de salvar seu trabalho.",
+      "alternativeTranslations": ["Lembre-se de salvar o arquivo.", "Não se esqueça de gravar o trabalho."],
+      "wordByWord": [{"english": "Don't", "portuguese": "Não"}, {"english": "forget to", "portuguese": "esqueça de"}, {"english": "save", "portuguese": "salvar"}, {"english": "your", "portuguese": "seu"}, {"english": "work", "portuguese": "trabalho"}]
+    },
+    {
+      "english": "I'll finish this tomorrow morning first thing.",
+      "portuguese": "Vou terminar isso amanhã de manhã logo de cara.",
+      "alternativeTranslations": ["Termino isso amanhã cedo em primeiro lugar.", "Primeira coisa amanhã é finalizar isso."],
+      "wordByWord": [{"english": "I'll", "portuguese": "Vou"}, {"english": "finish", "portuguese": "terminar"}, {"english": "this", "portuguese": "isso"}, {"english": "tomorrow", "portuguese": "amanhã"}, {"english": "morning", "portuguese": "de manhã"}, {"english": "first thing", "portuguese": "logo de cara"}]
+    },
+    {
+      "english": "Have a great evening, see you tomorrow!",
+      "portuguese": "Tenha uma ótima noite, até amanhã!",
+      "alternativeTranslations": ["Boa noite, nos vemos amanhã!", "Até amanhã, boa noite!"],
+      "wordByWord": [{"english": "Have", "portuguese": "Tenha"}, {"english": "a", "portuguese": "uma"}, {"english": "great", "portuguese": "ótima"}, {"english": "evening", "portuguese": "noite"}, {"english": "see you", "portuguese": "até"}, {"english": "tomorrow", "portuguese": "amanhã"}]
+    },
+    {
+      "english": "Don't work too late tonight!",
+      "portuguese": "Não trabalhe até muito tarde hoje à noite!",
+      "alternativeTranslations": ["Não fique até tarde trabalhando!", "Não vá trabalhar até tarde demais!"],
+      "wordByWord": [{"english": "Don't", "portuguese": "Não"}, {"english": "work", "portuguese": "trabalhe"}, {"english": "too", "portuguese": "muito"}, {"english": "late", "portuguese": "tarde"}, {"english": "tonight", "portuguese": "hoje à noite"}]
+    }
+  ]
+}

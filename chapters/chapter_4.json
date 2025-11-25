@@ -1,0 +1,97 @@
+{
+  "id": 4,
+  "title": "Chapter 004",
+  "description": "No Restaurante",
+  "phrases": [
+    {
+      "english": "Good evening! Table for two, please.",
+      "portuguese": "Boa noite! Mesa para dois, por favor.",
+      "alternativeTranslations": ["Boa noite! Uma mesa para duas pessoas.", "Boa noite! Queremos mesa para dois."],
+      "wordByWord": [{"english": "Good evening", "portuguese": "Boa noite"}, {"english": "Table", "portuguese": "Mesa"}, {"english": "for", "portuguese": "para"}, {"english": "two", "portuguese": "dois"}, {"english": "please", "portuguese": "por favor"}]
+    },
+    {
+      "english": "Do you have a reservation?",
+      "portuguese": "Você tem uma reserva?",
+      "alternativeTranslations": ["Vocês fizeram reserva?", "Tem reserva?"],
+      "wordByWord": [{"english": "Do you", "portuguese": "Você"}, {"english": "have", "portuguese": "tem"}, {"english": "a", "portuguese": "uma"}, {"english": "reservation", "portuguese": "reserva"}]
+    },
+    {
+      "english": "No, we don't have one.",
+      "portuguese": "Não, não temos uma.",
+      "alternativeTranslations": ["Não, não fizemos reserva.", "Não temos reserva."],
+      "wordByWord": [{"english": "No", "portuguese": "Não"}, {"english": "we", "portuguese": "nós"}, {"english": "don't have", "portuguese": "não temos"}, {"english": "one", "portuguese": "uma"}]
+    },
+    {
+      "english": "Please follow me this way.",
+      "portuguese": "Por favor, me siga por aqui.",
+      "alternativeTranslations": ["Me acompanhe, por favor.", "Venham comigo, por favor."],
+      "wordByWord": [{"english": "Please", "portuguese": "Por favor"}, {"english": "follow", "portuguese": "siga"}, {"english": "me", "portuguese": "me"}, {"english": "this way", "portuguese": "por aqui"}]
+    },
+    {
+      "english": "Here is your table.",
+      "portuguese": "Aqui está sua mesa.",
+      "alternativeTranslations": ["Esta é a mesa de vocês.", "Sua mesa é esta aqui."],
+      "wordByWord": [{"english": "Here", "portuguese": "Aqui"}, {"english": "is", "portuguese": "está"}, {"english": "your", "portuguese": "sua"}, {"english": "table", "portuguese": "mesa"}]
+    },
+    {
+      "english": "Can I see the menu, please?",
+      "portuguese": "Posso ver o cardápio, por favor?",
+      "alternativeTranslations": ["Pode trazer o menu?", "Poderia me mostrar o cardápio?"],
+      "wordByWord": [{"english": "Can I", "portuguese": "Posso"}, {"english": "see", "portuguese": "ver"}, {"english": "the", "portuguese": "o"}, {"english": "menu", "portuguese": "cardápio"}, {"english": "please", "portuguese": "por favor"}]
+    },
+    {
+      "english": "What do you recommend today?",
+      "portuguese": "O que você recomenda hoje?",
+      "alternativeTranslations": ["Qual é a recomendação de hoje?", "O que sugere para hoje?"],
+      "wordByWord": [{"english": "What", "portuguese": "O que"}, {"english": "do you", "portuguese": "você"}, {"english": "recommend", "portuguese": "recomenda"}, {"english": "today", "portuguese": "hoje"}]
+    },
+    {
+      "english": "I'll have the grilled chicken with salad.",
+      "portuguese": "Vou querer o frango grelhado com salada.",
+      "alternativeTranslations": ["Quero frango na grelha com salada.", "Vou pedir frango grelhado e salada."],
+      "wordByWord": [{"english": "I'll have", "portuguese": "Vou querer"}, {"english": "the", "portuguese": "o"}, {"english": "grilled", "portuguese": "grelhado"}, {"english": "chicken", "portuguese": "frango"}, {"english": "with", "portuguese": "com"}, {"english": "salad", "portuguese": "salada"}]
+    },
+    {
+      "english": "Would you like something to drink?",
+      "portuguese": "Gostaria de algo para beber?",
+      "alternativeTranslations": ["Quer alguma bebida?", "Vai querer algo para tomar?"],
+      "wordByWord": [{"english": "Would you", "portuguese": "Gostaria"}, {"english": "like", "portuguese": "de"}, {"english": "something", "portuguese": "algo"}, {"english": "to", "portuguese": "para"}, {"english": "drink", "portuguese": "beber"}]
+    },
+    {
+      "english": "Just water with ice, thank you.",
+      "portuguese": "Só água com gelo, obrigado.",
+      "alternativeTranslations": ["Apenas água gelada, obrigado.", "Somente água com gelo, valeu."],
+      "wordByWord": [{"english": "Just", "portuguese": "Só"}, {"english": "water", "portuguese": "água"}, {"english": "with", "portuguese": "com"}, {"english": "ice", "portuguese": "gelo"}, {"english": "thank you", "portuguese": "obrigado"}]
+    },
+    {
+      "english": "This food tastes absolutely delicious!",
+      "portuguese": "Esta comida está absolutamente deliciosa!",
+      "alternativeTranslations": ["Essa comida está uma delícia!", "Que comida saborosa!"],
+      "wordByWord": [{"english": "This", "portuguese": "Esta"}, {"english": "food", "portuguese": "comida"}, {"english": "tastes", "portuguese": "está"}, {"english": "absolutely", "portuguese": "absolutamente"}, {"english": "delicious", "portuguese": "deliciosa"}]
+    },
+    {
+      "english": "Could we get the check, please?",
+      "portuguese": "Podemos pegar a conta, por favor?",
+      "alternativeTranslations": ["Pode trazer a conta?", "A conta, por gentileza?"],
+      "wordByWord": [{"english": "Could we", "portuguese": "Podemos"}, {"english": "get", "portuguese": "pegar"}, {"english": "the", "portuguese": "a"}, {"english": "check", "portuguese": "conta"}, {"english": "please", "portuguese": "por favor"}]
+    },
+    {
+      "english": "Is the service charge included?",
+      "portuguese": "A taxa de serviço está incluída?",
+      "alternativeTranslations": ["Os 10% estão inclusos?", "A gorjeta já está na conta?"],
+      "wordByWord": [{"english": "Is", "portuguese": "Está"}, {"english": "the", "portuguese": "a"}, {"english": "service", "portuguese": "de serviço"}, {"english": "charge", "portuguese": "taxa"}, {"english": "included", "portuguese": "incluída"}]
+    },
+    {
+      "english": "We'll split the bill between us.",
+      "portuguese": "Vamos dividir a conta entre nós.",
+      "alternativeTranslations": ["Vamos rachar a conta.", "Dividiremos o valor."],
+      "wordByWord": [{"english": "We'll", "portuguese": "Vamos"}, {"english": "split", "portuguese": "dividir"}, {"english": "the", "portuguese": "a"}, {"english": "bill", "portuguese": "conta"}, {"english": "between", "portuguese": "entre"}, {"english": "us", "portuguese": "nós"}]
+    },
+    {
+      "english": "Thank you, the meal was wonderful!",
+      "portuguese": "Obrigado, a refeição estava maravilhosa!",
+      "alternativeTranslations": ["Valeu, a comida estava ótima!", "Obrigado, estava tudo delicioso!"],
+      "wordByWord": [{"english": "Thank you", "portuguese": "Obrigado"}, {"english": "the", "portuguese": "a"}, {"english": "meal", "portuguese": "refeição"}, {"english": "was", "portuguese": "estava"}, {"english": "wonderful", "portuguese": "maravilhosa"}]
+    }
+  ]
+}

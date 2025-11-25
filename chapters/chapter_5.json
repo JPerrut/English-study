@@ -1,0 +1,97 @@
+{
+  "id": 5,
+  "title": "Chapter 005",
+  "description": "Viajando de Avião",
+  "phrases": [
+    {
+      "english": "Where is the check-in counter?",
+      "portuguese": "Onde fica o balcão de check-in?",
+      "alternativeTranslations": ["Onde é o check-in?", "Cadê o guichê de check-in?"],
+      "wordByWord": [{"english": "Where", "portuguese": "Onde"}, {"english": "is", "portuguese": "fica"}, {"english": "the", "portuguese": "o"}, {"english": "check-in", "portuguese": "de check-in"}, {"english": "counter", "portuguese": "balcão"}]
+    },
+    {
+      "english": "I need to check my luggage.",
+      "portuguese": "Preciso despachar minha bagagem.",
+      "alternativeTranslations": ["Tenho que fazer check-in da mala.", "Preciso registrar minha mala."],
+      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "check", "portuguese": "despachar"}, {"english": "my", "portuguese": "minha"}, {"english": "luggage", "portuguese": "bagagem"}]
+    },
+    {
+      "english": "Can I see your passport?",
+      "portuguese": "Posso ver seu passaporte?",
+      "alternativeTranslations": ["Pode me mostrar o passaporte?", "Seu passaporte, por favor?"],
+      "wordByWord": [{"english": "Can I", "portuguese": "Posso"}, {"english": "see", "portuguese": "ver"}, {"english": "your", "portuguese": "seu"}, {"english": "passport", "portuguese": "passaporte"}]
+    },
+    {
+      "english": "Here is my boarding pass.",
+      "portuguese": "Aqui está meu cartão de embarque.",
+      "alternativeTranslations": ["Este é meu boarding pass.", "Aqui está o bilhete de embarque."],
+      "wordByWord": [{"english": "Here", "portuguese": "Aqui"}, {"english": "is", "portuguese": "está"}, {"english": "my", "portuguese": "meu"}, {"english": "boarding", "portuguese": "de embarque"}, {"english": "pass", "portuguese": "cartão"}]
+    },
+    {
+      "english": "What gate is my flight?",
+      "portuguese": "Qual é o portão do meu voo?",
+      "alternativeTranslations": ["Em que portão é meu voo?", "Qual portão de embarque?"],
+      "wordByWord": [{"english": "What", "portuguese": "Qual"}, {"english": "gate", "portuguese": "portão"}, {"english": "is", "portuguese": "é"}, {"english": "my", "portuguese": "do meu"}, {"english": "flight", "portuguese": "voo"}]
+    },
+    {
+      "english": "Excuse me, this is my seat.",
+      "portuguese": "Com licença, este é meu assento.",
+      "alternativeTranslations": ["Desculpe, esse é meu lugar.", "Perdão, esta é minha poltrona."],
+      "wordByWord": [{"english": "Excuse me", "portuguese": "Com licença"}, {"english": "this", "portuguese": "este"}, {"english": "is", "portuguese": "é"}, {"english": "my", "portuguese": "meu"}, {"english": "seat", "portuguese": "assento"}]
+    },
+    {
+      "english": "Can you help me with my bag?",
+      "portuguese": "Você pode me ajudar com minha bolsa?",
+      "alternativeTranslations": ["Pode me dar uma mão com a mala?", "Consegue me ajudar com a bagagem?"],
+      "wordByWord": [{"english": "Can you", "portuguese": "Você pode"}, {"english": "help", "portuguese": "ajudar"}, {"english": "me", "portuguese": "me"}, {"english": "with", "portuguese": "com"}, {"english": "my", "portuguese": "minha"}, {"english": "bag", "portuguese": "bolsa"}]
+    },
+    {
+      "english": "Please fasten your seatbelt.",
+      "portuguese": "Por favor, aperte seu cinto de segurança.",
+      "alternativeTranslations": ["Coloque o cinto, por favor.", "Afivele o cinto de segurança."],
+      "wordByWord": [{"english": "Please", "portuguese": "Por favor"}, {"english": "fasten", "portuguese": "aperte"}, {"english": "your", "portuguese": "seu"}, {"english": "seatbelt", "portuguese": "cinto de segurança"}]
+    },
+    {
+      "english": "Would you like something to drink?",
+      "portuguese": "Gostaria de algo para beber?",
+      "alternativeTranslations": ["Quer alguma bebida?", "Deseja tomar algo?"],
+      "wordByWord": [{"english": "Would you", "portuguese": "Gostaria"}, {"english": "like", "portuguese": "de"}, {"english": "something", "portuguese": "algo"}, {"english": "to", "portuguese": "para"}, {"english": "drink", "portuguese": "beber"}]
+    },
+    {
+      "english": "I'll have orange juice, please.",
+      "portuguese": "Vou querer suco de laranja, por favor.",
+      "alternativeTranslations": ["Quero suco de laranja.", "Suco de laranja, por gentileza."],
+      "wordByWord": [{"english": "I'll have", "portuguese": "Vou querer"}, {"english": "orange", "portuguese": "de laranja"}, {"english": "juice", "portuguese": "suco"}, {"english": "please", "portuguese": "por favor"}]
+    },
+    {
+      "english": "I'm feeling a bit airsick.",
+      "portuguese": "Estou me sentindo um pouco enjoado.",
+      "alternativeTranslations": ["Estou com um pouco de enjoo.", "Estou passando mal no avião."],
+      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "feeling", "portuguese": "me sentindo"}, {"english": "a bit", "portuguese": "um pouco"}, {"english": "airsick", "portuguese": "enjoado"}]
+    },
+    {
+      "english": "Could I have a blanket and pillow?",
+      "portuguese": "Poderia me dar um cobertor e travesseiro?",
+      "alternativeTranslations": ["Pode trazer uma manta e almofada?", "Tem cobertor e travesseiro disponível?"],
+      "wordByWord": [{"english": "Could I", "portuguese": "Poderia"}, {"english": "have", "portuguese": "me dar"}, {"english": "a", "portuguese": "um"}, {"english": "blanket", "portuguese": "cobertor"}, {"english": "and", "portuguese": "e"}, {"english": "pillow", "portuguese": "travesseiro"}]
+    },
+    {
+      "english": "How much longer until we land?",
+      "portuguese": "Quanto tempo falta até aterrisarmos?",
+      "alternativeTranslations": ["Falta quanto para pousar?", "Quanto tempo até chegarmos?"],
+      "wordByWord": [{"english": "How much", "portuguese": "Quanto"}, {"english": "longer", "portuguese": "tempo falta"}, {"english": "until", "portuguese": "até"}, {"english": "we", "portuguese": ""}, {"english": "land", "portuguese": "aterrisarmos"}]
+    },
+    {
+      "english": "We're experiencing some turbulence.",
+      "portuguese": "Estamos passando por alguma turbulência.",
+      "alternativeTranslations": ["Há turbulência no momento.", "Estamos enfrentando turbulência."],
+      "wordByWord": [{"english": "We're", "portuguese": "Estamos"}, {"english": "experiencing", "portuguese": "passando por"}, {"english": "some", "portuguese": "alguma"}, {"english": "turbulence", "portuguese": "turbulência"}]
+    },
+    {
+      "english": "Please remain seated until the sign turns off.",
+      "portuguese": "Por favor, permaneça sentado até o sinal apagar.",
+      "alternativeTranslations": ["Fique sentado até o aviso desligar.", "Mantenha-se no assento até a luz apagar."],
+      "wordByWord": [{"english": "Please", "portuguese": "Por favor"}, {"english": "remain", "portuguese": "permaneça"}, {"english": "seated", "portuguese": "sentado"}, {"english": "until", "portuguese": "até"}, {"english": "the sign", "portuguese": "o sinal"}, {"english": "turns off", "portuguese": "apagar"}]
+    }
+  ]
+}
