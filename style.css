@@ -668,3 +668,343 @@ body {
 .feedback-container {
   animation: slideIn 0.4s ease;
 }
+
+/* ========================================
+   SISTEMA DE PALAVRAS FIXAS
+   ======================================== */
+
+/* Container para palavras com posições fixas */
+.words-container {
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  min-height: 180px; /* Altura mínima para manter layout consistente */
+}
+
+.words-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estados das palavras fixas */
+.word-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ocupa toda a célula da grid */
+}
+
+.word-button:hover:not(.word-used):not(.word-missing) {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* Palavra usada (já selecionada) */
+.word-used {
+  opacity: 0.4;
+  background-color: var(--light) !important;
+  color: var(--text-muted) !important;
+  border: 2px dashed var(--border) !important;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.word-used .word-checkmark {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--success);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  box-shadow: 0 2px 4px var(--shadow);
+  z-index: 1;
+}
+
+/* Espaço vazio onde a palavra estava */
+.word-missing {
+  opacity: 0.2;
+  background-color: transparent !important;
+  color: transparent !important;
+  border: 2px dashed rgba(0, 0, 0, 0.1) !important;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.word-missing::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--success);
+  font-size: 20px;
+  opacity: 0.3;
+}
+
+/* Para o modo escuro, ajuste as cores */
+[data-theme="dark"] .word-used {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .word-missing {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .word-missing::after {
+  color: var(--success-light);
+}
+
+/* Efeito de foco para acessibilidade */
+.word-button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Indicador visual de que palavra pode ser clicada */
+.word-button:not(.word-used):not(.word-missing)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px var(--primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.word-button:not(.word-used):not(.word-missing):hover::before {
+  opacity: 0.2;
+}
+
+/* ========================================
+   ANIMAÇÕES PARA PALAVRAS
+   ======================================== */
+
+@keyframes wordSelected {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wordRemoved {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+/* Animações quando palavras são selecionadas/removidas */
+.word-button.word-used {
+  animation: wordRemoved 0.3s ease forwards;
+}
+
+.word-button:not(.word-used):not(.word-missing):active {
+  animation: wordSelected 0.2s ease;
+}
+
+/* ========================================
+   MELHORIAS NA ÁREA DE PALAVRAS SELECIONADAS
+   ======================================== */
+
+.selected-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 70px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+}
+
+.selected-word-button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+}
+
+.selected-word-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.selected-word-button::after {
+  content: "×";
+  font-size: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.selected-word-button:hover::after {
+  opacity: 1;
+}
+
+/* Para dispositivos muito pequenos */
+@media (max-width: 480px) {
+  .words-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+  
+  .word-button {
+    padding: 10px 12px;
+    font-size: 14px;
+    min-height: 45px;
+  }
+  
+  .selected-word-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   MELHORIAS NO LAYOUT RESPONSIVO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .words-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+  
+  .word-button {
+    font-size: 14px;
+  }
+  
+  .word-used .word-checkmark {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    top: -6px;
+    right: -6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .words-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .word-button {
+    min-height: 55px;
+  }
+}
+
+/* ========================================
+   CONTROLE DE ANIMAÇÕES
+   ======================================== */
+
+.words-grid.no-animations .word-button {
+  animation: none !important;
+}
+
+/* Mantenha apenas a animação para a palavra ativa */
+.word-button.word-active {
+  animation: wordSelected 0.2s ease;
+}
+
+/* ========================================
+   ANIMAÇÕES OTIMIZADAS PARA PALAVRAS (SEM DELAY)
+   ======================================== */
+
+.word-button {
+  transition: all 0.2s ease;
+  transform-origin: center;
+}
+
+/* Efeito de clique instantâneo */
+.word-button:active:not(.word-used):not(.word-missing) {
+  transform: scale(0.95);
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+/* Remove a animação da classe word-active */
+.word-button.word-active {
+  animation: none;
+}
+
+/* Animação apenas para quando a palavra é marcada como usada */
+.word-button.word-used {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Para garantir que o clique seja responsivo em dispositivos touch */
+@media (hover: none) and (pointer: coarse) {
+  .word-button:not(.word-used):not(.word-missing):active {
+    transform: scale(0.95);
+  }
+  
+  .word-button:not(.word-used):not(.word-missing) {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Remove qualquer delay na animação */
+@keyframes wordSelected {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Ajuste para garantir que a seleção seja instantânea */
+.word-button.word-active {
+  animation: wordSelected 0.15s ease;
+}

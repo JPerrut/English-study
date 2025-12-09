@@ -103,14 +103,12 @@
     },
     {
       "english": "This one is on sale with a discount.",
-      "portuguese": "Este está em promoção com desconto.",
-      "words": ["Este", "está", "em", "promoção", "com", "desconto"],
+      "portuguese": "Este aqui está com desconto.",
+      "words": ["Este", "aqui", "está", "com", "desconto"],
       "wordByWord": [
-        {"english": "This one", "portuguese": "Este"},
+        {"english": "This one", "portuguese": "Este aqui"},
         {"english": "is", "portuguese": "está"},
-        {"english": "on sale", "portuguese": "em promoção"},
-        {"english": "with", "portuguese": "com"},
-        {"english": "a discount", "portuguese": "desconto"}
+        {"english": "on sale", "portuguese": "com desconto"}
       ]
     },
     {

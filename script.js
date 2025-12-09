@@ -30,8 +30,8 @@ let currentState = {
   correctCount: 0,
   wrongCount: 0,
   isReviewMode: false,
-  selectedWords: [],
-  availableWords: []
+  selectedWords: [],  // Palavras selecionadas
+  wordPositions: {}   // Mapeia palavra -> posição na grid
 };
 
 const elements = {
@@ -173,7 +173,7 @@ function startPractice(mode) {
   currentState.wrongCount = 0;
   currentState.isReviewMode = false;
   currentState.selectedWords = [];
-  currentState.availableWords = [];
+  currentState.wordPositions = {}; // Usamos isso agora
   showQuizScreen();
   loadQuestion();
 }
@@ -201,14 +201,27 @@ function loadQuestion() {
     ? question.english
     : question.portuguese;
   
-  // Gera as palavras disponíveis
+  // Gera as palavras corretas
   const correctWords = question.words;
+  // Gera as palavras distratoras
   const distractors = generateDistractors(correctWords, 4);
+  // Combina todas as palavras
   const allWords = [...correctWords, ...distractors];
   
-  // Embaralha as palavras
-  currentState.availableWords = allWords.sort(() => Math.random() - 0.5);
+  // Embaralha todas as palavras (incluindo distratoras)
+  const shuffledWords = [...allWords].sort(() => Math.random() - 0.5);
+  
+  // Cria um objeto que mapeia cada palavra para seu estado atual
+  currentState.wordPositions = {};
   currentState.selectedWords = [];
+  
+  shuffledWords.forEach((word, index) => {
+    currentState.wordPositions[word] = {
+      index: index,
+      available: true,
+      selected: false
+    };
+  });
   
   renderWords();
   renderSelectedWords();
@@ -217,21 +230,133 @@ function loadQuestion() {
 }
 
 function renderWords() {
-  elements.wordsGrid.innerHTML = currentState.availableWords
-    .map((word, index) => `
-      <button class="word-button" data-word-index="${index}">
-        ${word}
-      </button>
-    `)
+  // Ordena as palavras pela posição original (índice)
+  const sortedWords = Object.keys(currentState.wordPositions)
+    .sort((a, b) => currentState.wordPositions[a].index - currentState.wordPositions[b].index);
+  
+  // Desabilita animações temporariamente para evitar flickering
+  elements.wordsGrid.classList.add('no-animations');
+  
+  // Usamos DocumentFragment para atualização em lote (mais eficiente)
+  const fragment = document.createDocumentFragment();
+  const tempDiv = document.createElement('div');
+  
+  tempDiv.innerHTML = sortedWords
+    .map((word) => {
+      const wordState = currentState.wordPositions[word];
+      
+      if (wordState.selected) {
+        // Palavra já selecionada - mostramos como "usada"
+        return `
+          <button class="word-button word-used" data-word="${word}" disabled>
+            ${word}
+            <span class="word-checkmark"><i class="fas fa-check"></i></span>
+          </button>
+        `;
+      } else if (wordState.available) {
+        // Palavra disponível para selecionar
+        return `
+          <button class="word-button" data-word="${word}">
+            ${word}
+          </button>
+        `;
+      } else {
+        // Palavra não disponível
+        return `
+          <button class="word-button word-missing" data-word="${word}" disabled>
+            ${word}
+          </button>
+        `;
+      }
+    })
     .join('');
   
-  // Adiciona event listeners aos botões de palavras
-  document.querySelectorAll('.word-button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const index = parseInt(btn.getAttribute('data-word-index'));
-      selectWord(index);
+  // Transfere os nós para o fragmento
+  while (tempDiv.firstChild) {
+    fragment.appendChild(tempDiv.firstChild);
+  }
+  
+  // Substitui todo o conteúdo de uma vez
+  elements.wordsGrid.innerHTML = '';
+  elements.wordsGrid.appendChild(fragment);
+  
+  // Remove a classe de não-animações após um pequeno delay
+  setTimeout(() => {
+    elements.wordsGrid.classList.remove('no-animations');
+  }, 10);
+  
+  // Adiciona event listeners apenas aos botões disponíveis
+  document.querySelectorAll('.word-button:not(.word-used):not(.word-missing)').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const word = btn.getAttribute('data-word');
+      // Adiciona classe ativa para animação apenas neste botão
+      btn.classList.add('word-active');
+      selectWord(word);
+      
+      // Remove a classe após a animação (usando evento CSS)
+      setTimeout(() => {
+        btn.classList.remove('word-active');
+      }, 200); // Isso é apenas para limpeza, não afeta o clique
     });
   });
+}
+
+function selectWord(word) {
+  if (currentState.wordPositions[word]) {
+    currentState.wordPositions[word].selected = true;
+    currentState.wordPositions[word].available = false;
+    currentState.selectedWords.push(word);
+    
+    // Atualiza apenas a palavra específica
+    updateWordButton(word);
+    renderSelectedWords();
+  }
+}
+
+function unselectWord(index) {
+  const word = currentState.selectedWords[index];
+  
+  if (currentState.wordPositions[word]) {
+    currentState.wordPositions[word].selected = false;
+    currentState.wordPositions[word].available = true;
+    currentState.selectedWords.splice(index, 1);
+    
+    // Atualiza apenas a palavra específica
+    updateWordButton(word);
+    renderSelectedWords();
+  }
+}
+
+function updateWordButton(word) {
+  const wordState = currentState.wordPositions[word];
+  if (!wordState) return;
+  
+  // Encontra o botão da palavra específica
+  const button = document.querySelector(`.word-button[data-word="${word}"]`);
+  if (!button) return;
+  
+  // Atualiza apenas este botão
+  if (wordState.selected) {
+    button.className = 'word-button word-used';
+    button.disabled = true;
+    button.innerHTML = `${word}<span class="word-checkmark"><i class="fas fa-check"></i></span>`;
+    // Remove event listener deste botão
+    button.replaceWith(button.cloneNode(true));
+  } else if (wordState.available) {
+    button.className = 'word-button';
+    button.disabled = false;
+    button.textContent = word;
+    // Adiciona event listener novamente
+    const newButton = button.cloneNode(true);
+    button.replaceWith(newButton);
+    newButton.addEventListener('click', (e) => {
+      newButton.classList.add('word-active');
+      selectWord(word);
+      setTimeout(() => {
+        newButton.classList.remove('word-active');
+      }, 200);
+    });
+  }
 }
 
 function renderSelectedWords() {
@@ -258,33 +383,37 @@ function renderSelectedWords() {
   }
 }
 
-function selectWord(index) {
-  const word = currentState.availableWords[index];
-  currentState.selectedWords.push(word);
-  currentState.availableWords.splice(index, 1);
-  
-  renderWords();
-  renderSelectedWords();
-}
-
-function unselectWord(index) {
-  const word = currentState.selectedWords[index];
-  currentState.availableWords.push(word);
-  currentState.selectedWords.splice(index, 1);
-  
-  renderWords();
-  renderSelectedWords();
-}
-
 function shuffleAvailableWords() {
-  currentState.availableWords.sort(() => Math.random() - 0.5);
+  // Pega todas as palavras
+  const allWords = Object.keys(currentState.wordPositions);
+  
+  // Embaralha as palavras
+  const shuffled = [...allWords].sort(() => Math.random() - 0.5);
+  
+  // Atualiza os índices para manter a nova ordem
+  shuffled.forEach((word, index) => {
+    if (currentState.wordPositions[word]) {
+      currentState.wordPositions[word].index = index;
+    }
+  });
+  
+  // Usa renderWords normal para reordenar tudo
   renderWords();
 }
 
 function clearSelectedWords() {
-  currentState.availableWords.push(...currentState.selectedWords);
+  // Animação para todas as palavras que estavam selecionadas
+  const selectedWords = [...currentState.selectedWords];
+  
+  selectedWords.forEach(word => {
+    if (currentState.wordPositions[word]) {
+      currentState.wordPositions[word].selected = false;
+      currentState.wordPositions[word].available = true;
+      updateWordButton(word);
+    }
+  });
+  
   currentState.selectedWords = [];
-  renderWords();
   renderSelectedWords();
 }
 
