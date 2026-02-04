@@ -33,8 +33,8 @@ let currentState = {
   correctCount: 0,
   wrongCount: 0,
   isReviewMode: false,
-  selectedWords: [],  // Palavras selecionadas
-  wordPositions: {}   // Mapeia palavra -> posição na grid
+  selectedWords: [], 
+  wordPositions: {}   
 };
 
 const elements = {
@@ -165,6 +165,27 @@ function showPracticeModeMenu(chapter) {
   currentState.currentChapter = chapter;
   elements.chapterPracticeTitle.textContent = `Capítulo ${chapter.id.toString().padStart(3, '0')} - ${chapter.description}`;
   elements.practiceModeMenu.classList.remove('hidden');
+  updateChapterStatsPreview(chapter); // Passamos o objeto chapter agora
+}
+
+function updateChapterStatsPreview(chapter) {
+  const stats = getChapterStats(chapter.id); // Usamos chapter.id aqui
+  
+  document.getElementById('preview-correct').textContent = stats.correct;
+  document.getElementById('preview-wrong').textContent = stats.wrong;
+  
+  const total = stats.correct + stats.wrong;
+  const percentage = total > 0 ? Math.round((stats.correct / total) * 100) : 0;
+  document.getElementById('preview-percentage').textContent = percentage + '%';
+}
+
+function getChapterStats(chapterId) {
+  // Recuperar estatísticas do localStorage
+  const stats = JSON.parse(localStorage.getItem(`chapter_${chapterId}_stats`)) || {
+    correct: 0,
+    wrong: 0
+  };
+  return stats;
 }
 
 function startPractice(mode) {

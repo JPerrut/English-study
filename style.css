@@ -219,7 +219,7 @@ body {
    ======================================== */
 
 .content {
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -230,7 +230,7 @@ body {
 
 .chapters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: 2fr 2fr;
   gap: 20px;
   margin-top: 20px;
 }
@@ -613,10 +613,6 @@ body {
 
   .button-group .btn {
     width: 100%;
-  }
-
-  .chapters-grid {
-    grid-template-columns: 1fr;
   }
 
   .score-circle {
@@ -1173,6 +1169,620 @@ body {
   right: 35%;
   animation-delay: 2s;
   background: var(--error);
+}
+
+/* ========================================
+   TELA DE SELEÇÃO DE MODO DE PRÁTICA
+   ======================================== */
+
+.practice-illustration {
+  margin: 0 auto 40px;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.practice-illustration-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ícone do cérebro com engrenagens */
+.brain-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  color: var(--primary);
+  animation: pulse 3s ease-in-out infinite;
+  z-index: 10;
+  filter: drop-shadow(0 4px 8px var(--shadow));
+}
+
+.brain-icon .gear {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--warning);
+  animation: spin linear infinite;
+}
+
+.gear-1 {
+  top: -15px;
+  right: -20px;
+  animation-duration: 8s;
+}
+
+.gear-2 {
+  bottom: -10px;
+  left: -25px;
+  animation-duration: 10s;
+  animation-direction: reverse;
+}
+
+.gear-3 {
+  bottom: 20px;
+  right: -30px;
+  animation-duration: 12s;
+}
+
+/* Linha conectando os modos */
+.mode-path {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  border-radius: 2px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.path-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--success));
+  border-radius: 2px;
+  animation: pathGlow 4s ease-in-out infinite;
+}
+
+.path-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: travel 4s linear infinite;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+.path-dot-1 { left: 25%; animation-delay: 0s; background-color: var(--primary); }
+.path-dot-2 { left: 50%; animation-delay: 1s; background-color: var(--success); }
+.path-dot-3 { left: 75%; animation-delay: 2s; background-color: var(--warning); }
+
+/* Bolhas de modo */
+.mode-bubble {
+  position: absolute;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 8;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.mode-bubble:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px var(--shadow-lg);
+}
+
+.mode-bubble-english {
+  top: 20%;
+  left: 5%;
+  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+  color: white;
+  animation: float 4s ease-in-out infinite;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mode-bubble-portuguese {
+  top: 20%;
+  right: 5%;
+  background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+  color: white;
+  animation: float 4s ease-in-out infinite 1s;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ícones flutuantes */
+.floating-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 4px 8px var(--shadow);
+  z-index: 6;
+  animation: float 5s ease-in-out infinite;
+}
+
+.floating-icon-1 {
+  bottom: 30%;
+  left: 15%;
+  background: var(--primary);
+  animation-delay: 0s;
+}
+
+.floating-icon-2 {
+  bottom: 20%;
+  right: 20%;
+  background: var(--success);
+  animation-delay: 1.5s;
+}
+
+.floating-icon-3 {
+  top: 40%;
+  right: 15%;
+  background: var(--warning);
+  animation-delay: 3s;
+}
+
+/* Conteúdo principal da tela de prática */
+.practice-mode-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+/* Instrução de prática */
+.practice-instruction {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.instruction-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.practice-instruction h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.practice-instruction p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Grade de modos de prática */
+.practice-modes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.practice-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 28px;
+  border-radius: 18px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 16px var(--shadow);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.practice-mode-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  z-index: 0;
+}
+
+.practice-mode-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px var(--shadow-lg);
+}
+
+.practice-mode-btn:active {
+  transform: translateY(-2px);
+}
+
+/* Modo Inglês */
+.practice-mode-english {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+  border: 2px solid rgba(37, 99, 235, 0.3);
+}
+
+.practice-mode-english:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0.1) 100%);
+  border-color: var(--primary);
+}
+
+/* Modo Português */
+.practice-mode-portuguese {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 2px solid rgba(5, 150, 105, 0.3);
+}
+
+.practice-mode-portuguese:hover {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(5, 150, 105, 0.1) 100%);
+  border-color: var(--success);
+}
+
+/* Ícones dos modos */
+.practice-mode-icon {
+  z-index: 1;
+}
+
+.mode-icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.practice-mode-english .mode-icon-circle {
+  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.practice-mode-portuguese .mode-icon-circle {
+  background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+/* Informações do modo */
+.practice-mode-info {
+  flex: 1;
+  z-index: 1;
+}
+
+.practice-mode-btn h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.practice-mode-english h3 {
+  color: var(--primary);
+}
+
+.practice-mode-portuguese h3 {
+  color: var(--success);
+}
+
+.practice-mode-btn p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Dificuldade */
+.mode-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.difficulty-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.difficulty-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+}
+
+.difficulty-dot.filled {
+  background: var(--warning);
+  border-color: var(--warning);
+}
+
+.difficulty-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Ação (seta) */
+.practice-mode-action {
+  z-index: 1;
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.practice-mode-btn:hover .practice-mode-action {
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+/* Estatísticas do capítulo */
+.chapter-stats-preview {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+.stats-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.stats-preview-header i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.stats-preview-header h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.stats-preview-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.stat-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 15px 20px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.stat-preview:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.stat-preview-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.stat-preview:nth-child(1) .stat-preview-icon {
+  background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+}
+
+.stat-preview:nth-child(2) .stat-preview-icon {
+  background: linear-gradient(135deg, var(--error) 0%, #b91c1c 100%);
+}
+
+.stat-preview:nth-child(3) .stat-preview-icon {
+  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+}
+
+.stat-preview-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-preview-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stat-preview-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+/* ========================================
+   ANIMAÇÕES ADICIONAIS
+   ======================================== */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pathGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ========================================
+   RESPONSIVIDADE PARA TELA DE PRÁTICA
+   ======================================== */
+
+@media (max-width: 768px) {
+  .practice-illustration {
+    height: 180px;
+    margin-bottom: 30px;
+  }
+  
+  .brain-icon {
+    font-size: 3.5rem;
+  }
+  
+  .gear-1, .gear-2, .gear-3 {
+    font-size: 1.2rem;
+  }
+  
+  .mode-bubble {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .mode-bubble-english {
+    top: 15%;
+    left: 2%;
+  }
+  
+  .mode-bubble-portuguese {
+    top: 15%;
+    right: 2%;
+  }
+  
+  .floating-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .practice-mode-btn {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px;
+    gap: 20px;
+  }
+  
+  .mode-icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .practice-mode-info {
+    text-align: center;
+  }
+  
+  .stats-preview-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .practice-instruction h3 {
+    font-size: 1.5rem;
+  }
+  
+  .practice-instruction p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .practice-illustration {
+    height: 150px;
+  }
+  
+  .brain-icon {
+    font-size: 2.8rem;
+  }
+  
+  .gear-1, .gear-2, .gear-3 {
+    font-size: 1rem;
+  }
+  
+  .mode-path {
+    left: 5%;
+    right: 5%;
+  }
+  
+  .mode-bubble {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  
+  .practice-mode-btn {
+    padding: 18px;
+  }
+  
+  .mode-icon-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .practice-mode-btn h3 {
+    font-size: 1.3rem;
+  }
+  
+  .practice-mode-btn p {
+    font-size: 0.9rem;
+  }
+  
+  .instruction-icon {
+    font-size: 2rem;
+  }
 }
 
 /* ========================================

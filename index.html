@@ -120,17 +120,153 @@
           <i class="fas fa-arrow-left icon"></i>Voltar
         </button>
         <h1 id="chapter-practice-title">Capítulo</h1>
-        <p>Selecione o modo de prática</p>
+        <p id="chapter-practice-description">Selecione o modo de prática</p>
       </div>
-      <div class="content">
-        <button id="easy-practice-btn" class="btn btn-primary">
-          <i class="fas fa-star icon"></i>Capitulos em Inglês
-          <br><small>Traduza do Inglês para Português</small>
-        </button>
-        <button id="hard-practice-btn" class="btn btn-secondary">
-          <i class="fas fa-fire icon"></i>Capitulos em Português
-          <br><small>Traduza do Português para Inglês</small>
-        </button>
+      
+      <!-- Ilustração específica para a tela de modos -->
+      <div class="practice-illustration">
+        <div class="practice-illustration-container">
+          <!-- Cérebro com engrenagens representando aprendizado -->
+          <div class="brain-icon">
+            <i class="fas fa-brain"></i>
+            <div class="gear gear-1">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="gear gear-2">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="gear gear-3">
+              <i class="fas fa-cog"></i>
+            </div>
+          </div>
+          
+          <!-- Linha conectando os modos -->
+          <div class="mode-path">
+            <div class="path-line"></div>
+            <div class="path-dot path-dot-1"></div>
+            <div class="path-dot path-dot-2"></div>
+            <div class="path-dot path-dot-3"></div>
+          </div>
+          
+          <!-- Bolhas de modo -->
+          <div class="mode-bubble mode-bubble-english">
+            <i class="fas fa-globe-americas"></i>
+            <span>Inglês → Português</span>
+          </div>
+          <div class="mode-bubble mode-bubble-portuguese">
+            <i class="fas fa-flag"></i>
+            <span>Português → Inglês</span>
+          </div>
+          
+          <!-- Ícones flutuantes -->
+          <div class="floating-icon floating-icon-1">
+            <i class="fas fa-language"></i>
+          </div>
+          <div class="floating-icon floating-icon-2">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <div class="floating-icon floating-icon-3">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Container principal dos botões de modo -->
+      <div class="content practice-mode-content">
+        <!-- Texto explicativo -->
+        <div class="practice-instruction">
+          <div class="instruction-icon">
+            <i class="fas fa-hand-point-down"></i>
+          </div>
+          <h3>Escolha sua jornada de aprendizado</h3>
+          <p>Cada modo oferece uma experiência única para desenvolver suas habilidades de tradução</p>
+        </div>
+        
+        <!-- Botões de modo de prática -->
+        <div class="practice-modes-grid">
+          <button id="easy-practice-btn" class="practice-mode-btn practice-mode-english">
+            <div class="practice-mode-icon">
+              <div class="mode-icon-circle">
+                <i class="fas fa-globe-americas"></i>
+              </div>
+            </div>
+            <div class="practice-mode-info">
+              <h3>Inglês → Português</h3>
+              <p>Comece com traduções mais simples para construir confiança e vocabulário</p>
+              <div class="mode-difficulty">
+                <div class="difficulty-dots">
+                  <span class="difficulty-dot filled"></span>
+                  <span class="difficulty-dot"></span>
+                  <span class="difficulty-dot"></span>
+                </div>
+                <span class="difficulty-text">Nível: Fácil</span>
+              </div>
+            </div>
+            <div class="practice-mode-action">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </button>
+          
+          <button id="hard-practice-btn" class="practice-mode-btn practice-mode-portuguese">
+            <div class="practice-mode-icon">
+              <div class="mode-icon-circle">
+                <i class="fas fa-flag"></i>
+              </div>
+            </div>
+            <div class="practice-mode-info">
+              <h3>Português → Inglês</h3>
+              <p>Desafie-se traduzindo do português para o inglês para maior fluência</p>
+              <div class="mode-difficulty">
+                <div class="difficulty-dots">
+                  <span class="difficulty-dot filled"></span>
+                  <span class="difficulty-dot filled"></span>
+                  <span class="difficulty-dot"></span>
+                </div>
+                <span class="difficulty-text">Nível: Intermediário</span>
+              </div>
+            </div>
+            <div class="practice-mode-action">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+        
+        <!-- Estatísticas do capítulo -->
+        <div class="chapter-stats-preview">
+          <div class="stats-preview-header">
+            <i class="fas fa-chart-line"></i>
+            <h4>Seu Progresso neste Capítulo</h4>
+          </div>
+          <div class="stats-preview-content">
+            <div class="stat-preview">
+              <div class="stat-preview-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="stat-preview-info">
+                <span class="stat-preview-value" id="preview-correct">0</span>
+                <span class="stat-preview-label">Acertos</span>
+              </div>
+            </div>
+            <div class="stat-preview">
+              <div class="stat-preview-icon">
+                <i class="fas fa-times-circle"></i>
+              </div>
+              <div class="stat-preview-info">
+                <span class="stat-preview-value" id="preview-wrong">0</span>
+                <span class="stat-preview-label">Erros</span>
+              </div>
+            </div>
+            <div class="stat-preview">
+              <div class="stat-preview-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <div class="stat-preview-info">
+                <span class="stat-preview-value" id="preview-percentage">0%</span>
+                <span class="stat-preview-label">Taxa de Acerto</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
