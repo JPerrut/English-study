@@ -1,0 +1,105 @@
+{
+  "id": 8,
+  "title": "Chapter 008",
+  "description": "Momento de Dúvida",
+  "phrases": [
+    {
+      "english": "One rainy Tuesday, I receive an email from my old boss.",
+      "portuguese": "Uma terça-feira chuvosa, recebo um e-mail do meu antigo chefe.",
+      "words": ["Uma", "terça-feira", "chuvosa", "recebo", "um", "e-mail", "do", "meu", "antigo", "chefe"],
+      "wordByWord": [
+        {"english": "One rainy Tuesday", "portuguese": "Uma terça-feira chuvosa"},
+        {"english": "I receive", "portuguese": "recebo"},
+        {"english": "an email from my old boss", "portuguese": "um e-mail do meu antigo chefe"}
+      ]
+    },
+    {
+      "english": "He offers me my old job back with a higher salary.",
+      "portuguese": "Ele me oferece meu antigo emprego de volta com um salário maior.",
+      "words": ["Ele", "me", "oferece", "meu", "antigo", "emprego", "de", "volta", "com", "um", "salário", "maior"],
+      "wordByWord": [
+        {"english": "He offers me", "portuguese": "Ele me oferece"},
+        {"english": "my old job back", "portuguese": "meu antigo emprego de volta"},
+        {"english": "with a higher salary", "portuguese": "com um salário maior"}
+      ]
+    },
+    {
+      "english": "I stare at the screen, feeling confused and torn.",
+      "portuguese": "Encaro a tela, sentindo-me confuso e dividido.",
+      "words": ["Encaro", "a", "tela", "sentindo-me", "confuso", "e", "dividido"],
+      "wordByWord": [
+        {"english": "I stare at the screen", "portuguese": "Encaro a tela"},
+        {"english": "feeling confused and torn", "portuguese": "sentindo-me confuso e dividido"}
+      ]
+    },
+    {
+      "english": "Part of me misses my old life and familiar routines.",
+      "portuguese": "Parte de mim sente falta da minha vida antiga e rotinas familiares.",
+      "words": ["Parte", "de", "mim", "sente", "falta", "da", "minha", "vida", "antiga", "e", "rotinas", "familiares"],
+      "wordByWord": [
+        {"english": "Part of me", "portuguese": "Parte de mim"},
+        {"english": "misses my old life", "portuguese": "sente falta da minha vida antiga"},
+        {"english": "and familiar routines", "portuguese": "e rotinas familiares"}
+      ]
+    },
+    {
+      "english": "But another part remembers the loneliness I felt there.",
+      "portuguese": "Mas outra parte lembra da solidão que sentia lá.",
+      "words": ["Mas", "outra", "parte", "lembra", "da", "solidão", "que", "sentia", "lá"],
+      "wordByWord": [
+        {"english": "But another part", "portuguese": "Mas outra parte"},
+        {"english": "remembers the loneliness", "portuguese": "lembra da solidão"},
+        {"english": "I felt there", "portuguese": "que sentia lá"}
+      ]
+    },
+    {
+      "english": "I call my sister to ask for her opinion.",
+      "portuguese": "Ligo para minha irmã para pedir a opinião dela.",
+      "words": ["Ligo", "para", "minha", "irmã", "para", "pedir", "a", "opinião", "dela"],
+      "wordByWord": [
+        {"english": "I call my sister", "portuguese": "Ligo para minha irmã"},
+        {"english": "to ask for her opinion", "portuguese": "para pedir a opinião dela"}
+      ]
+    },
+    {
+      "english": "She reminds me how unhappy I was before moving.",
+      "portuguese": "Ela me lembra o quanto eu era infeliz antes de me mudar.",
+      "words": ["Ela", "me", "lembra", "o", "quanto", "eu", "era", "infeliz", "antes", "de", "me", "mudar"],
+      "wordByWord": [
+        {"english": "She reminds me", "portuguese": "Ela me lembra"},
+        {"english": "how unhappy I was", "portuguese": "o quanto eu era infeliz"},
+        {"english": "before moving", "portuguese": "antes de me mudar"}
+      ]
+    },
+    {
+      "english": "What about the new friends you've made? she asks.",
+      "portuguese": "E os novos amigos que você fez? ela pergunta.",
+      "words": ["E", "os", "novos", "amigos", "que", "você", "fez", "ela", "pergunta"],
+      "wordByWord": [
+        {"english": "What about the new friends", "portuguese": "E os novos amigos"},
+        {"english": "you've made", "portuguese": "que você fez"},
+        {"english": "she asks", "portuguese": "ela pergunta"}
+      ]
+    },
+    {
+      "english": "Her words make me think deeply about my choice.",
+      "portuguese": "Suas palavras me fazem pensar profundamente sobre minha escolha.",
+      "words": ["Suas", "palavras", "me", "fazem", "pensar", "profundamente", "sobre", "minha", "escolha"],
+      "wordByWord": [
+        {"english": "Her words", "portuguese": "Suas palavras"},
+        {"english": "make me think deeply", "portuguese": "me fazem pensar profundamente"},
+        {"english": "about my choice", "portuguese": "sobre minha escolha"}
+      ]
+    },
+    {
+      "english": "I realize I can't go back—I've started building a new life here.",
+      "portuguese": "Percebo que não posso voltar—comecei a construir uma nova vida aqui.",
+      "words": ["Percebo", "que", "não", "posso", "voltar", "comecei", "a", "construir", "uma", "nova", "vida", "aqui"],
+      "wordByWord": [
+        {"english": "I realize", "portuguese": "Percebo"},
+        {"english": "I can't go back", "portuguese": "que não posso voltar"},
+        {"english": "I've started building a new life here", "portuguese": "comecei a construir uma nova vida aqui"}
+      ]
+    }
+  ]
+}

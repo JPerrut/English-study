@@ -1,192 +1,107 @@
 {
   "id": 2,
   "title": "Chapter 002",
-  "description": "No Supermercado",
+  "description": "Primeiros Passos",
   "phrases": [
     {
-      "english": "I need to buy groceries today.",
-      "portuguese": "Eu preciso comprar mantimentos hoje.",
-      "words": ["Eu", "preciso", "comprar", "mantimentos", "hoje"],
+      "english": "I wake up early to explore my new neighborhood.",
+      "portuguese": "Acordo cedo para explorar meu novo bairro.",
+      "words": ["Acordo", "cedo", "para", "explorar", "meu", "novo", "bairro"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "need to", "portuguese": "preciso"},
-        {"english": "buy", "portuguese": "comprar"},
-        {"english": "groceries", "portuguese": "mantimentos"},
-        {"english": "today", "portuguese": "hoje"}
+        {"english": "I wake up early", "portuguese": "Acordo cedo"},
+        {"english": "to explore", "portuguese": "para explorar"},
+        {"english": "my new neighborhood", "portuguese": "meu novo bairro"}
       ]
     },
     {
-      "english": "Where are the shopping carts?",
-      "portuguese": "Onde estão os carrinhos de compras?",
-      "words": ["Onde", "estão", "os", "carrinhos", "de", "compras"],
+      "english": "The streets are quiet and clean in the morning.",
+      "portuguese": "As ruas estão calmas e limpas pela manhã.",
+      "words": ["As", "ruas", "estão", "calmas", "e", "limpas", "pela", "manhã"],
       "wordByWord": [
-        {"english": "Where", "portuguese": "Onde"},
-        {"english": "are", "portuguese": "estão"},
-        {"english": "the", "portuguese": "os"},
-        {"english": "shopping", "portuguese": "de compras"},
-        {"english": "carts", "portuguese": "carrinhos"}
+        {"english": "The streets", "portuguese": "As ruas"},
+        {"english": "are quiet and clean", "portuguese": "estão calmas e limpas"},
+        {"english": "in the morning", "portuguese": "pela manhã"}
       ]
     },
     {
-      "english": "This store is very crowded.",
-      "portuguese": "Esta loja está muito lotada.",
-      "words": ["Esta", "loja", "está", "muito", "lotada"],
+      "english": "I find a small bakery with the most delicious smell.",
+      "portuguese": "Encontro uma pequena padaria com o cheiro mais delicioso.",
+      "words": ["Encontro", "uma", "pequena", "padaria", "com", "o", "cheiro", "mais", "delicioso"],
       "wordByWord": [
-        {"english": "This", "portuguese": "Esta"},
-        {"english": "store", "portuguese": "loja"},
-        {"english": "is", "portuguese": "está"},
-        {"english": "very", "portuguese": "muito"},
-        {"english": "crowded", "portuguese": "lotada"}
+        {"english": "I find", "portuguese": "Encontro"},
+        {"english": "a small bakery", "portuguese": "uma pequena padaria"},
+        {"english": "with the most delicious smell", "portuguese": "com o cheiro mais delicioso"}
       ]
     },
     {
-      "english": "I should make a shopping list.",
-      "portuguese": "Eu deveria fazer uma lista de compras.",
-      "words": ["Eu", "deveria", "fazer", "uma", "lista", "de", "compras"],
+      "english": "The baker greets me with a warm smile.",
+      "portuguese": "O padeiro me cumprimenta com um sorriso caloroso.",
+      "words": ["O", "padeiro", "me", "cumprimenta", "com", "um", "sorriso", "caloroso"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "should", "portuguese": "deveria"},
-        {"english": "make", "portuguese": "fazer"},
-        {"english": "a", "portuguese": "uma"},
-        {"english": "shopping", "portuguese": "de compras"},
-        {"english": "list", "portuguese": "lista"}
+        {"english": "The baker", "portuguese": "O padeiro"},
+        {"english": "greets me", "portuguese": "me cumprimenta"},
+        {"english": "with a warm smile", "portuguese": "com um sorriso caloroso"}
       ]
     },
     {
-      "english": "Let me check my phone.",
-      "portuguese": "Deixe-me verificar meu celular.",
-      "words": ["Deixe-me", "verificar", "meu", "celular"],
+      "english": "I buy a fresh croissant and a cup of coffee.",
+      "portuguese": "Compro um croissant fresco e uma xícara de café.",
+      "words": ["Compro", "um", "croissant", "fresco", "e", "uma", "xícara", "de", "café"],
       "wordByWord": [
-        {"english": "Let me", "portuguese": "Deixe-me"},
-        {"english": "check", "portuguese": "verificar"},
-        {"english": "my", "portuguese": "meu"},
-        {"english": "phone", "portuguese": "celular"}
+        {"english": "I buy", "portuguese": "Compro"},
+        {"english": "a fresh croissant", "portuguese": "um croissant fresco"},
+        {"english": "and a cup of coffee", "portuguese": "e uma xícara de café"}
       ]
     },
     {
-      "english": "The vegetables look fresh today.",
-      "portuguese": "Os vegetais parecem frescos hoje.",
-      "words": ["Os", "vegetais", "parecem", "frescos", "hoje"],
+      "english": "Sitting on a bench, I watch people walking by.",
+      "portuguese": "Sentado em um banco, observo as pessoas passando.",
+      "words": ["Sentado", "em", "um", "banco", "observo", "as", "pessoas", "passando"],
       "wordByWord": [
-        {"english": "The", "portuguese": "Os"},
-        {"english": "vegetables", "portuguese": "vegetais"},
-        {"english": "look", "portuguese": "parecem"},
-        {"english": "fresh", "portuguese": "frescos"},
-        {"english": "today", "portuguese": "hoje"}
+        {"english": "Sitting on a bench", "portuguese": "Sentado em um banco"},
+        {"english": "I watch", "portuguese": "observo"},
+        {"english": "people walking by", "portuguese": "as pessoas passando"}
       ]
     },
     {
-      "english": "How much does this cost per kilogram?",
-      "portuguese": "Quanto custa isso por quilograma?",
-      "words": ["Quanto", "custa", "isso", "por", "quilograma"],
+      "english": "A friendly dog comes to say hello to me.",
+      "portuguese": "Um cachorro amigável vem dizer olá para mim.",
+      "words": ["Um", "cachorro", "amigável", "vem", "dizer", "olá", "para", "mim"],
       "wordByWord": [
-        {"english": "How much", "portuguese": "Quanto"},
-        {"english": "does", "portuguese": ""},
-        {"english": "this", "portuguese": "isso"},
-        {"english": "cost", "portuguese": "custa"},
-        {"english": "per", "portuguese": "por"},
-        {"english": "kilogram", "portuguese": "quilograma"}
+        {"english": "A friendly dog", "portuguese": "Um cachorro amigável"},
+        {"english": "comes to say hello", "portuguese": "vem dizer olá"},
+        {"english": "to me", "portuguese": "para mim"}
       ]
     },
     {
-      "english": "I can't decide between these two brands.",
-      "portuguese": "Não consigo decidir entre essas duas marcas.",
-      "words": ["Não", "consigo", "decidir", "entre", "essas", "duas", "marcas"],
+      "english": "I pet the dog and ask its owner about the park.",
+      "portuguese": "Acaricio o cachorro e pergunto ao dono sobre o parque.",
+      "words": ["Acaricio", "o", "cachorro", "e", "pergunto", "ao", "dono", "sobre", "o", "parque"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "can't", "portuguese": "não consigo"},
-        {"english": "decide", "portuguese": "decidir"},
-        {"english": "between", "portuguese": "entre"},
-        {"english": "these two", "portuguese": "essas duas"},
-        {"english": "brands", "portuguese": "marcas"}
+        {"english": "I pet the dog", "portuguese": "Acaricio o cachorro"},
+        {"english": "and ask", "portuguese": "e pergunto"},
+        {"english": "its owner", "portuguese": "ao dono"},
+        {"english": "about the park", "portuguese": "sobre o parque"}
       ]
     },
     {
-      "english": "This one is on sale with a discount.",
-      "portuguese": "Este aqui está com desconto.",
-      "words": ["Este", "aqui", "está", "com", "desconto"],
+      "english": "The owner tells me this is the best park in town.",
+      "portuguese": "O dono me diz que este é o melhor parque da cidade.",
+      "words": ["O", "dono", "me", "diz", "que", "este", "é", "o", "melhor", "parque", "da", "cidade"],
       "wordByWord": [
-        {"english": "This one", "portuguese": "Este aqui"},
-        {"english": "is", "portuguese": "está"},
-        {"english": "on sale", "portuguese": "com desconto"}
+        {"english": "The owner tells me", "portuguese": "O dono me diz"},
+        {"english": "this is", "portuguese": "que este é"},
+        {"english": "the best park in town", "portuguese": "o melhor parque da cidade"}
       ]
     },
     {
-      "english": "I should buy some milk and eggs too.",
-      "portuguese": "Eu deveria comprar leite e ovos também.",
-      "words": ["Eu", "deveria", "comprar", "leite", "e", "ovos", "também"],
+      "english": "I feel a little less lonely after this small interaction.",
+      "portuguese": "Sinto-me um pouco menos sozinho depois dessa pequena interação.",
+      "words": ["Sinto-me", "um", "pouco", "menos", "sozinho", "depois", "dessa", "pequena", "interação"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "should", "portuguese": "deveria"},
-        {"english": "buy", "portuguese": "comprar"},
-        {"english": "some", "portuguese": ""},
-        {"english": "milk", "portuguese": "leite"},
-        {"english": "and", "portuguese": "e"},
-        {"english": "eggs", "portuguese": "ovos"},
-        {"english": "too", "portuguese": "também"}
-      ]
-    },
-    {
-      "english": "Excuse me, where is the checkout line?",
-      "portuguese": "Com licença, onde fica a fila do caixa?",
-      "words": ["Com", "licença", "onde", "fica", "a", "fila", "do", "caixa"],
-      "wordByWord": [
-        {"english": "Excuse me", "portuguese": "Com licença"},
-        {"english": "where", "portuguese": "onde"},
-        {"english": "is", "portuguese": "fica"},
-        {"english": "the", "portuguese": "a"},
-        {"english": "checkout", "portuguese": "do caixa"},
-        {"english": "line", "portuguese": "fila"}
-      ]
-    },
-    {
-      "english": "Do you accept credit cards here?",
-      "portuguese": "Vocês aceitam cartão de crédito aqui?",
-      "words": ["Vocês", "aceitam", "cartão", "de", "crédito", "aqui"],
-      "wordByWord": [
-        {"english": "Do you", "portuguese": "Vocês"},
-        {"english": "accept", "portuguese": "aceitam"},
-        {"english": "credit", "portuguese": "de crédito"},
-        {"english": "cards", "portuguese": "cartão"},
-        {"english": "here", "portuguese": "aqui"}
-      ]
-    },
-    {
-      "english": "I forgot to grab something from aisle three.",
-      "portuguese": "Esqueci de pegar algo do corredor três.",
-      "words": ["Esqueci", "de", "pegar", "algo", "do", "corredor", "três"],
-      "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "forgot to", "portuguese": "esqueci de"},
-        {"english": "grab", "portuguese": "pegar"},
-        {"english": "something", "portuguese": "algo"},
-        {"english": "from", "portuguese": "do"},
-        {"english": "aisle", "portuguese": "corredor"},
-        {"english": "three", "portuguese": "três"}
-      ]
-    },
-    {
-      "english": "Could you please double-check the total?",
-      "portuguese": "Você poderia verificar o total novamente, por favor?",
-      "words": ["Você", "poderia", "verificar", "o", "total", "novamente", "por", "favor"],
-      "wordByWord": [
-        {"english": "Could you", "portuguese": "Você poderia"},
-        {"english": "please", "portuguese": "por favor"},
-        {"english": "double-check", "portuguese": "verificar novamente"},
-        {"english": "the", "portuguese": "o"},
-        {"english": "total", "portuguese": "total"}
-      ]
-    },
-    {
-      "english": "Thank you, have a wonderful day!",
-      "portuguese": "Obrigado, tenha um dia maravilhoso!",
-      "words": ["Obrigado", "tenha", "um", "dia", "maravilhoso"],
-      "wordByWord": [
-        {"english": "Thank you", "portuguese": "Obrigado"},
-        {"english": "have", "portuguese": "tenha"},
-        {"english": "a", "portuguese": "um"},
-        {"english": "wonderful", "portuguese": "maravilhoso"},
-        {"english": "day", "portuguese": "dia"}
+        {"english": "I feel", "portuguese": "Sinto-me"},
+        {"english": "a little less lonely", "portuguese": "um pouco menos sozinho"},
+        {"english": "after this small interaction", "portuguese": "depois dessa pequena interação"}
       ]
     }
   ]

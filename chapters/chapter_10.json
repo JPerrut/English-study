@@ -1,0 +1,106 @@
+{
+  "id": 10,
+  "title": "Chapter 010",
+  "description": "Lar é Onde o Coração Está",
+  "phrases": [
+    {
+      "english": "One year has passed since I first arrived in this city.",
+      "portuguese": "Um ano se passou desde que cheguei nesta cidade pela primeira vez.",
+      "words": ["Um", "ano", "se", "passou", "desde", "que", "cheguei", "nesta", "cidade", "pela", "primeira", "vez"],
+      "wordByWord": [
+        {"english": "One year has passed", "portuguese": "Um ano se passou"},
+        {"english": "since I first arrived", "portuguese": "desde que cheguei"},
+        {"english": "in this city", "portuguese": "nesta cidade"}
+      ]
+    },
+    {
+      "english": "I now know the best shortcuts and hidden gems everywhere.",
+      "portuguese": "Agora conheço os melhores atalhos e joias escondidas em todos os lugares.",
+      "words": ["Agora", "conheço", "os", "melhores", "atalhos", "e", "joias", "escondidas", "em", "todos", "os", "lugares"],
+      "wordByWord": [
+        {"english": "I now know", "portuguese": "Agora conheço"},
+        {"english": "the best shortcuts", "portuguese": "os melhores atalhos"},
+        {"english": "and hidden gems everywhere", "portuguese": "e joias escondidas em todos os lugares"}
+      ]
+    },
+    {
+      "english": "My apartment feels like a true home filled with memories.",
+      "portuguese": "Meu apartamento parece um verdadeiro lar cheio de memórias.",
+      "words": ["Meu", "apartamento", "parece", "um", "verdadeiro", "lar", "cheio", "de", "memórias"],
+      "wordByWord": [
+        {"english": "My apartment feels", "portuguese": "Meu apartamento parece"},
+        {"english": "like a true home", "portuguese": "um verdadeiro lar"},
+        {"english": "filled with memories", "portuguese": "cheio de memórias"}
+      ]
+    },
+    {
+      "english": "Maya and I have become inseparable best friends.",
+      "portuguese": "Maya e eu nos tornamos amigos inseparáveis.",
+      "words": ["Maya", "e", "eu", "nos", "tornamos", "amigos", "inseparáveis"],
+      "wordByWord": [
+        {"english": "Maya and I", "portuguese": "Maya e eu"},
+        {"english": "have become", "portuguese": "nos tornamos"},
+        {"english": "inseparable best friends", "portuguese": "amigos inseparáveis"}
+      ]
+    },
+    {
+      "english": "We celebrate my work promotion with a special dinner.",
+      "portuguese": "Comemoramos minha promoção no trabalho com um jantar especial.",
+      "words": ["Comemoramos", "minha", "promoção", "no", "trabalho", "com", "um", "jantar", "especial"],
+      "wordByWord": [
+        {"english": "We celebrate", "portuguese": "Comemoramos"},
+        {"english": "my work promotion", "portuguese": "minha promoção no trabalho"},
+        {"english": "with a special dinner", "portuguese": "com um jantar especial"}
+      ]
+    },
+    {
+      "english": "Looking around the table, I feel overwhelming gratitude.",
+      "portuguese": "Olhando ao redor da mesa, sinto uma gratidão avassaladora.",
+      "words": ["Olhando", "ao", "redor", "da", "mesa", "sinto", "uma", "gratidão", "avassaladora"],
+      "wordByWord": [
+        {"english": "Looking around the table", "portuguese": "Olhando ao redor da mesa"},
+        {"english": "I feel", "portuguese": "sinto"},
+        {"english": "overwhelming gratitude", "portuguese": "uma gratidão avassaladora"}
+      ]
+    },
+    {
+      "english": "This city is no longer unfamiliar—it's my home now.",
+      "portuguese": "Esta cidade não é mais desconhecida—agora é meu lar.",
+      "words": ["Esta", "cidade", "não", "é", "mais", "desconhecida", "agora", "é", "meu", "lar"],
+      "wordByWord": [
+        {"english": "This city is no longer unfamiliar", "portuguese": "Esta cidade não é mais desconhecida"},
+        {"english": "it's my home now", "portuguese": "agora é meu lar"}
+      ]
+    },
+    {
+      "english": "I think about how far I've come since that first train ride.",
+      "portuguese": "Penso em quanto caminhei desde aquela primeira viagem de trem.",
+      "words": ["Penso", "em", "quanto", "caminhei", "desde", "aquela", "primeira", "viagem", "de", "trem"],
+      "wordByWord": [
+        {"english": "I think about", "portuguese": "Penso em"},
+        {"english": "how far I've come", "portuguese": "quanto caminhei"},
+        {"english": "since that first train ride", "portuguese": "desde aquela primeira viagem de trem"}
+      ]
+    },
+    {
+      "english": "Every challenge taught me something valuable about myself.",
+      "portuguese": "Cada desafio me ensinou algo valioso sobre mim mesmo.",
+      "words": ["Cada", "desafio", "me", "ensinou", "algo", "valioso", "sobre", "mim", "mesmo"],
+      "wordByWord": [
+        {"english": "Every challenge", "portuguese": "Cada desafio"},
+        {"english": "taught me", "portuguese": "me ensinou"},
+        {"english": "something valuable about myself", "portuguese": "algo valioso sobre mim mesmo"}
+      ]
+    },
+    {
+      "english": "Home isn't just a place—it's where your heart feels at peace.",
+      "portuguese": "Lar não é apenas um lugar—é onde seu coração se sente em paz.",
+      "words": ["Lar", "não", "é", "apenas", "um", "lugar", "é", "onde", "seu", "coração", "se", "sente", "em", "paz"],
+      "wordByWord": [
+        {"english": "Home isn't just a place", "portuguese": "Lar não é apenas um lugar"},
+        {"english": "it's where", "portuguese": "é onde"},
+        {"english": "your heart feels at peace", "portuguese": "seu coração se sente em paz"}
+      ]
+    }
+  ]
+}

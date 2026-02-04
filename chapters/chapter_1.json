@@ -1,190 +1,114 @@
 {
   "id": 1,
   "title": "Chapter 001",
-  "description": "Rotina Matinal",
+  "description": "Uma Nova Jornada",
   "phrases": [
     {
-      "english": "Good morning! Time to wake up.",
-      "portuguese": "Bom dia! Hora de acordar.",
-      "words": ["Bom", "dia", "Hora", "de", "acordar"],
+      "english": "Today is the day I move to a new city.",
+      "portuguese": "Hoje é o dia em que me mudo para uma nova cidade.",
+      "words": ["Hoje", "é", "o", "dia", "em", "que", "me", "mudo", "para", "uma", "nova", "cidade"],
       "wordByWord": [
-        {"english": "Good morning", "portuguese": "Bom dia"},
-        {"english": "Time to", "portuguese": "Hora de"},
-        {"english": "wake up", "portuguese": "acordar"}
+        {"english": "Today", "portuguese": "Hoje"},
+        {"english": "is the day", "portuguese": "é o dia"},
+        {"english": "I move", "portuguese": "me mudo"},
+        {"english": "to a new city", "portuguese": "para uma nova cidade"}
       ]
     },
     {
-      "english": "I need to turn off the alarm.",
-      "portuguese": "Eu preciso desligar o alarme.",
-      "words": ["Eu", "preciso", "desligar", "o", "alarme"],
+      "english": "My suitcase is packed with everything I need.",
+      "portuguese": "Minha mala está arrumada com tudo de que preciso.",
+      "words": ["Minha", "mala", "está", "arrumada", "com", "tudo", "de", "que", "preciso"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "need to", "portuguese": "preciso"},
-        {"english": "turn off", "portuguese": "desligar"},
-        {"english": "the alarm", "portuguese": "o alarme"}
+        {"english": "My suitcase", "portuguese": "Minha mala"},
+        {"english": "is packed", "portuguese": "está arrumada"},
+        {"english": "with everything", "portuguese": "com tudo"},
+        {"english": "I need", "portuguese": "de que preciso"}
       ]
     },
     {
-      "english": "It's still dark outside.",
-      "portuguese": "Ainda está escuro lá fora.",
-      "words": ["Ainda", "está", "escuro", "lá", "fora"],
+      "english": "I feel both excited and nervous about this change.",
+      "portuguese": "Sinto-me ao mesmo tempo animado e nervoso com essa mudança.",
+      "words": ["Sinto-me", "ao", "mesmo", "tempo", "animado", "e", "nervoso", "com", "essa", "mudança"],
       "wordByWord": [
-        {"english": "It's", "portuguese": "Está"},
-        {"english": "still", "portuguese": "Ainda"},
-        {"english": "dark", "portuguese": "escuro"},
-        {"english": "outside", "portuguese": "lá fora"}
+        {"english": "I feel", "portuguese": "Sinto-me"},
+        {"english": "both", "portuguese": "ao mesmo tempo"},
+        {"english": "excited", "portuguese": "animado"},
+        {"english": "and nervous", "portuguese": "e nervoso"},
+        {"english": "about this change", "portuguese": "com essa mudança"}
       ]
     },
     {
-      "english": "I should get out of bed now.",
-      "portuguese": "Eu deveria sair da cama agora.",
-      "words": ["Eu", "deveria", "sair", "da", "cama", "agora"],
+      "english": "The train leaves at nine in the morning.",
+      "portuguese": "O trem sai às nove da manhã.",
+      "words": ["O", "trem", "sai", "às", "nove", "da", "manhã"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "should", "portuguese": "deveria"},
-        {"english": "get out of", "portuguese": "sair da"},
-        {"english": "bed", "portuguese": "cama"},
-        {"english": "now", "portuguese": "agora"}
+        {"english": "The train", "portuguese": "O trem"},
+        {"english": "leaves", "portuguese": "sai"},
+        {"english": "at nine", "portuguese": "às nove"},
+        {"english": "in the morning", "portuguese": "da manhã"}
       ]
     },
     {
-      "english": "My body feels so heavy.",
-      "portuguese": "Meu corpo está tão pesado.",
-      "words": ["Meu", "corpo", "está", "tão", "pesado"],
+      "english": "I say goodbye to my family at the station.",
+      "portuguese": "Digo adeus à minha família na estação.",
+      "words": ["Digo", "adeus", "à", "minha", "família", "na", "estação"],
       "wordByWord": [
-        {"english": "My", "portuguese": "Meu"},
-        {"english": "body", "portuguese": "corpo"},
-        {"english": "feels", "portuguese": "está"},
-        {"english": "so", "portuguese": "tão"},
-        {"english": "heavy", "portuguese": "pesado"}
+        {"english": "I say goodbye", "portuguese": "Digo adeus"},
+        {"english": "to my family", "portuguese": "à minha família"},
+        {"english": "at the station", "portuguese": "na estação"}
       ]
     },
     {
-      "english": "I'll take a quick shower before breakfast.",
-      "portuguese": "Vou tomar um banho rápido antes do café da manhã.",
-      "words": ["Vou", "tomar", "um", "banho", "rápido", "antes", "do", "café", "da", "manhã"],
+      "english": "Tears fill my eyes as the train starts moving.",
+      "portuguese": "Lágrimas enchem meus olhos quando o trem começa a se mover.",
+      "words": ["Lágrimas", "enchem", "meus", "olhos", "quando", "o", "trem", "começa", "a", "se", "mover"],
       "wordByWord": [
-        {"english": "I'll", "portuguese": "Vou"},
-        {"english": "take", "portuguese": "tomar"},
-        {"english": "a quick", "portuguese": "um rápido"},
-        {"english": "shower", "portuguese": "banho"},
-        {"english": "before", "portuguese": "antes do"},
-        {"english": "breakfast", "portuguese": "café da manhã"}
+        {"english": "Tears", "portuguese": "Lágrimas"},
+        {"english": "fill my eyes", "portuguese": "enchem meus olhos"},
+        {"english": "as", "portuguese": "quando"},
+        {"english": "the train starts moving", "portuguese": "o trem começa a se mover"}
       ]
     },
     {
-      "english": "Where did I put my toothbrush?",
-      "portuguese": "Onde eu coloquei minha escova de dentes?",
-      "words": ["Onde", "eu", "coloquei", "minha", "escova", "de", "dentes"],
+      "english": "I look out the window at the changing landscape.",
+      "portuguese": "Olho pela janela para a paisagem que muda.",
+      "words": ["Olho", "pela", "janela", "para", "a", "paisagem", "que", "muda"],
       "wordByWord": [
-        {"english": "Where", "portuguese": "Onde"},
-        {"english": "did I", "portuguese": "eu"},
-        {"english": "put", "portuguese": "coloquei"},
-        {"english": "my", "portuguese": "minha"},
-        {"english": "toothbrush", "portuguese": "escova de dentes"}
+        {"english": "I look out", "portuguese": "Olho"},
+        {"english": "the window", "portuguese": "pela janela"},
+        {"english": "at the changing landscape", "portuguese": "para a paisagem que muda"}
       ]
     },
     {
-      "english": "The water is too cold this morning.",
-      "portuguese": "A água está muito fria esta manhã.",
-      "words": ["A", "água", "está", "muito", "fria", "esta", "manhã"],
+      "english": "Three hours later, I arrive at my new home.",
+      "portuguese": "Três horas depois, chego ao meu novo lar.",
+      "words": ["Três", "horas", "depois", "chego", "ao", "meu", "novo", "lar"],
       "wordByWord": [
-        {"english": "The", "portuguese": "A"},
-        {"english": "water", "portuguese": "água"},
-        {"english": "is", "portuguese": "está"},
-        {"english": "too", "portuguese": "muito"},
-        {"english": "cold", "portuguese": "fria"},
-        {"english": "this morning", "portuguese": "esta manhã"}
+        {"english": "Three hours later", "portuguese": "Três horas depois"},
+        {"english": "I arrive", "portuguese": "chego"},
+        {"english": "at my new home", "portuguese": "ao meu novo lar"}
       ]
     },
     {
-      "english": "I need to choose what to wear today.",
-      "portuguese": "Eu preciso escolher o que vestir hoje.",
-      "words": ["Eu", "preciso", "escolher", "o", "que", "vestir", "hoje"],
+      "english": "My new apartment is small but cozy.",
+      "portuguese": "Meu novo apartamento é pequeno mas aconchegante.",
+      "words": ["Meu", "novo", "apartamento", "é", "pequeno", "mas", "aconchegante"],
       "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "need to", "portuguese": "preciso"},
-        {"english": "choose", "portuguese": "escolher"},
-        {"english": "what to", "portuguese": "o que"},
-        {"english": "wear", "portuguese": "vestir"},
-        {"english": "today", "portuguese": "hoje"}
+        {"english": "My new apartment", "portuguese": "Meu novo apartamento"},
+        {"english": "is small", "portuguese": "é pequeno"},
+        {"english": "but cozy", "portuguese": "mas aconchegante"}
       ]
     },
     {
-      "english": "My favorite shirt is still in the laundry.",
-      "portuguese": "Minha camisa favorita ainda está na lavanderia.",
-      "words": ["Minha", "camisa", "favorita", "ainda", "está", "na", "lavanderia"],
+      "english": "Tomorrow I will start my new job and meet new people.",
+      "portuguese": "Amanhã vou começar meu novo trabalho e conhecer pessoas novas.",
+      "words": ["Amanhã", "vou", "começar", "meu", "novo", "trabalho", "e", "conhecer", "pessoas", "novas"],
       "wordByWord": [
-        {"english": "My", "portuguese": "Minha"},
-        {"english": "favorite", "portuguese": "favorita"},
-        {"english": "shirt", "portuguese": "camisa"},
-        {"english": "is", "portuguese": "está"},
-        {"english": "still", "portuguese": "ainda"},
-        {"english": "in the laundry", "portuguese": "na lavanderia"}
-      ]
-    },
-    {
-      "english": "I can't find my keys anywhere!",
-      "portuguese": "Não consigo encontrar minhas chaves em lugar nenhum!",
-      "words": ["Não", "consigo", "encontrar", "minhas", "chaves", "em", "lugar", "nenhum"],
-      "wordByWord": [
-        {"english": "I", "portuguese": "Eu"},
-        {"english": "can't", "portuguese": "não consigo"},
-        {"english": "find", "portuguese": "encontrar"},
-        {"english": "my", "portuguese": "minhas"},
-        {"english": "keys", "portuguese": "chaves"},
-        {"english": "anywhere", "portuguese": "em lugar nenhum"}
-      ]
-    },
-    {
-      "english": "Did I leave them on the kitchen counter?",
-      "portuguese": "Será que deixei elas no balcão da cozinha?",
-      "words": ["Será", "que", "deixei", "elas", "no", "balcão", "da", "cozinha"],
-      "wordByWord": [
-        {"english": "Did I", "portuguese": "Será que"},
-        {"english": "leave", "portuguese": "deixei"},
-        {"english": "them", "portuguese": "elas"},
-        {"english": "on the", "portuguese": "no"},
-        {"english": "kitchen counter", "portuguese": "balcão da cozinha"}
-      ]
-    },
-    {
-      "english": "Oh no! I'm going to be late for work!",
-      "portuguese": "Oh não! Vou me atrasar para o trabalho!",
-      "words": ["Oh", "não", "Vou", "me", "atrasar", "para", "o", "trabalho"],
-      "wordByWord": [
-        {"english": "Oh no", "portuguese": "Oh não"},
-        {"english": "I'm going to", "portuguese": "Vou"},
-        {"english": "be late", "portuguese": "me atrasar"},
-        {"english": "for", "portuguese": "para"},
-        {"english": "work", "portuguese": "o trabalho"}
-      ]
-    },
-    {
-      "english": "Maybe I should take the bus instead of walking.",
-      "portuguese": "Talvez eu devesse pegar o ônibus em vez de caminhar.",
-      "words": ["Talvez", "eu", "devesse", "pegar", "o", "ônibus", "em", "vez", "de", "caminhar"],
-      "wordByWord": [
-        {"english": "Maybe", "portuguese": "Talvez"},
-        {"english": "I", "portuguese": "eu"},
-        {"english": "should", "portuguese": "devesse"},
-        {"english": "take", "portuguese": "pegar"},
-        {"english": "the bus", "portuguese": "o ônibus"},
-        {"english": "instead of", "portuguese": "em vez de"},
-        {"english": "walking", "portuguese": "caminhar"}
-      ]
-    },
-    {
-      "english": "At least the weather looks nice today.",
-      "portuguese": "Pelo menos o tempo está bonito hoje.",
-      "words": ["Pelo", "menos", "o", "tempo", "está", "bonito", "hoje"],
-      "wordByWord": [
-        {"english": "At least", "portuguese": "Pelo menos"},
-        {"english": "the", "portuguese": "o"},
-        {"english": "weather", "portuguese": "tempo"},
-        {"english": "looks", "portuguese": "está"},
-        {"english": "nice", "portuguese": "bonito"},
-        {"english": "today", "portuguese": "hoje"}
+        {"english": "Tomorrow", "portuguese": "Amanhã"},
+        {"english": "I will start", "portuguese": "vou começar"},
+        {"english": "my new job", "portuguese": "meu novo trabalho"},
+        {"english": "and meet", "portuguese": "e conhecer"},
+        {"english": "new people", "portuguese": "pessoas novas"}
       ]
     }
   ]

@@ -1,97 +1,107 @@
 {
   "id": 7,
   "title": "Chapter 007",
-  "description": "Fim de Semana",
+  "description": "Uma Noite Especial",
   "phrases": [
     {
-      "english": "What are your plans for the weekend?",
-      "portuguese": "Quais são seus planos para o fim de semana?",
-      "alternativeTranslations": ["O que vai fazer no final de semana?", "Tem planos pro fim de semana?"],
-      "wordByWord": [{"english": "What", "portuguese": "Quais"}, {"english": "are", "portuguese": "são"}, {"english": "your", "portuguese": "seus"}, {"english": "plans", "portuguese": "planos"}, {"english": "for", "portuguese": "para"}, {"english": "the weekend", "portuguese": "o fim de semana"}]
+      "english": "Maya and I meet at the city festival on Friday night.",
+      "portuguese": "Maya e eu nos encontramos no festival da cidade na sexta à noite.",
+      "words": ["Maya", "e", "eu", "nos", "encontramos", "no", "festival", "da", "cidade", "na", "sexta", "à", "noite"],
+      "wordByWord": [
+        {"english": "Maya and I meet", "portuguese": "Maya e eu nos encontramos"},
+        {"english": "at the city festival", "portuguese": "no festival da cidade"},
+        {"english": "on Friday night", "portuguese": "na sexta à noite"}
+      ]
     },
     {
-      "english": "I'm thinking about going to the beach.",
-      "portuguese": "Estou pensando em ir à praia.",
-      "alternativeTranslations": ["Estou cogitando ir para a praia.", "Penso em ir na praia."],
-      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "thinking about", "portuguese": "pensando em"}, {"english": "going", "portuguese": "ir"}, {"english": "to", "portuguese": "à"}, {"english": "the beach", "portuguese": "praia"}]
+      "english": "Colorful lights decorate the entire main square.",
+      "portuguese": "Luzes coloridas decoram toda a praça principal.",
+      "words": ["Luzes", "coloridas", "decoram", "toda", "a", "praça", "principal"],
+      "wordByWord": [
+        {"english": "Colorful lights", "portuguese": "Luzes coloridas"},
+        {"english": "decorate", "portuguese": "decoram"},
+        {"english": "the entire main square", "portuguese": "toda a praça principal"}
+      ]
     },
     {
-      "english": "The weather should be nice.",
-      "portuguese": "O tempo deve estar bom.",
-      "alternativeTranslations": ["O clima deve estar agradável.", "Deve fazer um tempo bonito."],
-      "wordByWord": [{"english": "The", "portuguese": "O"}, {"english": "weather", "portuguese": "tempo"}, {"english": "should", "portuguese": "deve"}, {"english": "be", "portuguese": "estar"}, {"english": "nice", "portuguese": "bom"}]
+      "english": "We try street food from different countries together.",
+      "portuguese": "Experimentamos comida de rua de diferentes países juntos.",
+      "words": ["Experimentamos", "comida", "de", "rua", "de", "diferentes", "países", "juntos"],
+      "wordByWord": [
+        {"english": "We try", "portuguese": "Experimentamos"},
+        {"english": "street food", "portuguese": "comida de rua"},
+        {"english": "from different countries together", "portuguese": "de diferentes países juntos"}
+      ]
     },
     {
-      "english": "Do you want to come with us?",
-      "portuguese": "Você quer vir com a gente?",
-      "alternativeTranslations": ["Quer vir conosco?", "Topa vir junto?"],
-      "wordByWord": [{"english": "Do you", "portuguese": "Você"}, {"english": "want to", "portuguese": "quer"}, {"english": "come", "portuguese": "vir"}, {"english": "with", "portuguese": "com"}, {"english": "us", "portuguese": "a gente"}]
+      "english": "Maya laughs when I accidentally eat something too spicy.",
+      "portuguese": "Maya ri quando acidentalmente como algo muito picante.",
+      "words": ["Maya", "ri", "quando", "acidentalmente", "como", "algo", "muito", "picante"],
+      "wordByWord": [
+        {"english": "Maya laughs", "portuguese": "Maya ri"},
+        {"english": "when I accidentally eat", "portuguese": "quando acidentalmente como"},
+        {"english": "something too spicy", "portuguese": "algo muito picante"}
+      ]
     },
     {
-      "english": "That sounds like fun!",
-      "portuguese": "Isso parece divertido!",
-      "alternativeTranslations": ["Parece legal!", "Que ideia boa!"],
-      "wordByWord": [{"english": "That", "portuguese": "Isso"}, {"english": "sounds", "portuguese": "parece"}, {"english": "like", "portuguese": ""}, {"english": "fun", "portuguese": "divertido"}]
+      "english": "She hands me a bottle of water with a caring smile.",
+      "portuguese": "Ela me entrega uma garrafa de água com um sorriso carinhoso.",
+      "words": ["Ela", "me", "entrega", "uma", "garrafa", "de", "água", "com", "um", "sorriso", "carinhoso"],
+      "wordByWord": [
+        {"english": "She hands me", "portuguese": "Ela me entrega"},
+        {"english": "a bottle of water", "portuguese": "uma garrafa de água"},
+        {"english": "with a caring smile", "portuguese": "com um sorriso carinhoso"}
+      ]
     },
     {
-      "english": "The water is perfect today!",
-      "portuguese": "A água está perfeita hoje!",
-      "alternativeTranslations": ["A água está ótima hoje!", "Hoje a água está uma delícia!"],
-      "wordByWord": [{"english": "The", "portuguese": "A"}, {"english": "water", "portuguese": "água"}, {"english": "is", "portuguese": "está"}, {"english": "perfect", "portuguese": "perfeita"}, {"english": "today", "portuguese": "hoje"}]
+      "english": "We listen to live music under the starry sky.",
+      "portuguese": "Ouvimos música ao vivo sob o céu estrelado.",
+      "words": ["Ouvimos", "música", "ao", "vivo", "sob", "o", "céu", "estrelado"],
+      "wordByWord": [
+        {"english": "We listen to", "portuguese": "Ouvimos"},
+        {"english": "live music", "portuguese": "música ao vivo"},
+        {"english": "under the starry sky", "portuguese": "sob o céu estrelado"}
+      ]
     },
     {
-      "english": "Don't forget to put on sunscreen.",
-      "portuguese": "Não esqueça de passar protetor solar.",
-      "alternativeTranslations": ["Lembre-se de colocar filtro solar.", "Não se esqueça do protetor solar."],
-      "wordByWord": [{"english": "Don't", "portuguese": "Não"}, {"english": "forget to", "portuguese": "esqueça de"}, {"english": "put on", "portuguese": "passar"}, {"english": "sunscreen", "portuguese": "protetor solar"}]
+      "english": "During a slow song, she gently takes my hand.",
+      "portuguese": "Durante uma música lenta, ela gentilmente pega minha mão.",
+      "words": ["Durante", "uma", "música", "lenta", "ela", "gentilmente", "pega", "minha", "mão"],
+      "wordByWord": [
+        {"english": "During a slow song", "portuguese": "Durante uma música lenta"},
+        {"english": "she gently takes", "portuguese": "ela gentilmente pega"},
+        {"english": "my hand", "portuguese": "minha mão"}
+      ]
     },
     {
-      "english": "I'm getting a bit hungry now.",
-      "portuguese": "Estou ficando com um pouco de fome agora.",
-      "alternativeTranslations": ["Estou começando a sentir fome.", "Já estou com fome."],
-      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "getting", "portuguese": "ficando com"}, {"english": "a bit", "portuguese": "um pouco de"}, {"english": "hungry", "portuguese": "fome"}, {"english": "now", "portuguese": "agora"}]
+      "english": "My heart beats faster, but I feel completely happy.",
+      "portuguese": "Meu coração bate mais rápido, mas sinto-me completamente feliz.",
+      "words": ["Meu", "coração", "bate", "mais", "rápido", "mas", "sinto-me", "completamente", "feliz"],
+      "wordByWord": [
+        {"english": "My heart beats faster", "portuguese": "Meu coração bate mais rápido"},
+        {"english": "but I feel", "portuguese": "mas sinto-me"},
+        {"english": "completely happy", "portuguese": "completamente feliz"}
+      ]
     },
     {
-      "english": "Let's grab something to eat nearby.",
-      "portuguese": "Vamos pegar algo para comer por perto.",
-      "alternativeTranslations": ["Bora comer alguma coisa aqui perto.", "Vamos buscar comida nas redondezas."],
-      "wordByWord": [{"english": "Let's", "portuguese": "Vamos"}, {"english": "grab", "portuguese": "pegar"}, {"english": "something", "portuguese": "algo"}, {"english": "to eat", "portuguese": "para comer"}, {"english": "nearby", "portuguese": "por perto"}]
+      "english": "This moment feels magical and perfectly right.",
+      "portuguese": "Este momento parece mágico e perfeitamente certo.",
+      "words": ["Este", "momento", "parece", "mágico", "e", "perfeitamente", "certo"],
+      "wordByWord": [
+        {"english": "This moment feels", "portuguese": "Este momento parece"},
+        {"english": "magical", "portuguese": "mágico"},
+        {"english": "and perfectly right", "portuguese": "e perfeitamente certo"}
+      ]
     },
     {
-      "english": "This place has amazing seafood!",
-      "portuguese": "Este lugar tem frutos do mar incríveis!",
-      "alternativeTranslations": ["Aqui tem frutos do mar maravilhosos!", "Os frutos do mar daqui são sensacionais!"],
-      "wordByWord": [{"english": "This", "portuguese": "Este"}, {"english": "place", "portuguese": "lugar"}, {"english": "has", "portuguese": "tem"}, {"english": "amazing", "portuguese": "incríveis"}, {"english": "seafood", "portuguese": "frutos do mar"}]
-    },
-    {
-      "english": "I'm so relaxed after this day at the beach.",
-      "portuguese": "Estou tão relaxado depois deste dia na praia.",
-      "alternativeTranslations": ["Que relaxante esse dia de praia.", "Estou super relaxado após esse dia na praia."],
-      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "so", "portuguese": "tão"}, {"english": "relaxed", "portuguese": "relaxado"}, {"english": "after", "portuguese": "depois de"}, {"english": "this", "portuguese": "este"}, {"english": "day", "portuguese": "dia"}, {"english": "at the beach", "portuguese": "na praia"}]
-    },
-    {
-      "english": "We should do this more often.",
-      "portuguese": "Deveríamos fazer isso com mais frequência.",
-      "alternativeTranslations": ["Devíamos fazer isso mais vezes.", "Temos que repetir isso mais seguido."],
-      "wordByWord": [{"english": "We", "portuguese": "Nós"}, {"english": "should", "portuguese": "deveríamos"}, {"english": "do", "portuguese": "fazer"}, {"english": "this", "portuguese": "isso"}, {"english": "more", "portuguese": "com mais"}, {"english": "often", "portuguese": "frequência"}]
-    },
-    {
-      "english": "I can't wait for the next weekend!",
-      "portuguese": "Mal posso esperar pelo próximo fim de semana!",
-      "alternativeTranslations": ["Não vejo a hora do próximo final de semana!", "Já quero que chegue o próximo fim de semana!"],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "can't wait", "portuguese": "mal posso esperar"}, {"english": "for", "portuguese": "pelo"}, {"english": "the next", "portuguese": "próximo"}, {"english": "weekend", "portuguese": "fim de semana"}]
-    },
-    {
-      "english": "Tomorrow it's back to work unfortunately.",
-      "portuguese": "Amanhã é de volta ao trabalho infelizmente.",
-      "alternativeTranslations": ["Infelizmente amanhã volta a rotina.", "Amanhã já é dia de trabalhar de novo."],
-      "wordByWord": [{"english": "Tomorrow", "portuguese": "Amanhã"}, {"english": "it's", "portuguese": "é"}, {"english": "back to", "portuguese": "de volta ao"}, {"english": "work", "portuguese": "trabalho"}, {"english": "unfortunately", "portuguese": "infelizmente"}]
-    },
-    {
-      "english": "Thanks for the wonderful day, everyone!",
-      "portuguese": "Obrigado pelo dia maravilhoso, pessoal!",
-      "alternativeTranslations": ["Valeu pelo dia incrível, galera!", "Obrigado a todos por esse dia ótimo!"],
-      "wordByWord": [{"english": "Thanks", "portuguese": "Obrigado"}, {"english": "for", "portuguese": "pelo"}, {"english": "the", "portuguese": ""}, {"english": "wonderful", "portuguese": "maravilhoso"}, {"english": "day", "portuguese": "dia"}, {"english": "everyone", "portuguese": "pessoal"}]
+      "english": "As we walk home, I know our friendship has deepened.",
+      "portuguese": "Enquanto caminhamos para casa, sei que nossa amizade se aprofundou.",
+      "words": ["Enquanto", "caminhamos", "para", "casa", "sei", "que", "nossa", "amizade", "se", "aprofundou"],
+      "wordByWord": [
+        {"english": "As we walk home", "portuguese": "Enquanto caminhamos para casa"},
+        {"english": "I know", "portuguese": "sei"},
+        {"english": "our friendship has deepened", "portuguese": "que nossa amizade se aprofundou"}
+      ]
     }
   ]
 }

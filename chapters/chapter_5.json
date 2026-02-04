@@ -1,97 +1,107 @@
 {
   "id": 5,
   "title": "Chapter 005",
-  "description": "Viajando de Avião",
+  "description": "Amizade Crescente",
   "phrases": [
     {
-      "english": "Where is the check-in counter?",
-      "portuguese": "Onde fica o balcão de check-in?",
-      "alternativeTranslations": ["Onde é o check-in?", "Cadê o guichê de check-in?"],
-      "wordByWord": [{"english": "Where", "portuguese": "Onde"}, {"english": "is", "portuguese": "fica"}, {"english": "the", "portuguese": "o"}, {"english": "check-in", "portuguese": "de check-in"}, {"english": "counter", "portuguese": "balcão"}]
+      "english": "Maya invites me to join her for coffee at a nearby table.",
+      "portuguese": "Maya me convida para me juntar a ela para um café em uma mesa próxima.",
+      "words": ["Maya", "me", "convida", "para", "me", "juntar", "a", "ela", "para", "um", "café", "em", "uma", "mesa", "próxima"],
+      "wordByWord": [
+        {"english": "Maya invites me", "portuguese": "Maya me convida"},
+        {"english": "to join her", "portuguese": "para me juntar a ela"},
+        {"english": "for coffee at a nearby table", "portuguese": "para um café em uma mesa próxima"}
+      ]
     },
     {
-      "english": "I need to check my luggage.",
-      "portuguese": "Preciso despachar minha bagagem.",
-      "alternativeTranslations": ["Tenho que fazer check-in da mala.", "Preciso registrar minha mala."],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "check", "portuguese": "despachar"}, {"english": "my", "portuguese": "minha"}, {"english": "luggage", "portuguese": "bagagem"}]
+      "english": "She tells me she's lived in this city her whole life.",
+      "portuguese": "Ela me conta que mora nesta cidade desde que nasceu.",
+      "words": ["Ela", "me", "conta", "que", "mora", "nesta", "cidade", "desde", "que", "nasceu"],
+      "wordByWord": [
+        {"english": "She tells me", "portuguese": "Ela me conta"},
+        {"english": "she's lived in this city", "portuguese": "que mora nesta cidade"},
+        {"english": "her whole life", "portuguese": "desde que nasceu"}
+      ]
     },
     {
-      "english": "Can I see your passport?",
-      "portuguese": "Posso ver seu passaporte?",
-      "alternativeTranslations": ["Pode me mostrar o passaporte?", "Seu passaporte, por favor?"],
-      "wordByWord": [{"english": "Can I", "portuguese": "Posso"}, {"english": "see", "portuguese": "ver"}, {"english": "your", "portuguese": "seu"}, {"english": "passport", "portuguese": "passaporte"}]
+      "english": "I share stories about my hometown and why I moved.",
+      "portuguese": "Compartilho histórias sobre minha cidade natal e por que me mudei.",
+      "words": ["Compartilho", "histórias", "sobre", "minha", "cidade", "natal", "e", "por", "que", "me", "mudei"],
+      "wordByWord": [
+        {"english": "I share stories", "portuguese": "Compartilho histórias"},
+        {"english": "about my hometown", "portuguese": "sobre minha cidade natal"},
+        {"english": "and why I moved", "portuguese": "e por que me mudei"}
+      ]
     },
     {
-      "english": "Here is my boarding pass.",
-      "portuguese": "Aqui está meu cartão de embarque.",
-      "alternativeTranslations": ["Este é meu boarding pass.", "Aqui está o bilhete de embarque."],
-      "wordByWord": [{"english": "Here", "portuguese": "Aqui"}, {"english": "is", "portuguese": "está"}, {"english": "my", "portuguese": "meu"}, {"english": "boarding", "portuguese": "de embarque"}, {"english": "pass", "portuguese": "cartão"}]
+      "english": "Maya suggests we visit the art museum together next weekend.",
+      "portuguese": "Maya sugere que visitemos o museu de arte juntos no próximo fim de semana.",
+      "words": ["Maya", "sugere", "que", "visitemos", "o", "museu", "de", "arte", "juntos", "no", "próximo", "fim", "de", "semana"],
+      "wordByWord": [
+        {"english": "Maya suggests", "portuguese": "Maya sugere"},
+        {"english": "we visit the art museum together", "portuguese": "que visitemos o museu de arte juntos"},
+        {"english": "next weekend", "portuguese": "no próximo fim de semana"}
+      ]
     },
     {
-      "english": "What gate is my flight?",
-      "portuguese": "Qual é o portão do meu voo?",
-      "alternativeTranslations": ["Em que portão é meu voo?", "Qual portão de embarque?"],
-      "wordByWord": [{"english": "What", "portuguese": "Qual"}, {"english": "gate", "portuguese": "portão"}, {"english": "is", "portuguese": "é"}, {"english": "my", "portuguese": "do meu"}, {"english": "flight", "portuguese": "voo"}]
+      "english": "I happily agree, feeling less like a stranger in this city.",
+      "portuguese": "Concordo felizmente, sentindo-me menos como um estranho nesta cidade.",
+      "words": ["Concordo", "felizmente", "sentindo-me", "menos", "como", "um", "estranho", "nesta", "cidade"],
+      "wordByWord": [
+        {"english": "I happily agree", "portuguese": "Concordo felizmente"},
+        {"english": "feeling less like a stranger", "portuguese": "sentindo-me menos como um estranho"},
+        {"english": "in this city", "portuguese": "nesta cidade"}
+      ]
     },
     {
-      "english": "Excuse me, this is my seat.",
-      "portuguese": "Com licença, este é meu assento.",
-      "alternativeTranslations": ["Desculpe, esse é meu lugar.", "Perdão, esta é minha poltrona."],
-      "wordByWord": [{"english": "Excuse me", "portuguese": "Com licença"}, {"english": "this", "portuguese": "este"}, {"english": "is", "portuguese": "é"}, {"english": "my", "portuguese": "meu"}, {"english": "seat", "portuguese": "assento"}]
+      "english": "Before leaving, she writes her phone number on a napkin.",
+      "portuguese": "Antes de ir embora, ela escreve seu número de telefone em um guardanapo.",
+      "words": ["Antes", "de", "ir", "embora", "ela", "escreve", "seu", "número", "de", "telefone", "em", "um", "guardanapo"],
+      "wordByWord": [
+        {"english": "Before leaving", "portuguese": "Antes de ir embora"},
+        {"english": "she writes her phone number", "portuguese": "ela escreve seu número de telefone"},
+        {"english": "on a napkin", "portuguese": "em um guardanapo"}
+      ]
     },
     {
-      "english": "Can you help me with my bag?",
-      "portuguese": "Você pode me ajudar com minha bolsa?",
-      "alternativeTranslations": ["Pode me dar uma mão com a mala?", "Consegue me ajudar com a bagagem?"],
-      "wordByWord": [{"english": "Can you", "portuguese": "Você pode"}, {"english": "help", "portuguese": "ajudar"}, {"english": "me", "portuguese": "me"}, {"english": "with", "portuguese": "com"}, {"english": "my", "portuguese": "minha"}, {"english": "bag", "portuguese": "bolsa"}]
+      "english": "Text me when you're free! she says with a wave.",
+      "portuguese": "Me mande mensagem quando estiver livre! ela diz com um aceno.",
+      "words": ["Me", "mande", "mensagem", "quando", "estiver", "livre", "ela", "diz", "com", "um", "aceno"],
+      "wordByWord": [
+        {"english": "Text me", "portuguese": "Me mande mensagem"},
+        {"english": "when you're free", "portuguese": "quando estiver livre"},
+        {"english": "she says with a wave", "portuguese": "ela diz com um aceno"}
+      ]
     },
     {
-      "english": "Please fasten your seatbelt.",
-      "portuguese": "Por favor, aperte seu cinto de segurança.",
-      "alternativeTranslations": ["Coloque o cinto, por favor.", "Afivele o cinto de segurança."],
-      "wordByWord": [{"english": "Please", "portuguese": "Por favor"}, {"english": "fasten", "portuguese": "aperte"}, {"english": "your", "portuguese": "seu"}, {"english": "seatbelt", "portuguese": "cinto de segurança"}]
+      "english": "Walking home, I smile thinking about our conversation.",
+      "portuguese": "Caminhando para casa, sorrio pensando em nossa conversa.",
+      "words": ["Caminhando", "para", "casa", "sorrio", "pensando", "em", "nossa", "conversa"],
+      "wordByWord": [
+        {"english": "Walking home", "portuguese": "Caminhando para casa"},
+        {"english": "I smile", "portuguese": "sorrio"},
+        {"english": "thinking about our conversation", "portuguese": "pensando em nossa conversa"}
+      ]
     },
     {
-      "english": "Would you like something to drink?",
-      "portuguese": "Gostaria de algo para beber?",
-      "alternativeTranslations": ["Quer alguma bebida?", "Deseja tomar algo?"],
-      "wordByWord": [{"english": "Would you", "portuguese": "Gostaria"}, {"english": "like", "portuguese": "de"}, {"english": "something", "portuguese": "algo"}, {"english": "to", "portuguese": "para"}, {"english": "drink", "portuguese": "beber"}]
+      "english": "For the first time, this city feels a little more like home.",
+      "portuguese": "Pela primeira vez, esta cidade parece um pouco mais com lar.",
+      "words": ["Pela", "primeira", "vez", "esta", "cidade", "parece", "um", "pouco", "mais", "com", "lar"],
+      "wordByWord": [
+        {"english": "For the first time", "portuguese": "Pela primeira vez"},
+        {"english": "this city feels", "portuguese": "esta cidade parece"},
+        {"english": "a little more like home", "portuguese": "um pouco mais com lar"}
+      ]
     },
     {
-      "english": "I'll have orange juice, please.",
-      "portuguese": "Vou querer suco de laranja, por favor.",
-      "alternativeTranslations": ["Quero suco de laranja.", "Suco de laranja, por gentileza."],
-      "wordByWord": [{"english": "I'll have", "portuguese": "Vou querer"}, {"english": "orange", "portuguese": "de laranja"}, {"english": "juice", "portuguese": "suco"}, {"english": "please", "portuguese": "por favor"}]
-    },
-    {
-      "english": "I'm feeling a bit airsick.",
-      "portuguese": "Estou me sentindo um pouco enjoado.",
-      "alternativeTranslations": ["Estou com um pouco de enjoo.", "Estou passando mal no avião."],
-      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "feeling", "portuguese": "me sentindo"}, {"english": "a bit", "portuguese": "um pouco"}, {"english": "airsick", "portuguese": "enjoado"}]
-    },
-    {
-      "english": "Could I have a blanket and pillow?",
-      "portuguese": "Poderia me dar um cobertor e travesseiro?",
-      "alternativeTranslations": ["Pode trazer uma manta e almofada?", "Tem cobertor e travesseiro disponível?"],
-      "wordByWord": [{"english": "Could I", "portuguese": "Poderia"}, {"english": "have", "portuguese": "me dar"}, {"english": "a", "portuguese": "um"}, {"english": "blanket", "portuguese": "cobertor"}, {"english": "and", "portuguese": "e"}, {"english": "pillow", "portuguese": "travesseiro"}]
-    },
-    {
-      "english": "How much longer until we land?",
-      "portuguese": "Quanto tempo falta até aterrisarmos?",
-      "alternativeTranslations": ["Falta quanto para pousar?", "Quanto tempo até chegarmos?"],
-      "wordByWord": [{"english": "How much", "portuguese": "Quanto"}, {"english": "longer", "portuguese": "tempo falta"}, {"english": "until", "portuguese": "até"}, {"english": "we", "portuguese": ""}, {"english": "land", "portuguese": "aterrisarmos"}]
-    },
-    {
-      "english": "We're experiencing some turbulence.",
-      "portuguese": "Estamos passando por alguma turbulência.",
-      "alternativeTranslations": ["Há turbulência no momento.", "Estamos enfrentando turbulência."],
-      "wordByWord": [{"english": "We're", "portuguese": "Estamos"}, {"english": "experiencing", "portuguese": "passando por"}, {"english": "some", "portuguese": "alguma"}, {"english": "turbulence", "portuguese": "turbulência"}]
-    },
-    {
-      "english": "Please remain seated until the sign turns off.",
-      "portuguese": "Por favor, permaneça sentado até o sinal apagar.",
-      "alternativeTranslations": ["Fique sentado até o aviso desligar.", "Mantenha-se no assento até a luz apagar."],
-      "wordByWord": [{"english": "Please", "portuguese": "Por favor"}, {"english": "remain", "portuguese": "permaneça"}, {"english": "seated", "portuguese": "sentado"}, {"english": "until", "portuguese": "até"}, {"english": "the sign", "portuguese": "o sinal"}, {"english": "turns off", "portuguese": "apagar"}]
+      "english": "I save her number in my phone with a hopeful heart.",
+      "portuguese": "Salvo seu número no meu celular com um coração esperançoso.",
+      "words": ["Salvo", "seu", "número", "no", "meu", "celular", "com", "um", "coração", "esperançoso"],
+      "wordByWord": [
+        {"english": "I save her number", "portuguese": "Salvo seu número"},
+        {"english": "in my phone", "portuguese": "no meu celular"},
+        {"english": "with a hopeful heart", "portuguese": "com um coração esperançoso"}
+      ]
     }
   ]
 }

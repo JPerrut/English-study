@@ -1,0 +1,105 @@
+{
+  "id": 9,
+  "title": "Chapter 009",
+  "description": "Recomeçar com Força",
+  "phrases": [
+    {
+      "english": "I politely decline the job offer from my old boss.",
+      "portuguese": "Recuso educadamente a oferta de emprego do meu antigo chefe.",
+      "words": ["Recuso", "educadamente", "a", "oferta", "de", "emprego", "do", "meu", "antigo", "chefe"],
+      "wordByWord": [
+        {"english": "I politely decline", "portuguese": "Recuso educadamente"},
+        {"english": "the job offer", "portuguese": "a oferta de emprego"},
+        {"english": "from my old boss", "portuguese": "do meu antigo chefe"}
+      ]
+    },
+    {
+      "english": "Then I focus all my energy on the current project at work.",
+      "portuguese": "Então foco toda minha energia no projeto atual no trabalho.",
+      "words": ["Então", "foco", "toda", "minha", "energia", "no", "projeto", "atual", "no", "trabalho"],
+      "wordByWord": [
+        {"english": "Then I focus", "portuguese": "Então foco"},
+        {"english": "all my energy", "portuguese": "toda minha energia"},
+        {"english": "on the current project at work", "portuguese": "no projeto atual no trabalho"}
+      ]
+    },
+    {
+      "english": "Maya helps me practice my presentation after work.",
+      "portuguese": "Maya me ajuda a praticar minha apresentação depois do trabalho.",
+      "words": ["Maya", "me", "ajuda", "a", "praticar", "minha", "apresentação", "depois", "do", "trabalho"],
+      "wordByWord": [
+        {"english": "Maya helps me", "portuguese": "Maya me ajuda"},
+        {"english": "practice my presentation", "portuguese": "a praticar minha apresentação"},
+        {"english": "after work", "portuguese": "depois do trabalho"}
+      ]
+    },
+    {
+      "english": "She gives honest feedback and encourages me constantly.",
+      "portuguese": "Ela dá feedback honesto e me encoraja constantemente.",
+      "words": ["Ela", "dá", "feedback", "honesto", "e", "me", "encoraja", "constantemente"],
+      "wordByWord": [
+        {"english": "She gives honest feedback", "portuguese": "Ela dá feedback honesto"},
+        {"english": "and encourages me constantly", "portuguese": "e me encoraja constantemente"}
+      ]
+    },
+    {
+      "english": "On presentation day, I feel nervous but prepared.",
+      "portuguese": "No dia da apresentação, sinto-me nervoso mas preparado.",
+      "words": ["No", "dia", "da", "apresentação", "sinto-me", "nervoso", "mas", "preparado"],
+      "wordByWord": [
+        {"english": "On presentation day", "portuguese": "No dia da apresentação"},
+        {"english": "I feel nervous", "portuguese": "sinto-me nervoso"},
+        {"english": "but prepared", "portuguese": "mas preparado"}
+      ]
+    },
+    {
+      "english": "The clients smile and ask thoughtful questions.",
+      "portuguese": "Os clientes sorriem e fazem perguntas reflexivas.",
+      "words": ["Os", "clientes", "sorriem", "e", "fazem", "perguntas", "reflexivas"],
+      "wordByWord": [
+        {"english": "The clients smile", "portuguese": "Os clientes sorriem"},
+        {"english": "and ask", "portuguese": "e fazem"},
+        {"english": "thoughtful questions", "portuguese": "perguntas reflexivas"}
+      ]
+    },
+    {
+      "english": "Afterward, my manager praises my hard work publicly.",
+      "portuguese": "Depois, minha gerente elogia meu trabalho duro publicamente.",
+      "words": ["Depois", "minha", "gerente", "elogia", "meu", "trabalho", "duro", "publicamente"],
+      "wordByWord": [
+        {"english": "Afterward", "portuguese": "Depois"},
+        {"english": "my manager praises", "portuguese": "minha gerente elogia"},
+        {"english": "my hard work publicly", "portuguese": "meu trabalho duro publicamente"}
+      ]
+    },
+    {
+      "english": "I celebrate with Maya at our favorite café that evening.",
+      "portuguese": "Comemoro com Maya na nossa cafeteria favorita naquela noite.",
+      "words": ["Comemoro", "com", "Maya", "na", "nossa", "cafeteria", "favorita", "naquela", "noite"],
+      "wordByWord": [
+        {"english": "I celebrate with Maya", "portuguese": "Comemoro com Maya"},
+        {"english": "at our favorite café", "portuguese": "na nossa cafeteria favorita"},
+        {"english": "that evening", "portuguese": "naquela noite"}
+      ]
+    },
+    {
+      "english": "You've truly found your place here, she says warmly.",
+      "portuguese": "Você realmente encontrou seu lugar aqui, ela diz calorosamente.",
+      "words": ["Você", "realmente", "encontrou", "seu", "lugar", "aqui", "ela", "diz", "calorosamente"],
+      "wordByWord": [
+        {"english": "You've truly found your place here", "portuguese": "Você realmente encontrou seu lugar aqui"},
+        {"english": "she says warmly", "portuguese": "ela diz calorosamente"}
+      ]
+    },
+    {
+      "english": "Hearing this, I feel a deep sense of belonging.",
+      "portuguese": "Ouvindo isso, sinto um profundo sentimento de pertencimento.",
+      "words": ["Ouvindo", "isso", "sinto", "um", "profundo", "sentimento", "de", "pertencimento"],
+      "wordByWord": [
+        {"english": "Hearing this", "portuguese": "Ouvindo isso"},
+        {"english": "I feel", "portuguese": "sinto"},
+        {"english": "a deep sense of belonging", "portuguese": "um profundo sentimento de pertencimento"}
+      ]
+    }
+  ]
+}

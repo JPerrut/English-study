@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>English Pro - Aprenda com Histórias</title>
+  <title>WordWander - Aprenda com Histórias</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,13 +17,83 @@
     <!-- Menu Principal -->
     <div id="main-menu">
       <div class="header">
-        <h1><i class="fas fa-language icon"></i>English Pro</h1>
-        <p>Aprenda inglês com suas histórias favoritas</p>
+        <h1><i class="fas fa-language icon"></i>WordWander</h1>
+        <p>Aprenda inglês de forma divertida e natural</p>
       </div>
+      
       <div class="content">
-        <button id="story-mode-btn" class="btn btn-primary">
-          <i class="fas fa-book-open icon"></i>Inglês com História
-        </button>
+        <!-- Ilustração Interativa de Aprendizado -->
+        <div class="learning-illustration">
+          <div class="illustration-container">
+            <div class="book-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="crossword-icon">
+              <div class="crossword-grid">
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+                <div class="cell"></div>
+                <div class="cell filled"></div>
+              </div>
+            </div>
+            <div class="pathway">
+              <div class="path-dot"></div>
+              <div class="path-dot"></div>
+              <div class="path-dot"></div>
+              <div class="path-dot"></div>
+              <div class="path-dot"></div>
+            </div>
+            <div class="language-bubble">
+              <span>Learn</span>
+            </div>
+            <div class="language-bubble">
+              <span>Play</span>
+            </div>
+            <div class="language-bubble">
+              <span>Grow</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modos de Aprendizado -->
+        <div class="mode-selection">
+          <button id="story-mode-btn" class="mode-btn btn-primary">
+            <div class="mode-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div class="mode-content">
+              <h3>Inglês com Histórias</h3>
+              <p>Traduza frases de narrativas envolventes e construa vocabulário contextual</p>
+            </div>
+          </button>
+          
+          <button id="crossword-mode-btn" class="mode-btn btn-secondary">
+            <div class="mode-icon">
+              <i class="fas fa-th-large"></i>
+            </div>
+            <div class="mode-content">
+              <h3>Inglês com Palavras Cruzadas</h3>
+              <p>Desafie-se com puzzles clássicos adaptados para aprendizado de idiomas</p>
+            </div>
+          </button>
+        </div>
+        
+        <div class="app-tagline">
+          <i class="fas fa-lightbulb"></i>
+          <span>Escolha seu caminho para a fluência!</span>
+        </div>
       </div>
     </div>
 
@@ -54,11 +124,11 @@
       </div>
       <div class="content">
         <button id="easy-practice-btn" class="btn btn-primary">
-          <i class="fas fa-star icon"></i>Prática Fácil
+          <i class="fas fa-star icon"></i>Capitulos em Inglês
           <br><small>Traduza do Inglês para Português</small>
         </button>
         <button id="hard-practice-btn" class="btn btn-secondary">
-          <i class="fas fa-fire icon"></i>Prática Difícil
+          <i class="fas fa-fire icon"></i>Capitulos em Português
           <br><small>Traduza do Português para Inglês</small>
         </button>
       </div>

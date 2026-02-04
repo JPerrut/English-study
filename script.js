@@ -1,12 +1,15 @@
 // Lista estática de capítulos
 const CHAPTER_LIST = [
-  { id: 1, title: "Rotina Matinal" },
-  { id: 2, title: "No Supermercado" },
-  { id: 3, title: "Na Academia" },
-  { id: 4, title: "No Restaurante" },
-  { id: 5, title: "Viajando de Avião" },
-  { id: 6, title: "No Trabalho" },
-  { id: 7, title: "Fim de Semana" }
+  { id: 1, title: "Uma Nova Jornada" },
+  { id: 2, title: "Primeiros Passos" },
+  { id: 3, title: "O Primeiro Dia" },
+  { id: 4, title: "Um Encontro Casual" },
+  { id: 5, title: "Amizade Crescente" },
+  { id: 6, title: "Desafios no Trabalho" },
+  { id: 7, title: "Uma Noite Especial" },
+  { id: 8, title: "Momento de Dúvida" },
+  { id: 9, title: "Recomeçar com Força" },
+  { id: 10, title: "Lar é Onde o Coração Está" }
 ];
 
 // Banco de palavras distratoras em português (categorizadas)

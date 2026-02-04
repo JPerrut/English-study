@@ -1,97 +1,107 @@
 {
   "id": 3,
   "title": "Chapter 003",
-  "description": "Na Academia",
+  "description": "O Primeiro Dia",
   "phrases": [
     {
-      "english": "I'm going to the gym today.",
-      "portuguese": "Vou para a academia hoje.",
-      "alternativeTranslations": ["Hoje vou treinar.", "Vou malhar hoje."],
-      "wordByWord": [{"english": "I'm going", "portuguese": "Vou"}, {"english": "to", "portuguese": "para"}, {"english": "the", "portuguese": "a"}, {"english": "gym", "portuguese": "academia"}, {"english": "today", "portuguese": "hoje"}]
+      "english": "My first day at the new job begins at nine AM.",
+      "portuguese": "Meu primeiro dia no novo trabalho começa às nove da manhã.",
+      "words": ["Meu", "primeiro", "dia", "no", "novo", "trabalho", "começa", "às", "nove", "da", "manhã"],
+      "wordByWord": [
+        {"english": "My first day", "portuguese": "Meu primeiro dia"},
+        {"english": "at the new job", "portuguese": "no novo trabalho"},
+        {"english": "begins at nine AM", "portuguese": "começa às nove da manhã"}
+      ]
     },
     {
-      "english": "Where is my gym bag?",
-      "portuguese": "Onde está minha bolsa de academia?",
-      "alternativeTranslations": ["Cadê minha mochila de treino?", "Onde ficou minha bolsa de ginástica?"],
-      "wordByWord": [{"english": "Where", "portuguese": "Onde"}, {"english": "is", "portuguese": "está"}, {"english": "my", "portuguese": "minha"}, {"english": "gym", "portuguese": "de academia"}, {"english": "bag", "portuguese": "bolsa"}]
+      "english": "I wear my best shirt and try to look confident.",
+      "portuguese": "Visto minha melhor camisa e tento parecer confiante.",
+      "words": ["Visto", "minha", "melhor", "camisa", "e", "tento", "parecer", "confiante"],
+      "wordByWord": [
+        {"english": "I wear", "portuguese": "Visto"},
+        {"english": "my best shirt", "portuguese": "minha melhor camisa"},
+        {"english": "and try to look confident", "portuguese": "e tento parecer confiante"}
+      ]
     },
     {
-      "english": "I need to bring a water bottle.",
-      "portuguese": "Preciso levar uma garrafa de água.",
-      "alternativeTranslations": ["Tenho que trazer uma garrafinha de água.", "Devo levar água."],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "bring", "portuguese": "levar"}, {"english": "a", "portuguese": "uma"}, {"english": "water", "portuguese": "de água"}, {"english": "bottle", "portuguese": "garrafa"}]
+      "english": "My manager, Sarah, welcomes me warmly to the team.",
+      "portuguese": "Minha gerente, Sarah, me dá as boas-vindas calorosamente à equipe.",
+      "words": ["Minha", "gerente", "Sarah", "me", "dá", "as", "boas-vindas", "calorosamente", "à", "equipe"],
+      "wordByWord": [
+        {"english": "My manager, Sarah", "portuguese": "Minha gerente, Sarah"},
+        {"english": "welcomes me warmly", "portuguese": "me dá as boas-vindas calorosamente"},
+        {"english": "to the team", "portuguese": "à equipe"}
+      ]
     },
     {
-      "english": "The gym opens at six.",
-      "portuguese": "A academia abre às seis.",
-      "alternativeTranslations": ["A academia funciona a partir das seis.", "O horário de abertura é às seis."],
-      "wordByWord": [{"english": "The", "portuguese": "A"}, {"english": "gym", "portuguese": "academia"}, {"english": "opens", "portuguese": "abre"}, {"english": "at", "portuguese": "às"}, {"english": "six", "portuguese": "seis"}]
+      "english": "She introduces me to my new colleagues one by one.",
+      "portuguese": "Ela me apresenta aos meus novos colegas um por um.",
+      "words": ["Ela", "me", "apresenta", "aos", "meus", "novos", "colegas", "um", "por", "um"],
+      "wordByWord": [
+        {"english": "She introduces me", "portuguese": "Ela me apresenta"},
+        {"english": "to my new colleagues", "portuguese": "aos meus novos colegas"},
+        {"english": "one by one", "portuguese": "um por um"}
+      ]
     },
     {
-      "english": "I hope it's not too crowded.",
-      "portuguese": "Espero que não esteja muito lotado.",
-      "alternativeTranslations": ["Tomara que não esteja cheio demais.", "Espero que não tenha muita gente."],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "hope", "portuguese": "espero"}, {"english": "it's not", "portuguese": "não esteja"}, {"english": "too", "portuguese": "muito"}, {"english": "crowded", "portuguese": "lotado"}]
+      "english": "Everyone is friendly and asks about my background.",
+      "portuguese": "Todos são amigáveis e perguntam sobre meu histórico.",
+      "words": ["Todos", "são", "amigáveis", "e", "perguntam", "sobre", "meu", "histórico"],
+      "wordByWord": [
+        {"english": "Everyone is friendly", "portuguese": "Todos são amigáveis"},
+        {"english": "and asks", "portuguese": "e perguntam"},
+        {"english": "about my background", "portuguese": "sobre meu histórico"}
+      ]
     },
     {
-      "english": "I'll start with some cardio exercises.",
-      "portuguese": "Vou começar com alguns exercícios de cardio.",
-      "alternativeTranslations": ["Começarei com exercícios aeróbicos.", "Vou iniciar com cardio."],
-      "wordByWord": [{"english": "I'll", "portuguese": "Vou"}, {"english": "start", "portuguese": "começar"}, {"english": "with", "portuguese": "com"}, {"english": "some", "portuguese": "alguns"}, {"english": "cardio", "portuguese": "de cardio"}, {"english": "exercises", "portuguese": "exercícios"}]
+      "english": "I explain that I moved here for a fresh start.",
+      "portuguese": "Explico que me mudei para cá em busca de um recomeço.",
+      "words": ["Explico", "que", "me", "mudei", "para", "cá", "em", "busca", "de", "um", "recomeço"],
+      "wordByWord": [
+        {"english": "I explain", "portuguese": "Explico"},
+        {"english": "that I moved here", "portuguese": "que me mudei para cá"},
+        {"english": "for a fresh start", "portuguese": "em busca de um recomeço"}
+      ]
     },
     {
-      "english": "This treadmill is already taken.",
-      "portuguese": "Esta esteira já está ocupada.",
-      "alternativeTranslations": ["Essa esteira já tem alguém usando.", "Esta esteira já está sendo usada."],
-      "wordByWord": [{"english": "This", "portuguese": "Esta"}, {"english": "treadmill", "portuguese": "esteira"}, {"english": "is", "portuguese": "está"}, {"english": "already", "portuguese": "já"}, {"english": "taken", "portuguese": "ocupada"}]
+      "english": "At lunch, we eat together in the company cafeteria.",
+      "portuguese": "No almoço, comemos juntos na cafeteria da empresa.",
+      "words": ["No", "almoço", "comemos", "juntos", "na", "cafeteria", "da", "empresa"],
+      "wordByWord": [
+        {"english": "At lunch", "portuguese": "No almoço"},
+        {"english": "we eat together", "portuguese": "comemos juntos"},
+        {"english": "in the company cafeteria", "portuguese": "na cafeteria da empresa"}
+      ]
     },
     {
-      "english": "Can I use this machine after you?",
-      "portuguese": "Posso usar este aparelho depois de você?",
-      "alternativeTranslations": ["Posso usar esse equipamento quando você terminar?", "Você se importa se eu usar depois?"],
-      "wordByWord": [{"english": "Can I", "portuguese": "Posso"}, {"english": "use", "portuguese": "usar"}, {"english": "this", "portuguese": "este"}, {"english": "machine", "portuguese": "aparelho"}, {"english": "after", "portuguese": "depois de"}, {"english": "you", "portuguese": "você"}]
+      "english": "They recommend a great restaurant near the office.",
+      "portuguese": "Eles recomendam um ótimo restaurante perto do escritório.",
+      "words": ["Eles", "recomendam", "um", "ótimo", "restaurante", "perto", "do", "escritório"],
+      "wordByWord": [
+        {"english": "They recommend", "portuguese": "Eles recomendam"},
+        {"english": "a great restaurant", "portuguese": "um ótimo restaurante"},
+        {"english": "near the office", "portuguese": "perto do escritório"}
+      ]
     },
     {
-      "english": "I'm feeling tired already.",
-      "portuguese": "Já estou me sentindo cansado.",
-      "alternativeTranslations": ["Já estou cansado.", "Estou sentindo cansaço já."],
-      "wordByWord": [{"english": "I'm", "portuguese": "Estou"}, {"english": "feeling", "portuguese": "me sentindo"}, {"english": "tired", "portuguese": "cansado"}, {"english": "already", "portuguese": "já"}]
+      "english": "After work, I feel tired but happy with the day.",
+      "portuguese": "Depois do trabalho, sinto-me cansado mas feliz com o dia.",
+      "words": ["Depois", "do", "trabalho", "sinto-me", "cansado", "mas", "feliz", "com", "o", "dia"],
+      "wordByWord": [
+        {"english": "After work", "portuguese": "Depois do trabalho"},
+        {"english": "I feel tired", "portuguese": "sinto-me cansado"},
+        {"english": "but happy with the day", "portuguese": "mas feliz com o dia"}
+      ]
     },
     {
-      "english": "Just two more sets to go!",
-      "portuguese": "Só mais duas séries para terminar!",
-      "alternativeTranslations": ["Faltam apenas duas séries!", "Só faltam mais dois sets!"],
-      "wordByWord": [{"english": "Just", "portuguese": "Só"}, {"english": "two", "portuguese": "duas"}, {"english": "more", "portuguese": "mais"}, {"english": "sets", "portuguese": "séries"}, {"english": "to go", "portuguese": "para terminar"}]
-    },
-    {
-      "english": "I need to stretch before leaving.",
-      "portuguese": "Preciso me alongar antes de sair.",
-      "alternativeTranslations": ["Tenho que fazer alongamento antes de ir.", "Devo alongar antes de ir embora."],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "need to", "portuguese": "preciso"}, {"english": "stretch", "portuguese": "me alongar"}, {"english": "before", "portuguese": "antes de"}, {"english": "leaving", "portuguese": "sair"}]
-    },
-    {
-      "english": "My muscles are going to be sore tomorrow.",
-      "portuguese": "Meus músculos vão estar doloridos amanhã.",
-      "alternativeTranslations": ["Vou estar com dor muscular amanhã.", "Amanhã vou sentir dor nos músculos."],
-      "wordByWord": [{"english": "My", "portuguese": "Meus"}, {"english": "muscles", "portuguese": "músculos"}, {"english": "are going to", "portuguese": "vão"}, {"english": "be", "portuguese": "estar"}, {"english": "sore", "portuguese": "doloridos"}, {"english": "tomorrow", "portuguese": "amanhã"}]
-    },
-    {
-      "english": "That was a really intense workout!",
-      "portuguese": "Esse foi um treino realmente intenso!",
-      "alternativeTranslations": ["Foi um treino muito puxado!", "Que treino pesado!"],
-      "wordByWord": [{"english": "That", "portuguese": "Esse"}, {"english": "was", "portuguese": "foi"}, {"english": "a", "portuguese": "um"}, {"english": "really", "portuguese": "realmente"}, {"english": "intense", "portuguese": "intenso"}, {"english": "workout", "portuguese": "treino"}]
-    },
-    {
-      "english": "I should drink a protein shake now.",
-      "portuguese": "Eu deveria tomar um shake de proteína agora.",
-      "alternativeTranslations": ["Preciso tomar whey protein agora.", "Devo beber um shake proteico agora."],
-      "wordByWord": [{"english": "I", "portuguese": "Eu"}, {"english": "should", "portuguese": "deveria"}, {"english": "drink", "portuguese": "tomar"}, {"english": "a", "portuguese": "um"}, {"english": "protein", "portuguese": "de proteína"}, {"english": "shake", "portuguese": "shake"}, {"english": "now", "portuguese": "agora"}]
-    },
-    {
-      "english": "See you next time, have a great day!",
-      "portuguese": "Até a próxima, tenha um ótimo dia!",
-      "alternativeTranslations": ["Até logo, bom dia!", "Nos vemos, tenha um excelente dia!"],
-      "wordByWord": [{"english": "See you", "portuguese": "Até"}, {"english": "next time", "portuguese": "a próxima"}, {"english": "have", "portuguese": "tenha"}, {"english": "a", "portuguese": "um"}, {"english": "great", "portuguese": "ótimo"}, {"english": "day", "portuguese": "dia"}]
+      "english": "I call my family to share how my first day went.",
+      "portuguese": "Ligo para minha família para contar como foi meu primeiro dia.",
+      "words": ["Ligo", "para", "minha", "família", "para", "contar", "como", "foi", "meu", "primeiro", "dia"],
+      "wordByWord": [
+        {"english": "I call my family", "portuguese": "Ligo para minha família"},
+        {"english": "to share", "portuguese": "para contar"},
+        {"english": "how my first day went", "portuguese": "como foi meu primeiro dia"}
+      ]
     }
   ]
 }
