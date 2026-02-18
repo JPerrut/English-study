@@ -221,21 +221,57 @@ function loadQuestion() {
   elements.progressBar.style.width = `${progress}%`;
   
   // Define qual texto mostrar baseado no modo
-  elements.questionText.textContent = currentState.currentMode === 'easy'
-    ? question.english
-    : question.portuguese;
+  if (currentState.currentMode === 'easy') {
+    // Modo fácil: pergunta em INGLÊS, resposta em PORTUGUÊS
+    elements.questionText.textContent = question.english;
+    
+    // Gera as palavras corretas em PORTUGUÊS
+    const correctWords = question.words; // words já está em português no JSON
+    const distractors = generateDistractors(correctWords, 4);
+    const allWords = [...correctWords, ...distractors];
+    const shuffledWords = [...allWords].sort(() => Math.random() - 0.5);
+    
+    setupWordPositions(shuffledWords);
+  } else {
+    // Modo difícil: pergunta em PORTUGUÊS, resposta em INGLÊS
+    elements.questionText.textContent = question.portuguese;
+    
+    // Gera as palavras corretas em INGLÊS
+    const correctWords = question.english.replace(/[.,!?;:]/g, '').split(' ');
+    
+    // Para o modo difícil, precisamos de distratores em INGLÊS também
+    // Vamos criar um banco de distratores em inglês
+    const englishDistractors = [
+      'the', 'a', 'an', 'is', 'are', 'was', 'were', 'I', 'you', 'he', 'she', 'it', 'we', 'they',
+      'my', 'your', 'his', 'her', 'our', 'their', 'this', 'that', 'these', 'those',
+      'and', 'or', 'but', 'because', 'if', 'when', 'where', 'how', 'why',
+      'in', 'on', 'at', 'to', 'for', 'with', 'without', 'from', 'about',
+      'very', 'really', 'quite', 'always', 'never', 'often', 'sometimes',
+      'good', 'bad', 'happy', 'sad', 'big', 'small', 'new', 'old',
+      'go', 'come', 'see', 'look', 'hear', 'say', 'tell', 'think', 'know'
+    ];
+    
+    // Filtra palavras que já estão na resposta correta
+    const availableDistractors = englishDistractors.filter(word => 
+      !correctWords.includes(word) && 
+      !correctWords.some(w => w.toLowerCase() === word.toLowerCase())
+    );
+    
+    // Embaralha e pega alguns distratores
+    const shuffledDistractors = availableDistractors.sort(() => Math.random() - 0.5);
+    const distractors = shuffledDistractors.slice(0, Math.min(4, shuffledDistractors.length));
+    
+    const allWords = [...correctWords, ...distractors];
+    const shuffledWords = [...allWords].sort(() => Math.random() - 0.5);
+    
+    setupWordPositions(shuffledWords);
+  }
   
-  // Gera as palavras corretas
-  const correctWords = question.words;
-  // Gera as palavras distratoras
-  const distractors = generateDistractors(correctWords, 4);
-  // Combina todas as palavras
-  const allWords = [...correctWords, ...distractors];
-  
-  // Embaralha todas as palavras (incluindo distratoras)
-  const shuffledWords = [...allWords].sort(() => Math.random() - 0.5);
-  
-  // Cria um objeto que mapeia cada palavra para seu estado atual
+  elements.feedbackArea.classList.add('hidden');
+}
+
+// Função auxiliar para configurar as posições das palavras
+function setupWordPositions(shuffledWords) {
   currentState.wordPositions = {};
   currentState.selectedWords = [];
   
@@ -249,8 +285,6 @@ function loadQuestion() {
   
   renderWords();
   renderSelectedWords();
-  
-  elements.feedbackArea.classList.add('hidden');
 }
 
 function renderWords() {
@@ -461,14 +495,19 @@ function checkAnswer() {
   const question = currentState.currentQuestions[currentState.currentQuestionIndex];
   const userAnswer = currentState.selectedWords.join(' ');
   
-  // Pega a resposta correta baseado no modo
-  const correctAnswer = currentState.currentMode === 'easy' 
-    ? question.portuguese 
-    : question.english;
+  // Define qual é a resposta correta baseado no modo
+  let correctAnswer;
+  if (currentState.currentMode === 'easy') {
+    // Modo fácil: pergunta em inglês, resposta em português
+    correctAnswer = question.portuguese;
+  } else {
+    // Modo difícil: pergunta em português, resposta em inglês
+    correctAnswer = question.english;
+  }
   
   // Remove pontuação para comparação
   const normalizeForComparison = (text) => {
-    return text.replace(/[.,!?;:]/g, '').trim();
+    return text.replace(/[.,!?;:]/g, '').trim().toLowerCase();
   };
   
   const isCorrect = normalizeForComparison(userAnswer) === normalizeForComparison(correctAnswer);
@@ -511,12 +550,23 @@ function generateVocabTable(question) {
   
   // Se existir wordByWord no JSON, usa ele (tradução correta por expressões)
   if (question.wordByWord && question.wordByWord.length > 0) {
-    question.wordByWord.forEach(pair => {
-      html += `<tr>
-        <td><strong>${pair.english}</strong></td>
-        <td>${pair.portuguese}</td>
-      </tr>`;
-    });
+    // No modo fácil (inglês→português), mostramos inglês → português
+    // No modo difícil (português→inglês), mostramos português → inglês
+    if (currentState.currentMode === 'easy') {
+      question.wordByWord.forEach(pair => {
+        html += `<tr>
+          <td><strong>${pair.english}</strong></td>
+          <td>${pair.portuguese}</td>
+        </tr>`;
+      });
+    } else {
+      question.wordByWord.forEach(pair => {
+        html += `<tr>
+          <td><strong>${pair.portuguese}</strong></td>
+          <td>${pair.english}</td>
+        </tr>`;
+      });
+    }
   } else {
     // Fallback: mapeia palavra por palavra literalmente
     const englishWords = question.english.replace(/[.,!?;:]/g, '').split(' ');
@@ -528,10 +578,17 @@ function generateVocabTable(question) {
       const en = englishWords[i] || '-';
       const pt = portugueseWords[i] || '-';
       
-      html += `<tr>
-        <td><strong>${en}</strong></td>
-        <td>${pt}</td>
-      </tr>`;
+      if (currentState.currentMode === 'easy') {
+        html += `<tr>
+          <td><strong>${en}</strong></td>
+          <td>${pt}</td>
+        </tr>`;
+      } else {
+        html += `<tr>
+          <td><strong>${pt}</strong></td>
+          <td>${en}</td>
+        </tr>`;
+      }
     }
   }
   
